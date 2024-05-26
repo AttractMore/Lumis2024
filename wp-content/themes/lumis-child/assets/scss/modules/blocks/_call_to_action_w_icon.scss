@@ -1,0 +1,25 @@
+.call_to_action_with_icon {
+	&:before {
+		max-width: 951px;
+	}
+	.image_wrap {
+		position: relative;
+		figure {
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+	h4 {
+		margin-top: 0 !important;
+		margin-bottom: 25px !important;
+	}
+}
+.cta_spacer {
+	&:before {
+		max-width: 951px;
+	}
+}

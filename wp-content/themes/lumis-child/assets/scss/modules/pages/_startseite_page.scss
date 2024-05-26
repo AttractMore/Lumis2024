@@ -1,0 +1,113 @@
+.home header#masthead .main-header-bar #hero_section {display: flex;}
+.roww {
+	width: 100vw;
+	position: relative;
+	margin-left: calc(-50vw + 50% - 8px);
+}
+.column {
+	/*float: left;*/
+	/*width: 50%;*/
+	/*padding: 67px 121px;*/
+	/*height: 300px; !* Should be removed. Only for demonstration *!*/
+	/*margin-left: 15px;*/
+	/*margin-right: 15px;*/
+	min-height: 610px;
+	padding: 60px 60px 30px 60px
+}
+#bordered_bottom {
+	position: relative;
+	/*border: solid 4px #0080a1;*/
+	/* background: #3beadc; */
+	border-bottom: unset;
+	border-top-right-radius: 16px;
+	border-left: unset;
+	/*padding: 67px 30px 110px 298px!important;*/
+}
+
+.border_bottom {
+	/* border-bottom-left-radius: 25px; */
+	/* top: 50%; */
+
+	/*border-bottom: solid 4px #0080a1;*/
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	/*right: 0;*/
+	/*z-index: 100;*/
+	/*width: 75%;*/
+
+	border: solid 4px #0080a1;
+	/* border-bottom-left-radius: 25px; */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	width: 100vw;
+	border-bottom: unset;
+	border-top-right-radius: 16px;
+}
+
+.border_bottom_test {
+	border: solid 2px #0080A0;
+	border-bottom-left-radius: 25px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	/*z-index: 100;*/
+	width: 100%;
+}
+
+#bordered_top {
+	/* background: #3beadc; */
+	position: relative;
+	/*border: solid 4px #e54d1d;*/
+	border-top: unset;
+	border-bottom-left-radius: 16px;
+	border-right: unset;
+	padding-right: 20px;
+}
+
+.border_top {
+
+	/* top: 50%; */
+	/*border-bottom: solid 4px #e54d1d;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*z-index: 100;*/
+	/*width: 50%;*/
+	border-bottom-left-radius: 25px;
+	border: solid 4px #e54d1d;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	width: 100vw;
+	border-top: unset;
+	/*border-top-right-radius: 16px;*/
+}
+.border_top_test {
+	border: solid 2px #e54d1d;
+	border-bottom-left-radius: 25px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*z-index: 100;*/
+	width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}

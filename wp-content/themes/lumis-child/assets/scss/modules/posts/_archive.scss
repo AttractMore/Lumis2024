@@ -1,0 +1,30 @@
+.archive {
+	.page-title {
+		color: $black_color;
+	}
+	article {
+		padding: 0!important;
+		.post_details {
+			a.entry-title {
+				font-family: "Prompt Light",sans-serif;
+				font-size: 36px;
+				line-height: 45px;
+				color: #0e576d!important;
+				border: none;
+			}
+			p {
+				margin-top: 15px;
+			}
+		}
+		border-bottom: 1px solid $blue_color!important;
+		padding-bottom: 50px!important;
+		margin-bottom: 100px!important;
+		&:last-of-type {
+			border-bottom: none!important;
+			margin-bottom: 0!important;
+		}
+		.read-more.blue_button {
+			display: none;
+		}
+	}
+}

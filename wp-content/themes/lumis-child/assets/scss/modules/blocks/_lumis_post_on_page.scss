@@ -1,0 +1,28 @@
+.sticked_post {
+	&:before {
+		top: 50%!important;
+	}
+	h3 {
+		color: $blue_color!important;
+		a {
+			color: inherit!important;
+			border: none;
+			&:hover, &:focus {
+				color: inherit!important;
+			}
+		}
+	}
+	.display-posts-listing {
+		.listing-item {
+			.post_image {
+				width: 93%;
+				margin-bottom: 15px;
+				float: unset;
+			}
+			.post_details {
+				width: 93%;
+				padding: 0;
+			}
+		}
+	}
+}

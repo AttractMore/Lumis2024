@@ -1,0 +1,61 @@
+@mixin lumis_buttom {
+	border: none;
+	padding: 10px 11px;
+	text-align: center;
+	line-height: 24px;
+	font-family: Montserrat,sans-serif;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+@mixin lumis_blue_button {
+	background: #0e576d;
+	color: #fff!important;
+}
+
+/**
+ * Mixins responsive
+ */
+@mixin max_767 {
+	@media (max-width: 767px) {
+		@content
+	}
+}
+
+@mixin min_768 {
+	@media (min-width: 768px) {
+		@content
+	}
+}
+
+@mixin min_768_and_max_991 {
+	@media (min-width: 768px) and (max-width: 991px) {
+		@content
+	}
+}
+
+@mixin max_991 {
+	@media (max-width: 991px) {
+		@content
+	}
+}
+
+@mixin min_992 {
+	@media (min-width: 992px) {
+		@content
+	}
+}
+
+@mixin min_992_and_max_1199 {
+	@media (min-width: 992px) and (max-width: 1199px) {
+		@content
+	}
+}
+
+@mixin min_1200 {
+	@media (min-width: 1200px) {
+		@content
+	}
+}

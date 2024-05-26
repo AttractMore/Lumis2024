@@ -1,0 +1,52 @@
+/********************************************************************************
+  CAREERS ACCORDION
+********************************************************************************/
+.careers-accordion-container {
+  padding: 0;
+  margin-bottom: 1rem;
+  > div {
+    margin-bottom: 4rem;
+  }
+  .careers-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    div {
+      margin: 0 1em 1.25em;
+    }
+  }
+  h2 {
+    color: $blue_color;
+    text-transform: none;
+    font-size: 2em !important;
+    line-height: 1.25 !important;
+    padding: 0.5em;
+    margin-bottom: 1rem !important;
+    cursor: pointer;
+    outline: none;
+    transition: background-color ease 0.2s;
+    background-color: $light_grey_color;
+    border: 1px solid #aaa;
+    svg {
+      width: 0.5em;
+      height: 0.5em;
+      margin-right: 0.5em;
+      transition: transform 0.2s linear;
+    }
+    &:hover {
+      color: $light_blue_color;
+      background-color: $grey_color;
+      transition: background-color ease 0.2s;
+    }
+    &.open {
+      svg {
+        -webkit-transform: rotate(180deg);
+        transform:rotate(180deg);
+        transition: transform 0.2s linear;
+      }
+    }
+    &:before {
+      border: none;
+    }
+  }
+}

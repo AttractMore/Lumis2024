@@ -1,0 +1,42 @@
+/* Icon and slogan block */
+.icon_and_slogan_wrap {
+	ul {
+		margin-left: 0;
+		li {
+			font-size: 28px;
+			font-weight: 500;
+			margin-bottom: 43px;
+      padding-bottom: 8px;
+			line-height: 34px;
+      display: flex;
+			&:before {
+				vertical-align: middle;
+				position: unset!important;
+				width: unset!important;
+				background: unset;
+				margin-right: 15px;
+			}
+		}
+		/* Blue */
+		&.icon_and_slogan_blue {
+			li {
+				border-bottom: 4px solid #0080a1;
+				&:before {
+					content: url(/wp-content/themes/lumis-child/dist/img/content/services/legal_representative/legal_representative_li.svg);
+				}
+			}
+		}
+		/* Orange */
+		&.icon_and_slogan_orange {
+			li {
+				border-bottom: 4px solid #e54d1d;
+				&:before {
+					content: url(/wp-content/themes/lumis-child/dist/img/content/services/legal_representative/legal_representative_orange_li.svg);
+				}
+			}
+		}
+	}
+}
+
+
+/* Blue  */

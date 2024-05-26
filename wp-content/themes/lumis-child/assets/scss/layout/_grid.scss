@@ -1,0 +1,143 @@
+.site-content {
+	section {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-bottom: 50px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX( -50%);
+			height: 100%;
+			width: 100vw;
+		}
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		h2 {
+			margin-bottom: 50px;
+		}
+		&#our_services_section,
+		&#our_services_add_section {
+			p {
+				margin-bottom: 50px;
+			}
+		}
+		&.blue_section {
+			img {
+				//max-width: 25%;
+				max-width: 160px;
+				border-radius: 8px;
+				background: $light_blue_color;
+			}
+			h3 {
+				color: $light_blue_color;
+				margin-top: 24px;
+				margin-bottom: 24px;
+			}
+			&:before {
+				top: 240px;
+				//height: 68%;
+				height: auto;
+				bottom: 0;
+				background: rgba($grey_color, .2);
+			}
+			a.blue_button {
+				@include lumis_buttom;
+				@include lumis_blue_button;
+				&:hover, &:focus {
+					background: $light_blue_color;
+				}
+			}
+		}
+		&.orange_section {
+			img {
+				//max-width: 39%;
+				max-width: 160px;
+				border-radius: 8px;
+				background: $dark_orange_color;
+			}
+			h3 {
+				color: $dark_orange_color;
+				margin-top: 24px;
+				margin-bottom: 24px;
+		}
+			&:before {
+				top: 130px;
+				//height: 81%;
+				height: auto;
+				bottom: 0;
+				background: rgba($grey_color, .2);
+			}
+		}
+		/* Description Section */
+		&#description_section {
+			#bordered_bottom {
+				h3 {
+					color: $light_blue_color;
+				}
+			}
+			#bordered_top {
+				h3 {
+					color: $dark_orange_color;
+				}
+			}
+			h3 {
+				margin-top: 32px;
+				margin-bottom: 24px;
+			}
+		}
+		/* Contact Section */
+	}
+}
+
+.inverted_colors_section {
+	* {
+		color: $white_color!important;
+	}
+	a {
+		color: $white_color!important;
+	}
+	h2 {
+		&:before {
+			content: "";
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			border: solid $light_orange_color;
+			border-width: 0 0 10px 10px;
+			border-bottom-left-radius: 16px;
+			bottom: -12px;
+			left: 0;
+		}
+	}
+}
+
+
+
+//.background_section {
+//	position: relative;
+//	background: #663399;
+//}
+//.background_section:before,
+//.background_section:after {
+//	content: "";
+//	position: absolute;
+//	background: #663399;  /* Match the background */
+//	top: 0;
+//	bottom: 0;
+//	width: 9999px;   /* some huge width */
+//}
+//.background_section:before {
+//	right: 100%;
+//}
+//.background_section:after {
+//	left: 100%;
+//}

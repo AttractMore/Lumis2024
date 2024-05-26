@@ -1,0 +1,49 @@
+/*
+Theme Name: Lumis (Child)
+Theme URI: https://allcodesarebeautiful.com/
+Author: allcodesarebeautiful
+Theme Info: Link https://allcodesarebeautiful.com/
+Author URI: https://allcodesarebeautiful.com/
+Description: Lumis-Child Theme
+Template: lumis
+Version: 1.0.0
+Text Domain: lumis-child
+*/
+
+.page-id-68 .wp-block-columns{
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-id-68 h2 {
+	margin-top: 80px;
+}
+.page-id-68 h3 {
+	margin-top: 80px;
+	margin-bottom: 60px!important;
+}
+.wp-block-quote:before {
+	display: none !important;
+}
+
+.wp-block-quote {
+	border-left: none!important;
+	margin: 0;
+	padding: 0;
+}
+
+.page-id-68 .inverted_colors_section {
+	padding-bottom: 80px;
+}
+
+.page-id-68 .h3a {
+	margin-top: initial;
+	margin-bottom: initial!important;
+	line-height: 1.4!important;
+}
+
+.entry-content p {
+	margin-bottom: 1.6em;
+	margin-top: 1em;
+}
