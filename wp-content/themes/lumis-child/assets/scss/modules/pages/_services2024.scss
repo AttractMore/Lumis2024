@@ -1,6 +1,17 @@
 .ast-separate-container #primary {
   padding-bottom: 0;
 }
+.site-content .service {
+  section {
+    padding: 3em 0;
+    &:before {
+      z-index: -1;
+    }
+  }
+  h2 {
+    line-height: 1.5 !important;
+  }
+}
 .reversed-colours-section {
   &:before {
     background-color: $blue_color;
@@ -14,9 +25,14 @@
   h3 {
     color: $white_color !important;
   }
-  h2,
-  h3 {
-    padding: 0;
+  // h2,
+  // h3 {
+  //   padding: 0;
+  // }
+  h2 {
+    &:before {
+      border-color: $light_orange_color;
+    }
   }
 }
 .service-introduction {
@@ -58,9 +74,6 @@
 }
 .service-advantages {
   h2 {
-    &:before {
-      display: none;
-    }
     margin-bottom: 2.5rem !important;
   }
   ul,
@@ -157,11 +170,6 @@
   }
 }
 .services-contact-form {
-  h2 {
-    &:before {
-      display: none;
-    }
-  }
   .contact-details {
     max-width: 360px;
     img {
