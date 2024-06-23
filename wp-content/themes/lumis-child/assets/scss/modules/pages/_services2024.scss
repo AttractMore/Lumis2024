@@ -44,10 +44,16 @@
     line-height: 1.25;
     display: flex;
     align-items: center;
-    &:before {
-      content: url(legal_representative_orange_li.a5b284e4.svg);
+    svg {
+      fill: $dark_orange_color;
+      width: 1em;
+      height: 1em;
       margin-right: 1rem;
     }
+    // &:before {
+    //   content: url(legal_representative_orange_li.a5b284e4.svg);
+    //   margin-right: 1rem;
+    // }
   }
   aside {
     img {
