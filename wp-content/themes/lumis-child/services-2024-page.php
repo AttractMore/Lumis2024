@@ -33,11 +33,9 @@ get_header(); ?>
         ?>
         <div class="service-introduction-content">
           <p class="service-summary">
-            <span>
-              <svg aria-hidden='true'>
-                <use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#tick'></use>
-              </svg>
-            </span>
+            <svg aria-hidden='true'>
+              <use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#tick'></use>
+            </svg>
           <?php echo esc_html($service_introduction["service_summary"]); ?></p>
           <?php echo wp_kses_post($service_introduction["service_introduction_block"]); ?>
         </div>
