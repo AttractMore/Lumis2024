@@ -1,41 +1,15 @@
-// (max-width: 767px)
 @include max_767 {
-  header.site-header#masthead .main-header-bar {
-    #hero_section {
-      padding-top: unset;
-      .hero_section_text {
-        h1 {
-          font-family: $font_family_prompt_light !important;
-          font-size: 24px !important;
-          line-height: 28px !important;
-          letter-spacing: -0.49px;
-        }
-      }
-    }
-  }
   /* Icon and slogan asection */
   .icon_and_slogan_wrap {
     figure {
       display: block !important;
-      //margin-left: auto!important;
-      //margin-right: auto!important;
       text-align: center;
-      img {
-        //max-width: 30% !important;
-      }
     }
   }
   .contact_form_block {
     margin-bottom: 50px;
     margin-top: -50px;
     min-height: 1px !important;
-    //figure {
-    //	text-align: center;
-    //	padding-top: 30px;
-    //	img {
-    //		max-width: 150px;
-    //	}
-    //}
   }
   /* Services Section */
   #our_services_section,
