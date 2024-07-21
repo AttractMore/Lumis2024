@@ -175,7 +175,8 @@
     }
   }
 }
-.services-contact-form {
+.services-contact-form,
+.home-contact-form {
   scroll-margin-top: 3rem;
   .contact-details {
     max-width: 360px;
@@ -194,7 +195,8 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .services-contact-form {
+  .services-contact-form,
+  .home-contact-form {
     .form-plus-contact {
       display: grid;
       grid-template-columns: 2fr 1fr;

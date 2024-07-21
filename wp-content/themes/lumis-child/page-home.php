@@ -102,9 +102,39 @@ get_header(); ?>
 	</section>
 </article>
 
-	<?php
-//astra_content_page_loop();
-?>
+    <section id="home-contact-section" class="home-contact-form reversed-colours-section">
+      <h2>Contact our experts to find out more!</h2>
+      <?php
+      $contact = get_field("contact");
+      $contact_form_name = $contact["form_name"];
+      if ($contact_form_name === "Lumis International") {
+        $form_shortcode = '[contact-form-7 id="1b6bd32" title="Lumis International"]';
+      } else {
+        $form_shortcode = '[contact-form-7 id="d39d1df" title="Lumis Life Science Consulting"]';
+      }
+      ?>
+      <article class="form-plus-contact">
+        <div class="contact-form">
+          <?php echo do_shortcode($form_shortcode); ?>
+        </div>
+        <div class="contact-details">
+          <?php
+          $size = "full";
+          $photo = $contact["contact_person"]["photo"];
+          echo wp_get_attachment_image($photo, $size);
+          ?>
+          <aside>
+            <?php $phone = esc_html($contact["contact_person"]["phone"]); ?>
+            <?php $email = esc_html($contact["contact_person"]["email"]); ?>
+            <p><strong><?php echo esc_html($contact["contact_person"]["name"]); ?></strong></p>
+            <p><?php echo esc_html($contact["contact_person"]["title"]); ?></p>
+            <p>Phone:&nbsp;<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
+            <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+          </aside>
+        </div>
+      </article>
+    </section>
+
   <section>
     <h2>The latest from Lumis Content Hub</h2>
     <?php echo do_shortcode(
