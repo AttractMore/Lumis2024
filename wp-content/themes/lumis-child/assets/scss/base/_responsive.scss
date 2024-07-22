@@ -12,59 +12,59 @@
     min-height: 1px !important;
   }
   /* Services Section */
-  #our_services_section,
-  #our_services_add_section {
-    &:before {
-      display: none;
-    }
-    .row {
-      div {
-        position: relative;
-        //padding-top: 50px;
-        padding-bottom: 75px;
-        margin-bottom: 30px;
-        &:before {
-          //top: 240px;
-          height: unset;
-          bottom: 0;
-          background: rgba(#d8d8d8, 0.2);
-          content: "";
-          position: absolute;
-          //top: 24%;
-          top: 15%;
-          left: 50%;
-          transform: translateX(-50%);
-          //height: 100%;
-          width: 100vw;
-          z-index: -1;
-        }
-      }
-    }
-  }
-  #our_services_section {
-    .row {
-      div {
-        &:first-of-type:before {
-          display: none;
-        }
-        &:first-of-type {
-          padding-bottom: 0;
-          margin-bottom: 30px;
-        }
-      }
-    }
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  #our_services_add_section {
-    padding-top: 0;
-  }
+  // #our_services_section,
+  // #our_services_add_section {
+  //   &:before {
+  //     display: none;
+  //   }
+  //   .row {
+  //     div {
+  //       position: relative;
+  //       //padding-top: 50px;
+  //       padding-bottom: 75px;
+  //       margin-bottom: 30px;
+  //       &:before {
+  //         //top: 240px;
+  //         height: unset;
+  //         bottom: 0;
+  //         background: rgba(#d8d8d8, 0.2);
+  //         content: "";
+  //         position: absolute;
+  //         //top: 24%;
+  //         top: 15%;
+  //         left: 50%;
+  //         transform: translateX(-50%);
+  //         //height: 100%;
+  //         width: 100vw;
+  //         z-index: -1;
+  //       }
+  //     }
+  //   }
+  // }
+  // #our_services_section {
+  //   .row {
+  //     div {
+  //       &:first-of-type:before {
+  //         display: none;
+  //       }
+  //       &:first-of-type {
+  //         padding-bottom: 0;
+  //         margin-bottom: 30px;
+  //       }
+  //     }
+  //   }
+  //   margin-bottom: 0;
+  //   padding-bottom: 0;
+  // }
+  // #our_services_add_section {
+  //   padding-top: 0;
+  // }
 
-  /* Description Section */
-  .border_top {
-    width: calc(100vw - 7px) !important;
-    border-right: unset !important;
-  }
+  // /* Description Section */
+  // .border_top {
+  //   width: calc(100vw - 7px) !important;
+  //   border-right: unset !important;
+  // }
   .glossary {
     .wp-block-columns {
       display: flex !important;
@@ -624,10 +624,10 @@
     }
   }
   /* Services Add Section */
-  #our_services_add_section {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+  // #our_services_add_section {
+  //   margin-bottom: 0;
+  //   padding-bottom: 0;
+  // }
   .glossary {
     figure {
       margin-right: auto !important;

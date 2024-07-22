@@ -9,31 +9,52 @@
   }
   li {
     margin-bottom: 3em !important;
+    aside {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      align-items: center;
+      gap: 0.5em;
+      margin-bottom: 0.25em;
+    }
     &:before {
       display: none;
     }
+    a {
+      &.service-link {
+        display: inline-flex;
+        align-items: center;
+        svg {
+          padding-left: 0.25em;
+          width: 3em;
+          height: 1.5em;
+        }
+        &:hover {
+          svg {
+            fill: $light_blue_color;
+            stroke: $light_blue_color;
+          }
+        }
+      }
+    }
   }
-  .blue-section,
-  .orange-section {
+  .legal-section,
+  .consulting-section {
     padding: 0 !important;
     img {
-      max-width: 160px;
+      max-width: 80px;
       border-radius: 8px;
     }
   }
-  .blue-section img {
+  .legal-section img {
     background-color: $light_blue_color;
   }
-  .orange-section img {
+  .consulting-section img {
     background-color: $dark_orange_color;
   }
   h3 {
-    padding: 0.5em 0;
+    padding: 0;
     font-size: 22px !important;
     line-height: 1 !important;
-  }
-  p:empty {
-    display: none;
   }
 }
 

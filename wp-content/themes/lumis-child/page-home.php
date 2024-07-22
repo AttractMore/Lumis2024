@@ -34,29 +34,40 @@ get_header(); ?>
 // endif;
 ?>
 </div> -->
+<article class="home-introduction">
+  <?php the_content(); ?>
+</article>
 
 <article class="services-sections">
-	<section id="our_services_section" class="blue-section">
+	<section id="our_services_section" class="legal-section">
     <?php if (have_rows("services_list")): ?>
 			<?php while (have_rows("services_list")):
      the_row(); ?>
     <h2><?php echo get_sub_field("legal_title"); ?></h2>
-				<?php if (have_rows("service_name_blue")): ?>
+    <?php echo wp_kses_post(get_sub_field("legal_intro_text")); ?>
+				<?php if (have_rows("legal_service")): ?>
           <ul>
-					<?php while (have_rows("service_name_blue")):
+					<?php while (have_rows("legal_service")):
        the_row(); ?>
 						<li>
 							<?php $icon = get_sub_field("icon"); ?>
-							<?php if ($icon): ?>
-								<img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
-							<?php endif; ?>
-              <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
-              <p><?php echo wp_kses_post(get_sub_field("description")); ?></p>
+              <aside>
+                <?php if ($icon): ?>
+                  <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr(
+  $icon["alt"]
+); ?>" />
+                <?php endif; ?>
+                <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
+              </aside>
+              <?php echo wp_kses_post(get_sub_field("description")); ?>
 							<?php $link = get_sub_field("link"); ?>
 							<?php if ($link): ?>
-								<a class="blue_button" aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url(
+								<a class="service-link" aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url(
   $link["url"]
-); ?>"   target="<?php echo esc_attr($link["target"]); ?>"><?php echo esc_html($link["title"]); ?></a>
+); ?>"   target="<?php echo esc_attr($link["target"]); ?>">
+                  <?php echo esc_html($link["title"]); ?>
+                  <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
+                </a>
 							<?php endif; ?>
             </li>
 					<?php
@@ -68,28 +79,36 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</section>
-	<!-- Orange Section -->
-	<section id="our_services_add_section" class="orange-section ">
+	<!-- Consulting Services Section -->
+	<section id="our_services_add_section" class="consulting-section ">
     <?php if (have_rows("services_list")): ?>
 			<?php while (have_rows("services_list")):
      the_row(); ?>
       <h2><?php echo get_sub_field("consulting_title"); ?></h2>
-				<?php if (have_rows("service_orange")): ?>
+      <?php echo wp_kses_post(get_sub_field("consulting_intro_text")); ?>
+      <?php if (have_rows("consulting_service")): ?>
           <ul>
-					<?php while (have_rows("service_orange")):
+					<?php while (have_rows("consulting_service")):
        the_row(); ?>
 						<li>
               <?php $icon = get_sub_field("icon"); ?>
-              <?php if ($icon): ?>
-								<img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
-              <?php endif; ?>
-              <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
-              <p><?php echo wp_kses_post(get_sub_field("description")); ?></p>
+              <aside>
+                <?php if ($icon): ?>
+                  <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr(
+  $icon["alt"]
+); ?>" />
+                <?php endif; ?>
+                <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
+              </aside>
+              <?php echo wp_kses_post(get_sub_field("description")); ?>
               <?php $link = get_sub_field("link"); ?>
               <?php if ($link): ?>
-								<a class="blue_button" aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url(
+								<a class="service-link" aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url(
   $link["url"]
-); ?>" target="<?php echo esc_attr($link["target"]); ?>"><?php echo esc_html($link["title"]); ?></a>
+); ?>" target="<?php echo esc_attr($link["target"]); ?>">
+                  <?php echo esc_html($link["title"]); ?>
+                  <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
+                </a>
               <?php endif; ?>
             </li>
 					<?php
