@@ -247,3 +247,20 @@ a.skip-main:active {
     display: block;
   }
 }
+
+.grey-background-section {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100vw;
+    background: #e5e5e5;
+    bottom: 0;
+    z-index: -1;
+  }
+}

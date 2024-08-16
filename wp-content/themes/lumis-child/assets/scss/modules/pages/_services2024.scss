@@ -17,6 +17,10 @@
     background-color: $blue_color;
     z-index: -1;
   }
+  ::selection {
+    background: $white_color !important;
+    color: $blue_color !important;
+  }
   p,
   li,
   label,
@@ -160,6 +164,7 @@
 }
 
 .services-contact-reference {
+  margin-bottom: 0 !important;
   p {
     margin-bottom: 0;
   }
@@ -175,6 +180,34 @@
     }
   }
 }
+.testimonials {
+  .testimonial-set {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 2em;
+      &:before {
+        display: none;
+      }
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  .testimonials {
+    .testimonial-set {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .services-contact-form,
 .home-contact-form {
   scroll-margin-top: 3rem;

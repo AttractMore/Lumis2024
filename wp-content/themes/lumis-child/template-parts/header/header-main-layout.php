@@ -55,12 +55,10 @@
 				</div><!-- Main Header Container -->
 			</div>
       <?php $banner = get_field("banner", "option"); ?>
-      <?php if ($banner): ?>
+      <?php if ($banner && is_front_page()): ?>
       <div id="hero-section" class="inverted_colors_section">
         <div class="hero-section-img">
-          <img src="<?php echo esc_url($banner["banner_icon"]); ?>" alt="<?php echo esc_html(
-  $banner["banner_text"]
-); ?>" />
+          <img src="<?php echo esc_url($banner["banner_icon"]); ?>" alt="<?php echo esc_html($banner["banner_text"]); ?>" />
         </div>
         <div class="hero-section-text">
           <h1><?php echo esc_html($banner["banner_text"]); ?></h1>

@@ -107,6 +107,22 @@ get_header(); ?>
       </p>
     </section>
 
+    <?php
+    $rows = get_field("testimonials");
+    if ($rows) {
+      echo '<section class="testimonials grey-background-section"><h2>Testimonials</h2><ul class="testimonial-set">';
+
+      foreach ($rows as $row) {
+        echo "<li>";
+        echo wp_kses_post($row["testimonial"]);
+        echo "<p><em>-&nbsp;";
+        echo esc_html($row["attribution"]);
+        echo "</em></p></li>";
+      }
+      echo "</ul></section>";
+    }
+    ?>
+    
     <section class="services-resources">
       <h2>Resources: Case studies and helpful information</h2>
     </section>
