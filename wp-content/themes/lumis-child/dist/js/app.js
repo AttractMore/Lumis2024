@@ -194,27 +194,30 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
     const allSlides = document.querySelectorAll(".testimonial");
     const numSlides = allSlides.length;
 
-    const delay = 250; // delay between calls
+    const delay = 100; // delay between calls
     let throttled = false; // are we currently throttled?
-    let index = 0; //Current slide index initialised to 0
+    let index = 0; // Current slide index initialised to 0
+    let displayed_slides, gapPx, gap;
 
     const compStyles = window.getComputedStyle(slidesContainer);
-    let displayed_slides = compStyles.getPropertyValue("--displayed-slides");
-    let gapPx = compStyles.getPropertyValue("--testimonial-gap");
-    let gap = parseInt(gapPx, 10);
-
+    updateSlideDetails();
+    slidesContainer.scrollLeft = -10000; // set position back to beginning
     buttonDisplay(index);
 
     nextButton.addEventListener("click", () => {
       const slideWidth = slide.clientWidth + gap;
       slidesContainer.scrollLeft += slideWidth;
       index = index + 1;
+      updateSlideDetails();
+      console.log(`index: ${index}`);
       buttonDisplay(index);
     });
     prevButton.addEventListener("click", () => {
       const slideWidth = slide.clientWidth + gap;
       slidesContainer.scrollLeft -= slideWidth;
       index = index - 1;
+      updateSlideDetails();
+      console.log(`index: ${index}`);
       buttonDisplay(index);
     });
 
@@ -222,15 +225,13 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
     window.addEventListener("resize", function () {
       // only run if we're not throttled
       if (!throttled) {
-        // actual callback action
-        // const slideWidth = slide.clientWidth + gap;
-        slidesContainer.scrollLeft = -10000;
-        displayed_slides = compStyles.getPropertyValue("--displayed-slides");
-        gapPx = compStyles.getPropertyValue("--testimonial-gap");
-        gap = parseInt(gapPx, 10);
-        index = 0;
+        updateSlideDetails();
+        slideWidth = slide.clientWidth + gap;
+        slidesContainer.scrollLeft = slideWidth * index;
+        // slidesContainer.scrollLeft = -10000; // set position back to beginning
+        // index = 0;
+        console.log(`slides: ${displayed_slides}, gap: ${gap}, index: ${index}`);
         buttonDisplay(index);
-        // we're throttled!
         throttled = true;
         // set a timeout to un-throttle
         setTimeout(function () {
@@ -239,16 +240,22 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
       }
     });
 
-    function buttonDisplay(index) {
-      if (index == 0) {
-        prevButton.style.display = "none";
+    function updateSlideDetails() {
+      displayed_slides = compStyles.getPropertyValue("--displayed-slides");
+      gapPx = compStyles.getPropertyValue("--testimonial-gap");
+      gap = parseInt(gapPx, 10);
+    }
+
+    function buttonDisplay() {
+      if (index === 0) {
+        prevButton.style.visibility = "hidden";
       } else {
-        prevButton.style.display = "grid";
+        prevButton.style.visibility = "visible";
       }
-      if (index === numSlides - displayed_slides) {
-        nextButton.style.display = "none";
+      if (index >= numSlides - displayed_slides) {
+        nextButton.style.visibility = "hidden";
       } else {
-        nextButton.style.display = "grid";
+        nextButton.style.visibility = "visible";
       }
     }
   }

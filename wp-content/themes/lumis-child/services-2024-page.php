@@ -119,12 +119,12 @@ get_header(); ?>
         echo esc_html($row["attribution"]);
         echo "</cite></li>";
       }
-      echo "</ul><button class='slide-arrow' id='slide-arrow-prev'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button><button class='slide-arrow' id='slide-arrow-next'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button></section>";
+      echo "</ul><nav><button class='slide-arrow' id='slide-arrow-prev'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button><button class='slide-arrow' id='slide-arrow-next'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button></nav></section>";
     }
     ?>
     
     <section class="services-resources">
-      <h2>Resources: Case studies and helpful information</h2>
+      <h2>Additional resources</h2>
     </section>
 
     <section id="services-contact-section" class="services-contact-form reversed-colours-section">
