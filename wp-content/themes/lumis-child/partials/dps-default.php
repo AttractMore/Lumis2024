@@ -16,18 +16,17 @@
 //
 //echo '</article>';
 $categories = get_the_category();
-$separator = ' | ';
-$output = '';
+$separator = " | ";
+$output = "";
 ?>
 
-
 <div class="listing-item large ">
+  <h2 class="post-title h4"><a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a></h2>
 	<div class="post_image desktop_blog_list">
 		<a class="image" href="<? echo get_permalink() ?>">
 		<? echo get_the_post_thumbnail()?></a>
 	</div>
 	<div class="post_details">
-		<a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a>
 		<span class="category-display"><span class="category-display-label"></span>
 			<? if ( ! empty( $categories ) ) {
 		  foreach( $categories as $category ) {

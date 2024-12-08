@@ -257,8 +257,7 @@ function am_taxonomy_terms_callback($atts)
   if (!empty($terms)) {
     $output = '<ul class="taxonomy-terms">';
     foreach ($terms as $term) {
-      $output .=
-        '<li><a href="' . esc_url(get_term_link($term)) . '" alt="' . esc_attr(sprintf(__("View all post filed under %s"), $term->name)) . '">' . $term->name . "</a></li>";
+      $output .= '<li><a href="' . esc_url(get_term_link($term)) . '" title="' . esc_attr(sprintf(__("View all posts filed under %s"), $term->name)) . '">' . $term->name . "</a></li>";
     }
     $output .= "</ul>";
   }

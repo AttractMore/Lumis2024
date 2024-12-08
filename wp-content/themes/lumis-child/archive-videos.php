@@ -50,8 +50,18 @@ get_header(); ?>
   <div class="wp-container-3 wp-block-group lumis_hub_sidebar has-very-light-gray-color has-text-color has-background" style="background-color:#0e576d">
     <div class="wp-block-group__inner-container">
       <h2 class="has-text-color" style="color:#ffffff">Our topics</h2>
-      
-      <?php echo do_shortcode('[taxonomy_terms taxonomy="video_categories"]'); ?>
+      <?php
+// $categories = get_categories([
+//   "hide_empty" => false,
+// ]);
+// if (!empty($categories)) {
+//   foreach ($categories as $category) {
+//     $output =
+//   }
+// }
+?>
+      <!-- TODO: Needs fixing below! -->
+      <?php echo do_shortcode('[taxonomy_terms taxonomy="category"]'); ?>
       
     </div>
   </div>

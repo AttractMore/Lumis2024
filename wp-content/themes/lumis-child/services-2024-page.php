@@ -123,24 +123,36 @@ get_header(); ?>
     }
     ?>
     
-    <section class="services-resources">
-      <h2>Additional resources</h2>
-    </section>
+    <?php
+    $associated_category = get_field("associated_category_slug");
+    $args = [
+      "post_type" => ["post", "videos"],
+      "perm" => "readable",
+      "category_name" => $associated_category,
+    ];
+    $matching_posts = new WP_Query($args);
+    if ($matching_posts->have_posts()) {
+      echo "<section class='services-resources'><h2>Additional resources for " . esc_html(get_field("service_title")) . "</h2>";
+
+      while ($matching_posts->have_posts()) {
+        $matching_posts->the_post();
+        echo "<p class='post-title'><a class='title' href='" . get_the_permalink() . "'>" . get_the_title() . "</a></p>";
+        if (has_post_thumbnail()) {
+          echo "<div class='post_image'><a class='image' href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a></div>";
+          echo get_the_excerpt();
+          echo "<p><a class='blue_button read-more' href='" . get_the_permalink() . "'>Read more</a></p>";
+        }
+      }
+      echo "</section>";
+    }
+    ?>
 
     <section id="services-contact-section" class="services-contact-form reversed-colours-section">
       <h2>Contact our experts to find out more!</h2>
-      <?php
-      $contact = get_field("contact");
-      $contact_form_name = $contact["form_name"];
-      if ($contact_form_name === "Lumis International") {
-        $form_shortcode = '[contact-form-7 id="1b6bd32" title="Lumis International"]';
-      } else {
-        $form_shortcode = '[contact-form-7 id="d39d1df" title="Lumis Life Science Consulting"]';
-      }
-      ?>
+      <?php $contact = get_field("contact"); ?>
       <article class="form-plus-contact">
         <div class="contact-form">
-          <?php echo do_shortcode($form_shortcode); ?>
+          <?php echo do_shortcode('[contact-form-7 id="1b6bd32" title="Lumis International"]'); ?>
         </div>
         <div class="contact-details">
           <?php
