@@ -319,6 +319,48 @@
 //   }
 // }
 
+/***************************************/
+//  SERVICES RESOURCES
+/***************************************/
+.services-resources {
+  .matching-posts {
+    margin-left: 0;
+  }
+  .matching-post {
+    margin: 2em 0;
+    &:before {
+      display: none;
+    }
+    h3 {
+      margin-bottom: 0.5em !important;
+      .title {
+        border-bottom: 0;
+      }
+    }
+    .post-image {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+@media screen and (min-width: 48em) {
+  .services-resources {
+    .matching-posts {
+      .matching-post {
+        .post-content {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          > div {
+            flex: 0 1 48%;
+          }
+        }
+      }
+    }
+  }
+}
+/***************************************/
+//  SERVICES CONTACT FORM
+/***************************************/
 .services-contact-form,
 .home-contact-form {
   scroll-margin-top: 3rem;
