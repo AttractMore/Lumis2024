@@ -1,0 +1,16 @@
+@media screen and (min-width: 30em) {
+  .lumis-values {
+    > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em 4em;
+    }
+  }
+}
+@media screen and (min-width: 48em) {
+  .lumis-values {
+    > div {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

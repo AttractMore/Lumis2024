@@ -40,7 +40,8 @@
   }
 
   .orange_button,
-  .wpcf7-form-control.wpcf7-submit {
+  .wpcf7-form-control.wpcf7-submit,
+  .frm_submit .frm_button_submit {
     background: $light_orange_color;
     border: none;
     color: $black_color !important;

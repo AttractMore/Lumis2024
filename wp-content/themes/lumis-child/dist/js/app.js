@@ -94,7 +94,7 @@ window.onscroll = function () {
 var header = document.querySelector(".menu_desktop");
 var sticky = header.offsetTop;
 var logo = document.querySelector(".custom-logo");
-var rightcol = document.querySelector(".right_column_header_text");
+// var rightcol = document.querySelector(".right_column_header_text");
 var mobile_nav = document.querySelector("#mobile_menu");
 var mobile_nav_button = document.querySelector("#menu-toggle");
 
@@ -102,7 +102,7 @@ function stickyHeaderOnScroll() {
   if (window.pageYOffset > 220) {
     // header.classList.add("sticky_desktop_header");
     logo.classList.add("small");
-    rightcol.classList.add("rightcolpad");
+    // rightcol.classList.add("rightcolpad");
     header.classList.add("header_shadow");
     mobile_nav.classList.add("mobile_nav_scrolled");
     mobile_nav_button.classList.add("mobile_button_scrolled");
@@ -110,7 +110,7 @@ function stickyHeaderOnScroll() {
   } else {
     // header.classList.remove("sticky_desktop_header");
     logo.classList.remove("small");
-    rightcol.classList.remove("rightcolpad");
+    // rightcol.classList.remove("rightcolpad");
     header.classList.remove("header_shadow");
     mobile_nav.classList.remove("mobile_nav_scrolled");
     mobile_nav_button.classList.remove("mobile_button_scrolled");
