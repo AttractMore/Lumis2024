@@ -142,11 +142,10 @@ get_header(); ?>
           echo "<div class='post-content'><div class='post-image'><a class='image' href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a></div>";
         }
         echo "<div class='excerpt-button'><p class='post-excerpt'>" . get_the_excerpt() . "</p>";
-        echo "<p class='read-more-button-container'><a class='blue_button read-more' href='" .
-          get_the_permalink() .
-          "'>Read more</a></p></div><!-- .excerpt-button --></div><!-- .post-content --></li><!-- .matching-post --><hr>";
+        echo "<p class='read-more-button-container'><a class='blue_button read-more' href='" . get_the_permalink() . "'>Read more</a></p></div></div></li><hr>";
       }
-      echo "</ul><!-- .matching-posts --></section>";
+      wp_reset_postdata();
+      echo "</ul></section>";
     }
     ?>
 
@@ -155,7 +154,7 @@ get_header(); ?>
       <?php $contact = get_field("contact"); ?>
       <article class="form-plus-contact">
         <div class="contact-form">
-          <?php echo do_shortcode('[contact-form-7 id="1b6bd32" title="Lumis International"]'); ?>
+          <?php echo do_shortcode("[formidable id=1]"); ?>
         </div>
         <div class="contact-details">
           <?php
