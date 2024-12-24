@@ -13,6 +13,8 @@
   }
 }
 .reversed-colours-section {
+  background-color: $blue_color;
+  position: relative;
   &:before {
     background-color: $blue_color;
     z-index: -1;

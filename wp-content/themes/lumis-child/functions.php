@@ -120,6 +120,7 @@ include_once "inc/blog/blog.php";
 //include_once 'inc/core/class-astra-admin-settings.php';
 /* Archive settings */
 include_once "inc/core/common-functions.php";
+include_once "inc/shortcodes.php";
 
 /* SVG Support */
 function add_file_types_to_uploads($file_types)

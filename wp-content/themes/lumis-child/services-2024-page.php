@@ -149,30 +149,33 @@ get_header(); ?>
     }
     ?>
 
-    <section id="services-contact-section" class="services-contact-form reversed-colours-section">
-      <h2>Contact our experts to find out more!</h2>
-      <?php $contact = get_field("contact"); ?>
-      <article class="form-plus-contact">
-        <div class="contact-form">
-          <?php echo do_shortcode("[formidable id=1]"); ?>
-        </div>
-        <div class="contact-details">
-          <?php
-          $size = "full";
-          $photo = $contact["contact_person"]["photo"];
-          echo wp_get_attachment_image($photo, $size);
-          ?>
-          <aside>
-            <?php $phone = esc_html($contact["contact_person"]["phone"]); ?>
-            <?php $email = esc_html($contact["contact_person"]["email"]); ?>
-            <p><strong><?php echo esc_html($contact["contact_person"]["name"]); ?></strong></p>
-            <p><?php echo esc_html($contact["contact_person"]["title"]); ?></p>
-            <p>Phone:&nbsp;<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
-            <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
-          </aside>
-        </div>
-      </article>
-    </section>
+  <section id="home-contact-section" class="home-contact-form reversed-colours-section">
+    <h2>Contact our experts to find out more!</h2>
+    <?php
+    $contact = get_field("contact");
+    $form_shortcode = '[formidable id="1"]';
+    ?>
+    <article class="form-plus-contact">
+      <div class="contact-form">
+        <?php echo do_shortcode($form_shortcode); ?>
+      </div>
+      <div class="contact-details">
+        <?php
+        $size = "full";
+        $photo = $contact["contact_person"]["photo"];
+        echo wp_get_attachment_image($photo, $size);
+        ?>
+        <aside>
+          <?php $phone = esc_html($contact["contact_person"]["phone"]); ?>
+          <?php $email = esc_html($contact["contact_person"]["email"]); ?>
+          <p><strong><?php echo esc_html($contact["contact_person"]["name"]); ?></strong></p>
+          <p><?php echo esc_html($contact["contact_person"]["title"]); ?></p>
+          <p>Phone:&nbsp;<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
+          <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+        </aside>
+      </div>
+    </article>
+  </section>
 
     <?php astra_primary_content_bottom(); ?>
   </article>
