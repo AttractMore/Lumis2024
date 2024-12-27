@@ -13,7 +13,7 @@ function theme_enqueues_styles_scripts()
 {
   // Default theme stylesheet
   wp_enqueue_style("app-css", get_stylesheet_directory_uri() . "/dist/css/app.css");
-  wp_enqueue_style("fa-css", get_stylesheet_directory_uri() . "/dist/css/all.css");
+  // wp_enqueue_style("fa-css", get_stylesheet_directory_uri() . "/dist/css/all.css");
   /*wp_enqueue_style('bootstrap-css');
    wp_enqueue_style('event-css');*/
   //	wp_deregister_script('jquery');
@@ -295,25 +295,3 @@ function add_newsletter_signup()
     echo "</aside>";
   }
 }
-/**
- * Track contact form 7 submissions in GA4
- * @source  https://contactform7.com/tracking-form-submissions-with-google-analytics/
- */
-
-add_action(
-  "wp_footer",
-  function () {
-    ?>
-  <script>
-  document.addEventListener( 'wpcf7mailsent', function ( event ) {
-      gtag( 'event', 'wpcf7_submission', {
-          'event_category': event.detail.contactFormId,
-          'event_label': event.detail.unitTag
-      } );
-  }, false );
-  </script>
-  <?php
-  },
-  10,
-  0
-);

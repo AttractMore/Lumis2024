@@ -1,49 +1,26 @@
 #contact_section {
-	padding-top: 90px;
-	margin-top: -50px;
-	.wpcf7 input:not([type=submit]), .wpcf7 select, .wpcf7 textarea {
-		padding: 1.2em;
-	}
-	.wpcf7 form>div, .wpcf7 form>p {
-		margin-bottom: 1.7em;
-	}
-		.contact_form_wrap {
-			padding: 0;
-		}
-		&:before {
-			background: $blue_color;
-		}
-		.wpcf7-form {
-			.data_notice {
-				font-size: 14px;
-				line-height: 18px;
-				width: 78%;
-				float: left;
-				a {
-					color: $white_color!important;
-					&:hover, &:focus {
-						color: $link_hover_color!important;
-					}
-				}
-			}
-			.wpcf7-textarea {
-				max-height: 240px;
-			}
-		}
-		.contact_credits_wrap {
-			background: $white_color;
-			p {
-				padding: 25px 20px 40px 20px;
-				span {
-					display: block;
-					color: $black_color!important;
-					strong {
-						color: $black_color!important;
-					}
-					a {
-						color: $black_color!important;
-					}
-				}
-			}
-		}
+  padding-top: 90px;
+  margin-top: -50px;
+  .contact_form_wrap {
+    padding: 0;
+  }
+  &:before {
+    background: $blue_color;
+  }
+  .contact_credits_wrap {
+    background: $white_color;
+    p {
+      padding: 25px 20px 40px 20px;
+      span {
+        display: block;
+        color: $black_color !important;
+        strong {
+          color: $black_color !important;
+        }
+        a {
+          color: $black_color !important;
+        }
+      }
+    }
+  }
 }

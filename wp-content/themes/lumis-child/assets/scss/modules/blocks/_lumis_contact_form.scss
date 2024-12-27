@@ -45,51 +45,8 @@
     }
   }
 }
-.wpcf7 input:not([type="submit"]),
-.wpcf7 select,
-.wpcf7 textarea {
-  //padding: 1.2em;
-  color: $black_color !important;
-  font-size: 20px;
-}
-.wpcf7 form > div,
-.wpcf7 form > p {
-  margin-bottom: 1.7em;
-}
 .contact_form_wrap {
   padding: 0;
-}
-.wpcf7-form {
-  .wpcf7-response-output {
-    border: 2px dashed $dark_orange_color !important;
-    color: $white_color !important;
-    font-size: 1.5em;
-    text-align: center;
-    float: left;
-    margin: 0 20px 2em;
-    // position: absolute;
-    // bottom: 0;
-    // right: 0;
-  }
-  .wpcf7-not-valid-tip {
-    color: #ff4403 !important;
-  }
-  .data_notice {
-    font-size: 14px;
-    line-height: 18px;
-    width: 78%;
-    float: left;
-    a {
-      color: $white_color !important;
-      &:hover,
-      &:focus {
-        color: $link_hover_color !important;
-      }
-    }
-  }
-  .wpcf7-textarea {
-    max-height: 240px;
-  }
 }
 .contact_credits_wrap {
   background: $white_color;

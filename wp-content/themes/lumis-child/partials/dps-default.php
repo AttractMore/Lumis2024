@@ -27,7 +27,7 @@ $output = "";
 		<? echo get_the_post_thumbnail()?></a>
 	</div>
 	<div class="post_details">
-		<span class="category-display"><span class="category-display-label"></span>
+		<span class="category-display"><span class="category-display-label">Topic(s): </span>
 			<? if ( ! empty( $categories ) ) {
 		  foreach( $categories as $category ) {
 			  $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
