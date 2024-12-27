@@ -138,8 +138,9 @@ get_header(); ?>
       while ($matching_posts->have_posts()) {
         $matching_posts->the_post();
         echo "<li class='matching-post'><h3 class='post-title'><a class='title' href='" . get_the_permalink() . "'>" . get_the_title() . "</a></h3>";
+        echo "<div class='post-content'>";
         if (has_post_thumbnail()) {
-          echo "<div class='post-content'><div class='post-image'><a class='image' href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a></div>";
+          echo "<div class='post-image'><a class='image' href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a></div>";
         }
         echo "<div class='excerpt-button'><p class='post-excerpt'>" . get_the_excerpt() . "</p>";
         echo "<p class='read-more-button-container'><a class='blue_button read-more' href='" . get_the_permalink() . "'>Read more</a></p></div></div></li><hr>";

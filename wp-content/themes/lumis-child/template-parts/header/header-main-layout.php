@@ -54,14 +54,13 @@
 					<?php astra_masthead_content(); ?>
 				</div><!-- Main Header Container -->
 			</div>
-      <?php $banner = get_field("banner", "option"); ?>
-      <?php if ($banner && is_front_page()): ?>
+      <?php if (is_front_page()): ?>
       <div id="hero-section" class="inverted_colors_section">
         <div class="hero-section-img">
-          <img src="<?php echo esc_url($banner["banner_icon"]); ?>" alt="<?php echo esc_html($banner["banner_text"]); ?>" />
+          <img src="/wp-content/uploads/2020/06/IconsLUMIS-Final-Header.svg" alt="We accelerate your clinical development" />
         </div>
         <div class="hero-section-text">
-          <h1><?php echo esc_html($banner["banner_text"]); ?></h1>
+          <h1>We accelerate your clinical development</h1>
         </div>
       </div>
       <?php endif; ?>		
