@@ -60,7 +60,7 @@
           <img src="/wp-content/uploads/2020/06/IconsLUMIS-Final-Header.svg" alt="We accelerate your clinical development" />
         </div>
         <div class="hero-section-text">
-          <h1>We accelerate your clinical development</h1>
+          <h1>Representing your medical innovation.<br>Empowering your product development.</h1>
         </div>
       </div>
       <?php endif; ?>		
