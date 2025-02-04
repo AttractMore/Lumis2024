@@ -1,11 +1,6 @@
 <?php
 /**
- * Template NAme: Home page template (2024)
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Template Name: Home page template (2024)
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -16,18 +11,34 @@
 get_header(); ?>
 
 <div id="primary" <?php astra_primary_class(); ?>>
+  <div id="hero-section" class="full-width mid-bg">
+    <!-- <div class="hero-section-img">
+      <img src="/wp-content/uploads/2020/06/IconsLUMIS-Final-Header.svg" alt="We accelerate your clinical development" />
+    </div> -->
+    <div class="hero-section-text wrap">
+      <h1 class="h2 white-text">Representing your medical innovation.<br>Empowering your product development.</h1>
+    </div>
+  </div>
 
   <section class="home-introduction">
     <?php the_content(); ?>
   </section>
 
-  <section class="services-section">
+  <section class="home-services-section full-width light-bg mb0">
+    <div class="home-services-section-container wrap">
     <?php if (have_rows("services_list")): ?>
       <?php while (have_rows("services_list")):
         the_row(); ?>
       <ul>
         <li>
-          <h2><?php echo get_sub_field("legal_title"); ?></h2>
+          <h2 class="flash-dark-orange"><?php echo get_sub_field("legal_title"); ?></h2>
+          <?php
+          $image = get_sub_field("legal_intro_image");
+          $size = "full";
+          echo '<figure class="intro-image">';
+          echo wp_get_attachment_image($image, $size);
+          echo "</figure>";
+          ?>
           <?php echo wp_kses_post(get_sub_field("legal_intro_text")); ?>
         </li>
         <?php if (have_rows("legal_service")): ?>
@@ -63,7 +74,14 @@ get_header(); ?>
       <?php while (have_rows("services_list")):
         the_row(); ?>
         <li>
-          <h2><?php echo get_sub_field("consulting_title"); ?></h2>
+          <h2 class="flash-dark-orange"><?php echo get_sub_field("consulting_title"); ?></h2>
+          <?php
+          $image = get_sub_field("consulting_intro_image");
+          $size = "full";
+          echo '<figure class="intro-image">';
+          echo wp_get_attachment_image($image, $size);
+          echo "</figure>";
+          ?>
           <?php echo wp_kses_post(get_sub_field("consulting_intro_text")); ?>
         </li>
         <?php if (have_rows("consulting_service")): ?>
@@ -95,12 +113,13 @@ get_header(); ?>
       <?php
       endwhile; ?>
     <?php endif; ?>
+    </div>
   </section>
 
   <?php echo do_shortcode("[standard-contact-form]"); ?>
 
   <section>
-    <h2>The latest from Lumis Content Hub</h2>
+    <h2 class="flash-dark-orange">The latest from Lumis Content Hub</h2>
     <?php echo do_shortcode(
       '[display-posts layout="default" posts_per_page="3" category_display="true" include_excerpt="true" excerpt_length="30" image_size="full" wrapper="div" wrapper_class="display-posts-listing image-left"]'
     ); ?>

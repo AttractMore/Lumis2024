@@ -54,16 +54,20 @@
 					<?php astra_masthead_content(); ?>
 				</div><!-- Main Header Container -->
 			</div>
-      <?php if (is_front_page()): ?>
-      <div id="hero-section" class="inverted_colors_section">
+      <?php
+//if (is_front_page()):
+?>
+      <!-- <div id="hero-section" class="inverted_colors_section">
         <div class="hero-section-img">
           <img src="/wp-content/uploads/2020/06/IconsLUMIS-Final-Header.svg" alt="We accelerate your clinical development" />
         </div>
         <div class="hero-section-text">
           <h1>Representing your medical innovation.<br>Empowering your product development.</h1>
         </div>
-      </div>
-      <?php endif; ?>		
+      </div> -->
+      <?php
+//endif;
+?>		
     </div><!-- ast-container -->
 		<?php astra_main_header_bar_bottom(); ?>
 	</div> <!-- Main Header Bar -->

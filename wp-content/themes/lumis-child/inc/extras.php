@@ -672,7 +672,7 @@ if (!function_exists("astra_site_branding_markup")) {
 				</div>
 				<!-- Navigation -->
 				<div class="lumis-top-menu home_link" style="display: none">
-					<ul id="menu-lumis-top-menu" class="menu">
+					<ul id="menu-lumis-top-menu-1" class="menu">
 						<li style="margin-right: 36px!important;" id="" class="menu-item menu-item-type-post_type menu-item-object-page"><a
 											href="/">Home</a></li>
 					</ul>

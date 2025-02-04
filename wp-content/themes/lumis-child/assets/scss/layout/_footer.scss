@@ -1,12 +1,12 @@
 .site-footer {
-  background: $dark_blue_color;
+  background: var(--dark-blue);
   .ast-footer-overlay {
     background: transparent;
   }
   .footer-adv-overlay {
     padding-top: 60px;
     padding-bottom: 120px;
-    background: $dark_blue_color;
+    background: var(--dark-blue);
   }
   .ast-small-footer {
     border: unset;
@@ -14,7 +14,7 @@
   /* Widgets */
   .footer-adv-widget {
     * {
-      color: $white_color;
+      color: var(--white);
 
       a {
         &:hover,
@@ -32,14 +32,12 @@
     #text-2 {
       p {
         a {
-          border-bottom: 2px solid #24a6cd;
+          border-bottom: 2px solid var(--petrol);
         }
       }
     }
     #text-3 {
       a {
-        //display: inline-block;
-        //float: left;
         img {
           width: 40px;
           height: 40px;
@@ -51,7 +49,7 @@
   }
   /* Footer Social */
   .social-icon {
-    color: #fff;
+    color: var(--white);
     /*margin-right: 15px;*/
   }
   .social-icon img {
@@ -61,51 +59,15 @@
   .social-icon:hover img {
     opacity: 0.6;
   }
-  ul.social-icons {
-    /*margin-top: 10px;*/
-  }
   .social-icons li {
     vertical-align: top;
     display: inline;
     height: 100px;
   }
   .social-icons a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
   }
-  // .fa-twitter-square {
-  //   /*padding:10px 12px;*/
-  //   -o-transition: 0.5s;
-  //   -ms-transition: 0.5s;
-  //   -moz-transition: 0.5s;
-  //   -webkit-transition: 0.5s;
-  //   transition: 0.5s;
-  //   /*background-color: #322f30;*/
-  // }
-  // .fa-twitter-square:hover,
-  // .fa-twitter-square:focus {
-  //   color: #24a6cd;
-  // }
-  // .fa-linkedin {
-  //   /*padding:10px 14px;*/
-  //   -o-transition: 0.5s;
-  //   -ms-transition: 0.5s;
-  //   -moz-transition: 0.5s;
-  //   -webkit-transition: 0.5s;
-  //   transition: 0.5s;
-  //   /*background-color: #322f30;*/
-  // }
-  // .fa-linkedin:hover,
-  // .fa-linkedin:focus {
-  //   color: #24a6cd;
-  // }
-  // .social-icons {
-  //   li {
-  //     .fab {
-  //       font-size: 40px;
-  //     }
-  //   }
-  // }
   #menu-lumis-footer-menu {
     .current-menu-item:before {
       border: none;

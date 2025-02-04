@@ -11,8 +11,8 @@ function standard_contact_form_callback()
   $phone = esc_html($contact["contact_person"]["phone"]);
   $email = esc_html($contact["contact_person"]["email"]);
 
-  $standard_contact_form .= '<section id="services-contact-section" class="services-contact-form reversed-colours-section">';
-  $standard_contact_form .= "<h2>Contact our experts to find out more!</h2>";
+  $standard_contact_form .= '<section id="services-contact-section" class="services-contact-form full-width mid-bg"><div class="wrap">';
+  $standard_contact_form .= "<h2 class='white-text flash-mid-grey'>Contact our experts to find out more!</h2>";
   $standard_contact_form .= '<article class="form-plus-contact">';
   $standard_contact_form .= '<div class="contact-form">';
   $standard_contact_form .= do_shortcode("[formidable id=1]");
@@ -27,7 +27,7 @@ function standard_contact_form_callback()
   $standard_contact_form .= "</aside>";
   $standard_contact_form .= "</div>";
   $standard_contact_form .= "</article>";
-  $standard_contact_form .= "</section>";
+  $standard_contact_form .= "</div></section>";
 
   return $standard_contact_form;
 }

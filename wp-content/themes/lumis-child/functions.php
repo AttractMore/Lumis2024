@@ -295,3 +295,26 @@ function add_newsletter_signup()
     echo "</aside>";
   }
 }
+
+function display_team_member_details($linkedin_url, $email_address)
+{
+  the_post_thumbnail("full");
+  echo "<dialog class='wrap mid-bg'><button autofocus>&#x2716</button>";
+  the_post_thumbnail("full");
+  echo "<h3 class='white-text'>" . get_the_title() . "</h3>";
+  echo "<p class='role white-text'>" . get_field("role") . "</p>";
+  the_content();
+  echo "</dialog>";
+  echo "<h3>" . get_the_title() . "</h3>";
+  echo "<p class='role'>" . get_field("role") . "</p>";
+  if (!empty($linkedin_url) || !empty($email_address)) {
+    echo "<ul class='contact-group'>";
+    if ($linkedin_url) {
+      echo "<li><a href='" . $linkedin_url . "'><svg class='linkedin'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#linkedin'></use></svg></a></li>";
+    }
+    if ($email_address) {
+      echo "<li><a href='mailto:" . $email_address . "'><svg class='envelope'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#envelope'></use></svg></a></li>";
+    }
+    echo "</ul>";
+  }
+}

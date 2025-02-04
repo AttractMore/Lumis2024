@@ -115,16 +115,30 @@ General
   margin: 0;
   padding: 0;
 }
-
+html {
+  font-size: 100%;
+}
 body {
   background: $white_color !important;
-  //padding-top: 42px;
   color: $black_color;
+  min-width: 320px;
 }
-
+html,
+body {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+#content {
+  margin-top: 64px;
+}
+@media screen and (min-width: 991px) {
+  #content {
+    margin-top: 170px;
+  }
+}
 #primary {
-  padding-top: 190px !important;
-  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  margin: 0 !important;
 }
 .home {
   #primary {
@@ -135,7 +149,57 @@ body {
   background-color: $blue_color !important;
   background: $blue_color !important;
 }
+.full-width {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  max-width: 100vw;
+}
+.light-bg {
+  background-color: var(--light-blue);
+}
+.mid-bg {
+  background-color: var(--petrol);
+}
+.light-grey-bg {
+  background-color: var(--light-grey);
+}
 
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb15 {
+  margin-bottom: 1.5em !important;
+}
+.mb2 {
+  margin-bottom: 2em !important;
+}
+.mb25 {
+  margin-bottom: 2.5em !important;
+}
+.mb3 {
+  margin-bottom: 3em !important;
+}
+.mt2 {
+  margin-top: 2em !important;
+}
+.pb15 {
+  padding-bottom: 1.5em !important;
+}
+
+.white-text {
+  color: var(--white) !important;
+}
+.wrap {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
 .inverted_colors_section {
   position: relative;
   z-index: 1;
@@ -159,6 +223,12 @@ body {
     background-color: $grey_color;
   }
 }
+@media (max-width: 544px) {
+  .ast-separate-container #content .ast-container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
 
 @media (min-width: 922px) {
   .ast-container {
@@ -168,4 +238,16 @@ body {
 
 .wp-block-group .has-background {
   padding: 0;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }

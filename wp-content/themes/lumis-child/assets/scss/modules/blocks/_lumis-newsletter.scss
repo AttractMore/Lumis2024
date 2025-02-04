@@ -1,19 +1,19 @@
 .newsletter-signup {
   text-align: center;
-  background-color: $blue_color;
+  background-color: var(--petrol);
   padding: 2em;
   margin-bottom: 2em;
   h3,
   p,
   label {
-    color: $white_color;
+    color: var(--white);
   }
   h3,
   p.before-form {
     margin-bottom: 0.5em;
   }
   a {
-    color: $white_color !important;
+    color: var(--white) !important;
     &:hover,
     &:focus {
       color: $link_hover_color !important;
@@ -58,19 +58,22 @@
     border-color: red;
   }
   button {
-    background-color: $light_orange_color;
-    color: $black_color;
-    margin: 4px 2px;
-    font-size: 20px;
+    background-color: var(--white);
+    // border: 2px solid var(--orange);
+    color: var(--orange) !important;
+    padding: 0.5em 0.75em;
+    text-align: center;
     text-decoration: none;
-    border-radius: 4px !important;
-    padding: 10px 11px !important;
-    font-family: Montserrat, sans-serif !important;
-    line-height: 24px !important;
-    transition: all 0.2s linear;
+    font-size: 1.25rem;
+    font-family: $font_family_montserrat;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: background-color 0.4s ease-in-out;
     &:hover,
     &:focus {
-      background-color: $dark_orange_color;
+      color: var(--white) !important;
+      background: var(--orange);
+      // border-color: var(--orange);
     }
   }
 }

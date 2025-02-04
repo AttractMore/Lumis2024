@@ -14,6 +14,7 @@
   textarea {
     color: $black_color !important;
     font-size: 20px;
+    border-radius: $radius;
   }
   input {
     max-width: 400px;
@@ -45,7 +46,7 @@
         flex: 0 1 calc(100% - 180px);
       }
       > div {
-        flex: 0 0 150px;
+        flex: 0 0 160px;
         margin-bottom: 0;
       }
     }

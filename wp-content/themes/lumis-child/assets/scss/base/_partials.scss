@@ -24,7 +24,7 @@
     font-family: $font_family_montserrat;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px !important;
+    border-radius: $radius;
     &:hover,
     &:focus {
       color: $white_color !important;
@@ -52,7 +52,7 @@
     font-family: $font_family_montserrat;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px !important;
+    border-radius: $radius;
     &:hover,
     &:focus {
       color: $black_color !important;
@@ -61,7 +61,7 @@
   }
   .lumis_button {
     a {
-      border-radius: 4px !important;
+      border-radius: $radius;
     }
   }
 }
@@ -245,19 +245,19 @@ a.skip-main:active {
   }
 }
 
-.grey-background-section {
-  position: relative;
-  z-index: 1;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100vw;
-    background: #e5e5e5;
-    bottom: 0;
-    z-index: -1;
-  }
-}
+// .grey-background-section {
+//   position: relative;
+//   z-index: 1;
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     height: 100%;
+//     width: 100vw;
+//     background: #e5e5e5;
+//     bottom: 0;
+//     z-index: -1;
+//   }
+// }

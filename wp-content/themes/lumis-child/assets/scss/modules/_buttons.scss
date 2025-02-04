@@ -1,69 +1,98 @@
 .lumis_button {
-	a {
-		border: none;
-		padding: 10px 11px!important;
-		text-align: center;
-		line-height: 24px!important;
-		font-family: Montserrat,sans-serif!important;
-		margin: 4px 2px;
-		font-size: 20px;
-		cursor: pointer;
-		text-decoration: none;
-		border-radius: 4px!important;
-	}
+  a {
+    border: none;
+    padding: 10px 11px !important;
+    text-align: center;
+    line-height: 24px !important;
+    font-family: Montserrat, sans-serif !important;
+    margin: 4px 2px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: $radius;
+  }
 }
 .lumis_button_orange {
-	width: fit-content;
-	a {
-		color: $black_color!important;
-		border-radius: 4px!important;
-	}
-	&:hover a, &:focus a {
-		background-color: $dark_orange_color!important;
-		color: $black_color!important;
-	}
+  width: fit-content;
+  a {
+    color: $black_color !important;
+    border-radius: 4px !important;
+  }
+  &:hover a,
+  &:focus a {
+    background-color: $dark_orange_color !important;
+    color: $black_color !important;
+  }
 }
 .lumis_button_blue {
-	width: fit-content;
-	a {
-		color: $white_color!important;
-		border-radius: 4px!important;
-	}
-	&:hover a, &:focus a {
-		background-color: $light_blue_color!important;
-		color: $white_color!important;
-	}
+  width: fit-content;
+  a {
+    color: $white_color !important;
+    border-radius: 4px !important;
+  }
+  &:hover a,
+  &:focus a {
+    background-color: $light_blue_color !important;
+    color: $white_color !important;
+  }
 }
 .lumis_button_orange {
-	.wp-block-button__link {
-		&:hover, &:focus {
-			background: $dark_orange_color!important;
-			color: $black_color!important;
-		}
-	}
+  .wp-block-button__link {
+    &:hover,
+    &:focus {
+      background: $dark_orange_color !important;
+      color: $black_color !important;
+    }
+  }
 }
-
 
 .lumis-top-menu li:hover > ul,
 .lumis-top-menu li.focus > ul {
-	left: auto;
-	right: 0;
+  left: auto;
+  right: 0;
 }
 
 /* The :focus-within selector is not recognized by IE/Edge. */
 .lumis-top-menu li:focus-within > ul {
-	left: auto;
-	right: 0;
+  left: auto;
+  right: 0;
 }
 
 .lumis-top-menu ul ul li:hover > ul,
 .lumis-top-menu ul ul li.focus > ul {
-	left: auto;
-	right: 100%;
+  left: auto;
+  right: 100%;
 }
 
 /* The :focus-within selector is not recognized by IE/Edge. */
 .lumis-top-menu ul ul li:focus-within > ul {
-	left: auto;
-	right: 100%;
+  left: auto;
+  right: 100%;
+}
+
+.site-content {
+  a,
+  button {
+    &.primary-button {
+      background-color: var(--white);
+      border: 2px solid var(--orange);
+      color: var(--orange) !important;
+      padding: 0.5em 0.75em;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-family: $font_family_montserrat;
+      font-weight: 600;
+      border-radius: var(--radius);
+      transition: background-color 0.4s ease-in-out;
+      &:hover,
+      &:focus {
+        color: var(--white) !important;
+        background: var(--orange);
+      }
+    }
+    &.button-no-border {
+      border: 0;
+    }
+  }
 }

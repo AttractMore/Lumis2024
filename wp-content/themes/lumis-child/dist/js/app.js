@@ -128,34 +128,34 @@ function throttle(fn, wait) {
 }
 
 /* Validation Events for changing response CSS classes */
-document.addEventListener(
-  "wpcf7invalid",
-  function (event) {
-    $(".wpcf7-response-output").addClass("alert alert-danger");
-  },
-  false
-);
-document.addEventListener(
-  "wpcf7spam",
-  function (event) {
-    $(".wpcf7-response-output").addClass("alert alert-warning");
-  },
-  false
-);
-document.addEventListener(
-  "wpcf7mailfailed",
-  function (event) {
-    $(".wpcf7-response-output").addClass("alert alert-warning");
-  },
-  false
-);
-document.addEventListener(
-  "wpcf7mailsent",
-  function (event) {
-    $(".wpcf7-response-output").addClass("alert alert-success");
-  },
-  false
-);
+// document.addEventListener(
+//   "wpcf7invalid",
+//   function (event) {
+//     $(".wpcf7-response-output").addClass("alert alert-danger");
+//   },
+//   false
+// );
+// document.addEventListener(
+//   "wpcf7spam",
+//   function (event) {
+//     $(".wpcf7-response-output").addClass("alert alert-warning");
+//   },
+//   false
+// );
+// document.addEventListener(
+//   "wpcf7mailfailed",
+//   function (event) {
+//     $(".wpcf7-response-output").addClass("alert alert-warning");
+//   },
+//   false
+// );
+// document.addEventListener(
+//   "wpcf7mailsent",
+//   function (event) {
+//     $(".wpcf7-response-output").addClass("alert alert-success");
+//   },
+//   false
+// );
 
 /**************************************
     ACCORDION ON CAREERS
@@ -259,4 +259,34 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
       }
     }
   }
+}
+
+/**
+ * Control the dialog element on the About (company) pages
+ */
+// const dialog = document.querySelectorAll(".about dialog");
+// const showButton = document.querySelectorAll(".team-member img");
+// const closeButton = document.querySelectorAll("dialog button");
+
+// // "Show the dialog" button opens the dialog modally
+// showButton.addEventListener("click", (event) => {
+//   element = event.currentTarget;
+//   dialog.showModal();
+// });
+
+// // "Close" button closes the dialog
+// closeButton.addEventListener("click", () => {
+//   dialog.close();
+// });
+if (document.body.classList.contains("page-template-about-page")) {
+  document.querySelectorAll(".team-member img").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      item.nextElementSibling.showModal();
+    });
+  });
+  document.querySelectorAll(".team-member dialog button").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      item.parentElement.close();
+    });
+  });
 }

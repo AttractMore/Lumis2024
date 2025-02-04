@@ -1,3 +1,14 @@
+// .main-page-header {
+//   background-color: var(--petrol);
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//   }
+//   .header-horizontal-menu {
+//     display: none;
+//   }
+// }
 header#masthead {
   //background: $blue_color;
   background: linear-gradient(128deg, $blue_color 10%, #0e576d 52%);
@@ -152,7 +163,7 @@ header#masthead {
 }
 /* Top nav test css */
 .topnav,
-#menu-lumis-top-menu {
+#menu-lumis-top-menu-1 {
   //overflow: hidden;
   //background-color: #f1f1f1;
   list-style: disc;
@@ -163,7 +174,7 @@ header#masthead {
 }
 
 .topnav li,
-#menu-lumis-top-menu li {
+#menu-lumis-top-menu-1 li {
   * {
     transition: font-weight 0.1s ease-in-out !important;
   }
@@ -360,9 +371,9 @@ header#masthead {
 }
 
 .topnav li:hover,
-#menu-lumis-top-menu li:hover,
+//li:hover,
 .topnav li:focus,
-#menu-lumis-top-menu li:focus {
+#menu-lumis-top-menu-1 li:focus {
   text-align: center;
   transition: font-weight 0.1s ease-in-out !important;
   //height: 6px;
@@ -384,42 +395,42 @@ header#masthead {
   }
 }
 
-#hero-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
-  padding-top: 110px;
-  .hero-section-img {
-    flex: 0 1 33%;
-  }
-  .hero-section-text {
-    flex: 0 1 62%;
-  }
-  h1 {
-    font-family: $font_family_montserrat;
-    font-size: 24px !important;
-    line-height: 28px !important;
-    letter-spacing: -0.5px;
-  }
-}
-@media screen and (min-width: 800px) {
-  #hero-section {
-    h1 {
-      font-size: 59px !important;
-      line-height: 72px !important;
-    }
-  }
-}
+// #hero-section {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 60px;
+//   padding-top: 110px;
+//   .hero-section-img {
+//     flex: 0 1 33%;
+//   }
+//   .hero-section-text {
+//     flex: 0 1 62%;
+//   }
+//   h1 {
+//     font-family: $font_family_montserrat;
+//     font-size: 24px !important;
+//     line-height: 28px !important;
+//     letter-spacing: -0.5px;
+//   }
+// }
+// @media screen and (min-width: 800px) {
+//   #hero-section {
+//     h1 {
+//       font-size: 59px !important;
+//       line-height: 72px !important;
+//     }
+//   }
+// }
 
-@media screen and (min-width: 990px) {
-  #hero-section {
-    margin-bottom: 100px;
-    padding-top: 230px;
-    .hero-section-img {
-      flex: 0 1 25%;
-    }
-    .hero-section-text {
-      flex: 0 1 70%;
-    }
-  }
-}
+// @media screen and (min-width: 990px) {
+//   #hero-section {
+//     margin-bottom: 100px;
+//     padding-top: 230px;
+//     .hero-section-img {
+//       flex: 0 1 25%;
+//     }
+//     .hero-section-text {
+//       flex: 0 1 70%;
+//     }
+//   }
+// }

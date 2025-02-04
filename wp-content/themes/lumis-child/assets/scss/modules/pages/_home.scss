@@ -2,19 +2,36 @@
   #primary {
     margin: 4em 0 !important;
   }
-}
-.site-content {
-  .home-introduction,
-  .services-section {
-    padding: 0;
+  #content {
+    margin-top: 112px;
+  }
+  .site-content {
+    .home-introduction {
+      padding: 0;
+    }
   }
 }
-.services-section {
+#hero-section {
+  margin-top: 0;
+  margin-bottom: 5em;
+  padding: 0;
+  h1 {
+    padding: 1em 0;
+  }
+}
+.home-services-section {
+  padding-top: 2em;
   ul {
     margin-left: 0 !important;
   }
   li {
     margin-bottom: 3em !important;
+    .intro-image {
+      img {
+        border-radius: var(--radius);
+        margin-bottom: 2em;
+      }
+    }
     aside {
       display: grid;
       grid-template-columns: 80px 1fr;
@@ -36,11 +53,12 @@
           padding-left: 0.25em;
           width: 3em;
           height: 1.5em;
+          stroke: var(--black);
         }
         &:hover {
           svg {
-            fill: $light_blue_color;
-            stroke: $light_blue_color;
+            fill: var(--petrol);
+            stroke: var(--petrol);
           }
         }
       }
@@ -52,14 +70,18 @@
     img {
       max-width: 80px;
       border-radius: 8px;
+      background-color: var(--white);
+      padding: 0.5em;
+      display: block;
+      margin: 0 auto;
     }
   }
-  .legal-service img {
-    background-color: $light_blue_color;
-  }
-  .consulting-service img {
-    background-color: $dark_orange_color;
-  }
+  // .legal-service img {
+  //   background-color: $light_blue_color;
+  // }
+  // .consulting-service img {
+  //   background-color: $dark_orange_color;
+  // }
   h3 {
     padding: 0;
     font-size: 22px !important;
@@ -68,7 +90,7 @@
 }
 
 @media screen and (min-width: 700px) {
-  .services-section {
+  .home-services-section {
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -112,7 +134,7 @@
   }
 }
 @media screen and (min-width: 991px) {
-  .services-section {
+  .home-services-section {
     h3 {
       font-size: 30px !important;
     }

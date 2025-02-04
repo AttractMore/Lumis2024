@@ -1,6 +1,4 @@
 (function ($) {
-  // "use strict"; // Start of use strict
-  // "use strict"; // Start of use strict
   $.fn.extend({
     // Define the threeBarToggle function by extending the jQuery object
     threeBarToggle: function (options) {
@@ -99,7 +97,7 @@ var mobile_nav = document.querySelector("#mobile_menu");
 var mobile_nav_button = document.querySelector("#menu-toggle");
 
 function stickyHeaderOnScroll() {
-  if (window.pageYOffset > 220) {
+  if (window.scrollY > 220) {
     // header.classList.add("sticky_desktop_header");
     logo.classList.add("small");
     // rightcol.classList.add("rightcolpad");
@@ -203,3 +201,20 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
     }
   }
 }
+
+/**
+ * Control the dialog element on the About (company) pages
+ */
+const dialog = document.querySelectorAll(".about dialog");
+const showButton = document.querySelectorAll(".team-member img");
+const closeButton = document.querySelectorAll("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});

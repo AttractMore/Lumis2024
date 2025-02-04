@@ -1,13 +1,18 @@
-/**
- * Put below your own bootstrap variables
- *
- * Bootstrap variables list: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
- * Set your own theme: https://pikock.github.io/bootstrap-magic/app/index.html#!/editor
- */
-
-/*
-Colors
- */
+/******
+Colours
+*********/
+:root {
+  --light-blue: #d9ecf1;
+  --petrol: #0081a2;
+  --dark-blue: #1c4153;
+  --orange: #ff3702;
+  --grey: #ababab;
+  --light-grey: #e5e5e5;
+  --black: #000;
+  --white: #fff;
+  --radius: 1em;
+  --radius-small: 0.25em;
+}
 $black_color: #000000;
 $white_color: #ffffff;
 $blue_color: #0e576d;
@@ -15,7 +20,6 @@ $light_blue_color: #0080a1;
 $dark_blue_color: #064254;
 $dark_orange_color: #e54d1d;
 $light_orange_color: #ffaa3d;
-$yellow_color: #feee4e;
 $link_hover_color: #24a6cd;
 $submenu_link_hover_color: #00a9cf;
 $blockquote_blue_color: #106980;
@@ -36,3 +40,5 @@ $font_family_montserrat_light: "Montserrat Light", sans-serif;
 $font_family_montserrat: "Montserrat", sans-serif;
 $font_montserrat_medium: "Montserrat Medium", sans-serif;
 $font_montserrat_bold: "Montserrat Bold", sans-serif;
+
+$radius: 1em;
