@@ -279,6 +279,30 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
 //   dialog.close();
 // });
 if (document.body.classList.contains("page-template-about-page")) {
+  // See https://tympanus.net/codrops/2021/10/06/how-to-implement-and-style-the-dialog-element/
+
+  const dialog = document.querySelector("dialog");
+
+  if (typeof dialog.showModal !== "function") {
+    // Load polyfill script
+    const polyfill = document.createElement("script");
+    polyfill.type = "text/javascript";
+    polyfill.src = "/dist/js/dialog-polyfill.js"; // example path
+    document.body.append(polyfill);
+
+    // Register polyfill on dialog element once the script has loaded
+    polyfill.onload = () => {
+      dialogPolyfill.registerDialog(dialog);
+    };
+
+    // Load polyfill CSS styles
+    const polyfillStyles = document.createElement("link");
+
+    polyfillStyles.rel = "stylesheet";
+    polyfillStyles.href = "/dist/css/dialog-polyfill.css";
+    document.head.append(polyfillStyles);
+  }
+
   document.querySelectorAll(".team-member img").forEach((item) => {
     item.addEventListener("click", (event) => {
       item.nextElementSibling.showModal();
@@ -286,7 +310,7 @@ if (document.body.classList.contains("page-template-about-page")) {
   });
   document.querySelectorAll(".team-member dialog button").forEach((item) => {
     item.addEventListener("click", (event) => {
-      item.parentElement.close();
+      item.parentElement.parentElement.close();
     });
   });
 }
