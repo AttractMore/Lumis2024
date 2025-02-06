@@ -92,7 +92,9 @@ header#masthead {
         width: 100%;
         //background: #0e576d;
         z-index: 10;
-        background: linear-gradient(176.43deg, #064f65 7.53%, #0e576d 69.46%);
+        // background: linear-gradient(176.43deg, #064f65 7.53%, #0e576d 69.46%);
+        background-color: var(--dark-blue);
+
         //top: 0;
         /* left: auto; */
         /* right: auto; */

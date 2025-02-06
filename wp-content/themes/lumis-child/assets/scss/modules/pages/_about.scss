@@ -3,13 +3,23 @@
   backdrop-filter: blur(2px);
 }
 .about {
+  .management-team {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+    gap: 2rem;
+  }
   .team-member {
+    display: flex;
+    flex-direction: column;
     > img {
       margin-bottom: 1em;
       border-radius: var(--radius);
       cursor: pointer;
     }
-    margin-bottom: 1em;
     svg {
       fill: var(--black);
       width: 1em;
@@ -19,7 +29,7 @@
       margin-bottom: 0.5em;
     }
     .contact-group {
-      margin: 0 0 1em;
+      margin: auto 0 1em;
       padding: 0;
       display: flex;
       li {

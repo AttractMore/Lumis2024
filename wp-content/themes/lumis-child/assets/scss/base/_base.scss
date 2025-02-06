@@ -128,17 +128,18 @@ body {
   height: 100%;
   -webkit-overflow-scrolling: touch;
 }
-#content {
-  margin-top: 64px;
-}
-@media screen and (min-width: 991px) {
-  #content {
-    margin-top: 170px;
-  }
-}
+// #content {
+//   margin-top: 64px;
+// }
+// @media screen and (min-width: 991px) {
+//   #content {
+//     margin-top: 170px;
+//   }
+// }
 #primary {
   padding-top: 0 !important;
   margin: 0 !important;
+  float: none;
 }
 .home {
   #primary {

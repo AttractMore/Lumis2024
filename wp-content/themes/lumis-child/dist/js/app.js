@@ -287,7 +287,7 @@ if (document.body.classList.contains("page-template-about-page")) {
     // Load polyfill script
     const polyfill = document.createElement("script");
     polyfill.type = "text/javascript";
-    polyfill.src = "/dist/js/dialog-polyfill.js"; // example path
+    polyfill.src = "/wp-content/themes/lumis-child/dist/js/dialog-polyfill.js";
     document.body.append(polyfill);
 
     // Register polyfill on dialog element once the script has loaded
@@ -299,7 +299,7 @@ if (document.body.classList.contains("page-template-about-page")) {
     const polyfillStyles = document.createElement("link");
 
     polyfillStyles.rel = "stylesheet";
-    polyfillStyles.href = "/dist/css/dialog-polyfill.css";
+    polyfillStyles.href = "/wp-content/themes/lumis-child/dist/css/dialog-polyfill.css";
     document.head.append(polyfillStyles);
   }
 

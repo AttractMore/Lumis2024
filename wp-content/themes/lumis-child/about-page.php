@@ -67,6 +67,7 @@ get_header(); ?>
         ?>
       </div>
     </section>
+    <?php echo do_shortcode("[standard-contact-form]"); ?>
   </article>
 </div><!-- #primary -->
 

@@ -11,12 +11,12 @@
 get_header(); ?>
 
 <div id="primary" <?php astra_primary_class(); ?>>
-  <div id="hero-section" class="full-width mid-bg">
-    <!-- <div class="hero-section-img">
-      <img src="/wp-content/uploads/2020/06/IconsLUMIS-Final-Header.svg" alt="We accelerate your clinical development" />
-    </div> -->
+
+  <div id="hero-section" class="hero-section full-width">
+    <div class="hero-section-overlay"></div>
+    <img class="hero-section-graphic" src="/wp-content/themes/lumis-child/dist/img/home-page-graphic-with-gradient-1.jpg" alt="" decoding="async">
     <div class="hero-section-text wrap">
-      <h1 class="h2 white-text">Representing your medical innovation.<br>Empowering your product development.</h1>
+      <h1 class="white-text">Representing your medical innovation.<br>Empowering your product development.</h1>
     </div>
   </div>
 
