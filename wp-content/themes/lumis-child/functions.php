@@ -225,11 +225,21 @@ add_filter("nav_menu_link_attributes", "wcag_nav_menu_link_attributes", 10, 4);
 
 //require_once "../../themes/lumis-child/";
 
+// add_filter("body_class", "am_body_classes");
+// function am_body_classes($classes)
+// {
+//   if (is_page("careers")) {
+//     $classes[] = "careers";
+//   }
+//   return $classes;
+// }
 add_filter("body_class", "am_body_classes");
 function am_body_classes($classes)
 {
-  if (is_page("careers")) {
-    $classes[] = "careers";
+  global $post;
+  if (in_array("page", $classes, true)) {
+    $page_slug = $post->post_name;
+    $classes[] = $page_slug;
   }
   return $classes;
 }

@@ -118,11 +118,13 @@ get_header(); ?>
 
   <?php echo do_shortcode("[standard-contact-form]"); ?>
 
-  <section>
-    <h2 class="flash-dark-orange">The latest from Lumis Content Hub</h2>
-    <?php echo do_shortcode(
-      '[display-posts layout="default" posts_per_page="3" category_display="true" include_excerpt="true" excerpt_length="30" image_size="full" wrapper="div" wrapper_class="display-posts-listing image-left"]'
-    ); ?>
+  <section class="latest-blogs full-width">
+    <div class="latest-blogs-container wrap">
+      <h2 class="flash-dark-orange">The latest from Lumis Content Hub</h2>
+      <?php echo do_shortcode(
+        '[display-posts layout="default" post_type="post, videos" posts_per_page="3" category_display="true" include_excerpt="true" excerpt_length="30" image_size="full" wrapper="div" wrapper_class="display-posts-listing image-left"]'
+      ); ?>
+    </div>
   </section>
   <?php astra_primary_content_bottom(); ?> <!-- needed for inclusion of newletter signup block -->
 

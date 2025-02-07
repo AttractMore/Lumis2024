@@ -14,6 +14,10 @@ get_header(); ?>
   <article>
     <section class="about full-width">
       <div class="about-container wrap">
+        <header class="entry-header">
+          <h1 class="entry-title" itemprop="headline"><?php echo the_title(); ?></h1>
+        </header>
+
         <?php the_content(); ?>
         <?php
         $company = get_post_field("post_name", get_post());

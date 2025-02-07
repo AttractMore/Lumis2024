@@ -128,14 +128,59 @@ body {
   height: 100%;
   -webkit-overflow-scrolling: touch;
 }
-// #content {
-//   margin-top: 64px;
-// }
-// @media screen and (min-width: 991px) {
-//   #content {
-//     margin-top: 170px;
-//   }
-// }
+#content {
+  margin-top: 4em;
+}
+body.blog,
+body.post-type-archive-videos,
+body.single,
+body.glossary,
+body.events,
+body.careers,
+body.legal-notice,
+body.privacy-policy,
+body.archive.category {
+  #content {
+    margin-top: 6em;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  #content {
+    margin-top: 10.6em;
+  }
+  body.blog,
+  body.post-type-archive-videos,
+  body.single,
+  body.glossary,
+  body.events,
+  body.careers,
+  body.legal-notice,
+  body.privacy-policy,
+  body.archive.category {
+    #content {
+      margin-top: 14em;
+    }
+  }
+}
+@media screen and (min-width: 1199px) {
+  #content {
+    margin-top: 11em;
+  }
+  body.blog,
+  body.post-type-archive-videos,
+  body.single,
+  body.glossary,
+  body.events,
+  body.careers,
+  body.legal-notice,
+  body.privacy-policy,
+  body.archive.category {
+    #content {
+      margin-top: 15em;
+    }
+  }
+}
 #primary {
   padding-top: 0 !important;
   margin: 0 !important;
@@ -200,6 +245,9 @@ body {
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+main + article {
+  margin-top: 14em;
 }
 .inverted_colors_section {
   position: relative;

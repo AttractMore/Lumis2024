@@ -6,6 +6,7 @@ h1,
   font-size: clamp(2rem, 1.33rem + 3.333vw, 3.75rem) !important;
   line-height: 1.2 !important;
   color: $black_color;
+  text-wrap: balance;
 }
 h2,
 .h2 {

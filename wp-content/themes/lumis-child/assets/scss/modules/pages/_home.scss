@@ -1,6 +1,6 @@
 .home {
   #primary {
-    margin: 4em 0 !important;
+    margin-bottom: 4em !important;
   }
   // #content {
   //   margin-top: 112px;
@@ -47,20 +47,21 @@
     }
   }
 }
-@media screen and (min-width: 991px) {
-  .hero-section {
-    margin-top: 6.7rem;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .hero-section {
-    margin-top: 7rem;
-  }
-}
+// @media screen and (min-width: 991px) {
+//   .hero-section {
+//     margin-top: 6.7rem;
+//   }
+// }
+// @media screen and (min-width: 1199px) {
+//   .hero-section {
+//     margin-top: 7rem;
+//   }
+// }
 .home-services-section {
   padding-top: 2em;
   ul {
     margin-left: 0 !important;
+    margin-bottom: 0;
   }
   li {
     margin-bottom: 3em !important;
@@ -175,6 +176,21 @@
   .home-services-section {
     h3 {
       font-size: 30px !important;
+    }
+  }
+}
+
+.latest-blogs {
+  padding-top: 3em;
+  .listing-item {
+    margin-bottom: 2em !important;
+  }
+  .post-title {
+    margin-bottom: 0.5em !important;
+  }
+  .excerpt {
+    p {
+      margin-top: 1.5em;
     }
   }
 }

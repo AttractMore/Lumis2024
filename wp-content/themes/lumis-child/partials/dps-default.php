@@ -21,7 +21,7 @@ $output = "";
 ?>
 
 <div class="listing-item large ">
-  <h2 class="post-title h4"><a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a></h2>
+  <h2 class="post-title h3"><a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a></h2>
 	<div class="post_image desktop_blog_list">
 		<a class="image" href="<? echo get_permalink() ?>">
 		<? echo get_the_post_thumbnail()?></a>
@@ -43,7 +43,7 @@ $output = "";
 		<span class="excerpt"><? echo get_the_excerpt()?>
 			<span class="excerpt-more"> …
 				<p class="">
-					<a class="read-more blue_button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
+					<a class="read-more primary-button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
 						<span class="screen-reader-text"><? echo get_the_title()?>
 						</span>Read More</a>
 				</p></span></span>

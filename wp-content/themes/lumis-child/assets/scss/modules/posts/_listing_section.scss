@@ -7,9 +7,9 @@
     .post-title {
       .title {
         font-family: $font_family_prompt_light;
-        font-size: 36px;
-        line-height: 45px;
-        color: $blue_color !important;
+        // font-size: 36px;
+        // line-height: 45px;
+        // color: $blue_color !important;
         border-bottom: 0;
       }
     }
@@ -48,10 +48,13 @@
         font-size: 20px;
         line-height: 30px;
         .excerpt-more {
+          p {
+            margin-top: 2em;
+          }
           .read-more {
-            margin-top: 35px;
-            width: 136px;
-            border-radius: 2px;
+            // margin-top: 35px;
+            // width: 136px;
+            // border-radius: 2px;
             //float: left;
             //display: block;
             a {

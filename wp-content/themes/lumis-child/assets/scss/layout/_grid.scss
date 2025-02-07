@@ -1,54 +1,54 @@
-.site-content {
-  section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100%;
-      width: 100vw;
-      z-index: -1;
-    }
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    h2 {
-      margin-bottom: 50px;
-    }
-  }
-}
+// .site-content {
+//   section {
+//     padding-top: 50px;
+//     padding-bottom: 50px;
+//     margin-bottom: 50px;
+//     position: relative;
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       height: 100%;
+//       width: 100vw;
+//       z-index: -1;
+//     }
+//     &:after {
+//       content: "";
+//       display: table;
+//       clear: both;
+//     }
+//     &:last-of-type {
+//       margin-bottom: 0;
+//     }
+//     h2 {
+//       margin-bottom: 50px;
+//     }
+//   }
+// }
 
-.inverted_colors_section {
-  * {
-    color: $white_color !important;
-  }
-  a {
-    color: $white_color !important;
-  }
-  h2 {
-    &:before {
-      content: "";
-      position: absolute;
-      width: 42px;
-      height: 42px;
-      border: solid $light_orange_color;
-      border-width: 0 0 10px 10px;
-      border-bottom-left-radius: 16px;
-      bottom: -12px;
-      left: 0;
-    }
-  }
-}
+// .inverted_colors_section {
+//   * {
+//     color: $white_color !important;
+//   }
+//   a {
+//     color: $white_color !important;
+//   }
+//   h2 {
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       width: 42px;
+//       height: 42px;
+//       border: solid $light_orange_color;
+//       border-width: 0 0 10px 10px;
+//       border-bottom-left-radius: 16px;
+//       bottom: -12px;
+//       left: 0;
+//     }
+// //   }
+// }
 
 //.background_section {
 //	position: relative;

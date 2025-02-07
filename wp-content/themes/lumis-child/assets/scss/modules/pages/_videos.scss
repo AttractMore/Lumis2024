@@ -3,7 +3,7 @@
     .listing-item {
       margin-bottom: 5em;
       .post_details {
-        float:none;
+        float: none;
         width: 93%;
         padding: 0;
         .title {
@@ -15,6 +15,7 @@
         float: none;
         width: 93%;
         margin-bottom: 15px;
+        margin-top: 0.5em;
       }
     }
   }
@@ -41,7 +42,8 @@ body.single-videos {
     margin-bottom: 1.5em;
   }
 }
-.post-type-archive-videos, .tax-video_categories {
+.post-type-archive-videos,
+.tax-video_categories {
   #primary {
     width: 100%;
   }
@@ -59,7 +61,7 @@ body.single-videos {
   }
   &.nav-next {
     &::after {
-       opacity: 0.5;
+      opacity: 0.5;
     }
   }
 }

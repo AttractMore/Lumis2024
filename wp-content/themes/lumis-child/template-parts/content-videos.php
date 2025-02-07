@@ -9,7 +9,7 @@
  */
 ?>
 <div class="listing-item">
-	<h2 class="post-title h4">
+	<h2 class="post-title h3">
 		<a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a>
   </h2>
 	<div class="post_image">
@@ -66,7 +66,7 @@
     </span>
     <p><?php the_excerpt(); ?></p>
 		<p>
-			<a class="blue_button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
+			<a class="primary-button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
 				<span class="screen-reader-text"><? echo get_the_title()?></span>
 				Watch
 			</a>
