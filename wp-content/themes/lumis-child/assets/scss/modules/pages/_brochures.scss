@@ -15,17 +15,18 @@
   }
 }
 .brochure {
-  #first_icon_block_section, #second_icon_block_section {
+  #first_icon_block_section,
+  #second_icon_block_section {
     &:before {
-      background: $light_blue_color;
+      background: var(--petrol);
     }
     > p {
-      color:$white_color;
+      color: var(--white);
       font-size: 24px !important;
     }
     margin: 0 0 4em;
     padding: 4em 0;
-    background-color: $light_blue_color;
+    background-color: var(--petrol);
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -34,7 +35,7 @@
           display: none;
         }
         p {
-          color: $white_color;
+          color: var(--white);
           margin-bottom: 0;
         }
       }
@@ -184,19 +185,22 @@
   }
 }
 .brochure {
-  #first_content_block, #second_content_block {
+  #first_content_block,
+  #second_content_block {
     margin: 0;
     .heading {
       margin-bottom: 0.75em;
       font-size: 28px !important;
       font-weight: 700;
     }
-     p, li {
+    p,
+    li {
       color: $blue_color;
     }
   }
   &.lumis-international {
-    #first_content_block, #second_content_block {
+    #first_content_block,
+    #second_content_block {
       .heading {
         text-align: center;
       }
@@ -206,7 +210,8 @@
 
 @media screen and (min-width: 782px) {
   .brochure {
-    #first_content_block, #second_content_block {
+    #first_content_block,
+    #second_content_block {
       div {
         columns: 2;
         column-gap: 3em;
@@ -221,19 +226,19 @@
 .brochure {
   #brochure_footer_block {
     &:before {
-      background: $light_blue_color;
+      background: var(--petrol);
       z-index: -1;
     }
     margin: 0 0 2em;
     padding: 2em 0;
-    background-color: $light_blue_color;
+    background-color: var(--petrol);
     font-size: 20px !important;
     line-height: 1.25;
     .larger-text {
       font-size: 28px !important;
       line-height: 36px !important;
       font-weight: 700;
-      color: $white_color;
+      color: var(--white);
       margin-bottom: 0.5em;
     }
     p {
@@ -241,7 +246,7 @@
       margin-bottom: 0;
       font-size: 18px !important;
       &.contact-details {
-        color: $white_color;
+        color: var(--white);
         i {
           white-space: nowrap;
           font-style: normal;
@@ -250,10 +255,10 @@
     }
     .footer-text {
       a {
-        color: $white_color !important;
+        color: var(--white) !important;
         border-bottom: none;
         &:hover {
-          border-bottom: 2px solid $white_color;
+          border-bottom: 2px solid var(--white);
         }
       }
     }
@@ -322,7 +327,7 @@
         max-width: 17ch;
         text-align: left;
         margin-bottom: 1em;
-        font-size: 24px !important
+        font-size: 24px !important;
       }
     }
   }
@@ -368,7 +373,7 @@
     #skills {
       margin: 0 1em;
       padding: 0;
-      color: $dark_orange_color;
+      color: var(--orange);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;

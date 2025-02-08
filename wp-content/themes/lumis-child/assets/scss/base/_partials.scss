@@ -15,7 +15,7 @@
   .blue_button {
     background: $blue_color;
     border: none;
-    color: $white_color !important;
+    color: var(--white) !important;
     padding: 10px 11px;
     text-align: center;
     text-decoration: none;
@@ -27,14 +27,14 @@
     border-radius: $radius;
     &:hover,
     &:focus {
-      color: $white_color !important;
-      background: $light_blue_color;
+      color: var(--white) !important;
+      background: var(--petrol);
     }
     a {
       &:hover,
       &:focus {
-        color: $white_color !important;
-        background: $light_blue_color;
+        color: var(--white) !important;
+        background: var(--petrol);
       }
     }
   }
@@ -43,7 +43,7 @@
   .frm_submit .frm_button_submit {
     background: $light_orange_color;
     border: none;
-    color: $black_color !important;
+    color: var(--black) !important;
     padding: 10px 11px;
     text-align: center;
     text-decoration: none;
@@ -55,8 +55,8 @@
     border-radius: $radius;
     &:hover,
     &:focus {
-      color: $black_color !important;
-      background: $dark_orange_color;
+      color: var(--black) !important;
+      background: var(--orange);
     }
   }
   .lumis_button {

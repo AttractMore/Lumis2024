@@ -6,13 +6,13 @@
   }
   .contact-form-person {
     max-width: 357px;
-    background-color: $white_color;
+    background-color: var(--white);
     padding-bottom: 0.5em;
     margin: 0 auto;
     p,
     a,
     strong {
-      color: $black_color !important;
+      color: var(--black) !important;
     }
     p {
       padding-inline: 1rem;
@@ -49,17 +49,17 @@
   padding: 0;
 }
 .contact_credits_wrap {
-  background: $white_color;
+  background: var(--white);
   p {
     padding: 25px 20px 40px 20px;
     span {
       display: block;
-      color: $black_color !important;
+      color: var(--black) !important;
       strong {
-        color: $black_color !important;
+        color: var(--black) !important;
       }
       a {
-        color: $black_color !important;
+        color: var(--black) !important;
       }
     }
   }
@@ -67,7 +67,7 @@
 /* Credits block */
 .inverted_colors_section {
   .contact_form_block {
-    background: $white_color;
+    background: var(--white);
     padding-bottom: 35px;
     margin-top: 2em;
     p {
@@ -88,7 +88,7 @@
     p,
     a,
     strong {
-      color: $black_color !important;
+      color: var(--black) !important;
     }
   }
 }

@@ -1,25 +1,26 @@
 /* Call to action glossary module */
 .wp-block-group {
-	&.glossary {
-		.wp-block-group__inner-container {
-			p {
-				margin-bottom: unset;
-				margin-top: 0 !important;
-			}
-			.glossary_p {
-				margin-top: 0 !important;
-			}
-			a {
-				&:hover, &:focus {
-					span {
-						color: $light_blue_color!important;
-						border-bottom: 2px solid #24a6cd!important;
-					}
-				}
-				span {
-					color: $white_color!important;
-				}
-			}
-		}
-	}
+  &.glossary {
+    .wp-block-group__inner-container {
+      p {
+        margin-bottom: unset;
+        margin-top: 0 !important;
+      }
+      .glossary_p {
+        margin-top: 0 !important;
+      }
+      a {
+        &:hover,
+        &:focus {
+          span {
+            color: var(--petrol) !important;
+            border-bottom: 2px solid #24a6cd !important;
+          }
+        }
+        span {
+          color: var(--white) !important;
+        }
+      }
+    }
+  }
 }

@@ -12,7 +12,7 @@
   }
   input,
   textarea {
-    color: $black_color !important;
+    color: var(--black) !important;
     font-size: 20px;
     border-radius: $radius;
   }

@@ -309,7 +309,7 @@ function add_newsletter_signup()
 function display_team_member_details($linkedin_url, $email_address)
 {
   the_post_thumbnail("full");
-  echo "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&#x2716</button>";
+  echo "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&#x2716</button><div class='team-member-content'>";
   echo "<figure>";
   the_post_thumbnail("full");
   echo "</figure>";
@@ -327,7 +327,7 @@ function display_team_member_details($linkedin_url, $email_address)
   }
   echo "<div id='team-member-bio'>";
   the_content();
-  echo "</div>";
+  echo "</div></div>";
   echo "</div></div></dialog>";
   echo "<h3>" . get_the_title() . "</h3>";
   echo "<p class='role'>" . get_field("role") . "</p>";

@@ -99,3 +99,14 @@
     }
   }
 }
+@media screen and (min-width: 60em) {
+  .about {
+    dialog {
+      .team-member-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2em;
+      }
+    }
+  }
+}

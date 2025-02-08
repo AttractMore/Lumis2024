@@ -8,17 +8,17 @@
     background: $blue_color;
   }
   .contact_credits_wrap {
-    background: $white_color;
+    background: var(--white);
     p {
       padding: 25px 20px 40px 20px;
       span {
         display: block;
-        color: $black_color !important;
+        color: var(--black) !important;
         strong {
-          color: $black_color !important;
+          color: var(--black) !important;
         }
         a {
-          color: $black_color !important;
+          color: var(--black) !important;
         }
       }
     }

@@ -58,7 +58,7 @@ ul#mobile_menu {
       li {
         padding: unset;
         a {
-          color: $white_color !important;
+          color: var(--white) !important;
           background: none;
           padding: 12px;
           padding-left: 0;
@@ -102,7 +102,7 @@ ul#mobile_menu {
       height: 31px;
     }
     a {
-      color: $white_color;
+      color: var(--white);
       display: block;
       margin-left: 26px;
     }

@@ -1,14 +1,14 @@
 #wcb {
   text-align: right !important;
   #wcb_a {
-    background-color: $light_blue_color !important;
-    border-color: $light_blue_color !important;
+    background-color: var(--petrol) !important;
+    border-color: var(--petrol) !important;
     font-weight: normal !important;
   }
   #wcb_g {
-    border-color: $white_color !important;
+    border-color: var(--white) !important;
   }
   #wcb_2 {
-    color: $white_color !important;
+    color: var(--white) !important;
   }
 }

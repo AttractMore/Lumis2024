@@ -23,7 +23,7 @@
         font-family: $font_family_montserrat;
         line-height: 20px;
         font-style: italic;
-        color: $black_color;
+        color: var(--black);
         &.single_post_date {
           font-weight: bold;
           margin-right: 7px;
@@ -39,7 +39,7 @@
       }
       .entry-meta {
         display: block;
-        color: $black_color;
+        color: var(--black);
         max-width: 740px;
         margin: auto;
         margin-top: 50px;

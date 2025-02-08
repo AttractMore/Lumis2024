@@ -58,7 +58,7 @@
             //float: left;
             //display: block;
             a {
-              color: $white_color !important;
+              color: var(--white) !important;
               border-bottom: 0;
             }
           }

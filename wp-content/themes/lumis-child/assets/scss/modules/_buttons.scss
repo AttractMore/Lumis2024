@@ -15,33 +15,33 @@
 .lumis_button_orange {
   width: fit-content;
   a {
-    color: $black_color !important;
+    color: var(--black) !important;
     border-radius: 4px !important;
   }
   &:hover a,
   &:focus a {
-    background-color: $dark_orange_color !important;
-    color: $black_color !important;
+    background-color: var(--orange) !important;
+    color: var(--black) !important;
   }
 }
 .lumis_button_blue {
   width: fit-content;
   a {
-    color: $white_color !important;
+    color: var(--white) !important;
     border-radius: 4px !important;
   }
   &:hover a,
   &:focus a {
-    background-color: $light_blue_color !important;
-    color: $white_color !important;
+    background-color: var(--petrol) !important;
+    color: var(--white) !important;
   }
 }
 .lumis_button_orange {
   .wp-block-button__link {
     &:hover,
     &:focus {
-      background: $dark_orange_color !important;
-      color: $black_color !important;
+      background: var(--orange) !important;
+      color: var(--black) !important;
     }
   }
 }

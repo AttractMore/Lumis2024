@@ -56,13 +56,6 @@
   font-style: normal;
 }
 
-//@font-face {
-//	font-family: 'Alegreya Sans';
-//	src: local('Alegreya Sans Medium'), local('AlegreyaSans-Medium'), url('Alegreyasansmedium.woff2') format('woff2'), url('Alegreyasansmedium.woff') format('woff'), url('Alegreyasansmedium.ttf') format('truetype');
-//	font-weight: 500;
-//	font-style: normal;
-//}
-
 /* Montserrat font */
 /* Montserrat Thin - 300 */
 @font-face {
@@ -119,8 +112,8 @@ html {
   font-size: 100%;
 }
 body {
-  background: $white_color !important;
-  color: $black_color;
+  background: var(--white) !important;
+  color: var(--black);
   min-width: 320px;
 }
 html,
@@ -249,29 +242,29 @@ body.archive.category {
 main + article {
   margin-top: 14em;
 }
-.inverted_colors_section {
-  position: relative;
-  z-index: 1;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100vw;
-    background: #0e576d;
-    z-index: -1;
-  }
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  &::selection {
-    background-color: $grey_color;
-  }
-}
+// .inverted_colors_section {
+//   position: relative;
+//   z-index: 1;
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     height: 100%;
+//     width: 100vw;
+//     background: #0e576d;
+//     z-index: -1;
+//   }
+//   &:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+//   &::selection {
+//     background-color: $grey_color;
+//   }
+// }
 @media (max-width: 544px) {
   .ast-separate-container #content .ast-container {
     padding-left: 1.5em;

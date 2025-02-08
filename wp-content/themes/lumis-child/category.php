@@ -52,24 +52,26 @@ get_header();
       endif; ?>
     </div><!-- .posts-container -->
     <div class="category-sidebar">
-      <h3>Topics:</h3>
-      <?php
-      $categories = get_categories([
-        "orderby" => "name",
-        "order" => "ASC",
-      ]);
-      echo "<ul class='category-list'>";
-      foreach ($categories as $category) {
-        $category_link = sprintf(
-          '<a href="%1$s" alt="%2$s">%3$s</a>',
-          esc_url(get_category_link($category->term_id)),
-          esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)),
-          esc_html($category->name)
-        );
-        echo "<li>" . sprintf(esc_html__("%s", "textdomain"), $category_link) . "</li> ";
-      }
-      ?>
-      </ul>
+      <div class="category-sidebar-container">
+        <h3>Topics:</h3>
+        <?php
+        $categories = get_categories([
+          "orderby" => "name",
+          "order" => "ASC",
+        ]);
+        echo "<ul class='category-list'>";
+        foreach ($categories as $category) {
+          $category_link = sprintf(
+            '<a href="%1$s" alt="%2$s">%3$s</a>',
+            esc_url(get_category_link($category->term_id)),
+            esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)),
+            esc_html($category->name)
+          );
+          echo "<li>" . sprintf(esc_html__("%s", "textdomain"), $category_link) . "</li> ";
+        }
+        ?>
+        </ul>
+      </div>
     </div><!-- .category-sidebar -->
   </section>
 </div><!-- #primary -->

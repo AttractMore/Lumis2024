@@ -5,7 +5,7 @@ h1,
   // line-height: 72px !important;
   font-size: clamp(2rem, 1.33rem + 3.333vw, 3.75rem) !important;
   line-height: 1.2 !important;
-  color: $black_color;
+  color: var(--black);
   text-wrap: balance;
 }
 h2,
@@ -15,7 +15,7 @@ h2,
   line-height: 1.25 !important;
   position: relative;
   padding-left: 22px;
-  color: $black_color;
+  color: var(--black);
   margin-bottom: 65px !important;
 }
 h2 {
@@ -66,7 +66,7 @@ h3,
   line-height: 1.25 !important;
   margin-bottom: 0 !important;
   padding-left: 0;
-  color: $black_color;
+  color: var(--black);
   &:before {
     display: none;
   }
@@ -79,7 +79,7 @@ h4,
   // line-height: 37px !important;
   font-size: clamp(1.125rem, 0.887rem + 1.19vw, 1.75rem) !important;
   line-height: 1.32 !important;
-  color: $black_color !important;
+  color: var(--black) !important;
   margin-bottom: 0 !important;
   padding-left: 0;
   &:before {
@@ -95,7 +95,8 @@ li {
   line-height: 30px;
   font-size: clamp(1.125rem, 1.077rem + 0.238vw, 1.25rem) !important;
   line-height: 1.5 !important;
-  color: $black_color;
+  color: var(--black);
+  max-width: 78ch;
 }
 
 p {
@@ -110,12 +111,12 @@ a {
 }
 
 :focus {
-  //outline: 4px solid $dark_orange_color!important;
+  //outline: 4px solid var(--orange)!important;
 }
 
 .site-content {
   a {
-    color: $black_color !important;
+    color: var(--black) !important;
     border-bottom: 2px solid $link_hover_color;
     &:hover,
     &:focus {
@@ -175,12 +176,12 @@ blockquote p {
 
 blockquote.orange_color,
 blockquote.orange_color p {
-  color: $blockquote_orange_color;
+  color: var(--orange);
   font-size: 28px !important;
   line-height: 38px;
   font-family: $font_prompt_medium_italic;
   .blockquote_author {
-    color: $blockquote_orange_color;
+    color: var(--orange);
     font-size: 20px;
     line-height: 42px;
     font-family: $font_prompt_medium;
@@ -195,12 +196,12 @@ span {
 // Callouts (11/4/2024)
 /*****************/
 .callout-box {
-  border: 3px solid $dark_orange_color;
+  border: 3px solid var(--orange);
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding: 1em;
   p {
-    color: $dark_orange_color;
+    color: var(--orange);
     margin: 0;
     &.callout-title {
       &:after {

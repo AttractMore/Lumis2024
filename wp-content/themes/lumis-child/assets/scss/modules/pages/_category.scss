@@ -15,17 +15,22 @@
     margin-top: 2em;
   }
   .category-sidebar {
-    .category-list {
-      margin: 1em 0;
-      padding: 0;
-      li {
+    .category-sidebar-container {
+      background-color: var(--light-blue);
+      padding: 1.5em;
+      margin-bottom: 2em;
+      .category-list {
+        margin: 1em 0;
         padding: 0;
-        margin: 0.5em 0;
-        a {
-          border-bottom: 0;
-        }
-        &:before {
-          display: none;
+        li {
+          padding: 0;
+          margin: 1.5em 0;
+          a {
+            border-bottom: 0;
+          }
+          &:before {
+            display: none;
+          }
         }
       }
     }
@@ -37,6 +42,10 @@
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 3rem;
+    }
+    .category-sidebar-container {
+      position: sticky;
+      top: 7.5em;
     }
   }
 }

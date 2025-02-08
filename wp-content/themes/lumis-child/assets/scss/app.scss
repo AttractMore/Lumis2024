@@ -16,8 +16,8 @@
  */
 @import "layout/_header";
 @import "layout/mobile_menu";
-@import "layout/_grid";
-@import "layout/_sidebar";
+// @import "layout/_grid";
+// @import "layout/_sidebar";
 @import "layout/_footer";
 
 /**
@@ -29,20 +29,20 @@
 // @import "modules/pages/contact";
 @import "modules/pages/brochures";
 @import "modules/pages/category";
-@import "modules/pages/outsourcing_trials";
-@import "modules/pages/legal_representative";
-@import "modules/pages/data_representative";
-@import "modules/pages/lumis_international";
-@import "modules/pages/startseite_page";
+// @import "modules/pages/outsourcing_trials";
+// @import "modules/pages/legal_representative";
+// @import "modules/pages/data_representative";
+// @import "modules/pages/lumis_international";
+// @import "modules/pages/startseite_page";
 @import "modules/pages/videos";
 @import "modules/pages/home";
 @import "modules/buttons";
-@import "modules/icon_and_slogan";
+// @import "modules/icon_and_slogan";
 @import "modules/blocks/lumis_glossary";
 @import "modules/blocks/lumis_post_on_page";
 // @import "modules/blocks/lumis_contact_form";
-@import "modules/blocks/call_to_action_w_icon";
-@import "modules/blocks/lumis_checkmark";
+// @import "modules/blocks/call_to_action_w_icon";
+// @import "modules/blocks/lumis_checkmark";
 @import "modules/blocks/accordion";
 @import "modules/blocks/post-nav";
 @import "modules/blocks/lumis-newsletter";

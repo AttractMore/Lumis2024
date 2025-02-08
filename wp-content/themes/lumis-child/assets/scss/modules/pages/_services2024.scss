@@ -151,7 +151,7 @@
     }
     margin-bottom: 1rem;
     h3 {
-      color: $white_color;
+      color: var(--white);
       position: relative;
       background-color: var(--petrol);
       border-radius: var(--radius-small);
@@ -162,7 +162,7 @@
       outline: none;
       span {
         svg {
-          fill: $white_color;
+          fill: var(--white);
           width: 20px;
           height: 20px;
           transform: rotate(180deg);
@@ -210,7 +210,7 @@
     p {
       font-size: 20px !important;
       font-style: normal;
-      color: $black_color;
+      color: var(--black);
       font-family: $font_family_montserrat;
       line-height: 1.5 !important;
       &:first-of-type {
@@ -399,12 +399,12 @@
       border-radius: var(--radius) var(--radius) 0 0;
     }
     aside {
-      background-color: $white_color;
+      background-color: var(--white);
       padding: 1rem 1.5rem;
       border-radius: 0 0 var(--radius) var(--radius);
       p,
       a {
-        color: $black_color !important;
+        color: var(--black) !important;
       }
       p {
         &:last-child {
