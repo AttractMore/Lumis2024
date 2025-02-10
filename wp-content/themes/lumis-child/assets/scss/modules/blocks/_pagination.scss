@@ -1,0 +1,14 @@
+.page-numbers {
+  display: flex;
+  margin-left: 0;
+  padding-left: 0;
+  li {
+    margin: 0 0.5em;
+    &:before {
+      display: none;
+    }
+    a {
+      padding: 0 0.5em;
+    }
+  }
+}

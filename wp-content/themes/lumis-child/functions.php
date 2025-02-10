@@ -76,35 +76,6 @@ function special_nav_class($classes, $item)
   return $classes;
 }
 
-/* ACF Options Pages */
-// if (function_exists("acf_add_options_page")) {
-//   acf_add_options_page([
-//     "page_title" => "Theme General Settings",
-//     "menu_title" => "Theme Settings",
-//     "menu_slug" => "theme-general-settings",
-//     "capability" => "edit_posts",
-//     "redirect" => false,
-//   ]);
-
-//   acf_add_options_sub_page([
-//     "page_title" => "Theme Header Settings",
-//     "menu_title" => "Header",
-//     "parent_slug" => "theme-general-settings",
-//   ]);
-
-//   acf_add_options_sub_page([
-//     "page_title" => "Theme Content Settings",
-//     "menu_title" => "Content",
-//     "parent_slug" => "theme-general-settings",
-//   ]);
-
-//   acf_add_options_sub_page([
-//     "page_title" => "Theme Footer Settings",
-//     "menu_title" => "Footer",
-//     "parent_slug" => "theme-general-settings",
-//   ]);
-// }
-
 if (function_exists("add_theme_support")) {
   add_theme_support("post-thumbnails");
   add_image_size("post-thumbnails-home-page", 730, 354, true); //just my specified size for the default page
@@ -153,29 +124,6 @@ function ds_admin_theme_style()
     echo "<style>.update-nag, .updated, .error, .is-dismissible { display: none; }</style>";
   }
 }
-
-/* Including Custom Fields */
-
-// Define path and URL to the ACF plugin.
-// define("MY_ACF_PATH", get_stylesheet_directory() . "/inc/plugins/acf/");
-// define("MY_ACF_URL", get_stylesheet_directory_uri() . "/inc/plugins/acf/");
-
-// Include the ACF plugin.
-// include_once MY_ACF_PATH . "acf.php";
-// include_once MY_ACF_PATH . "pro/acf-pro.php";
-
-// Customize the url setting to fix incorrect asset URLs.
-// add_filter("acf/settings/url", "my_acf_settings_url");
-// function my_acf_settings_url($url)
-// {
-//   return MY_ACF_URL;
-// }
-
-// (Optional) Hide the ACF admin menu item.
-//add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
-//function my_acf_settings_show_admin( $show_admin ) {
-//	return true;
-//}
 
 /**
  * Template Parts with Display Posts Shortcode
@@ -342,3 +290,13 @@ function display_team_member_details($linkedin_url, $email_address)
     echo "</ul>";
   }
 }
+
+function set_number_of_posts($query)
+{
+  if (!is_admin() && $query->is_main_query() && is_category()) {
+    // Display 5 posts on category pages
+    $query->set("posts_per_page", 5);
+    return;
+  }
+}
+add_action("pre_get_posts", "set_number_of_posts", 1);

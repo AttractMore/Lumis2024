@@ -180,17 +180,29 @@
   }
 }
 
-.latest-blogs {
+.latest-posts {
   padding-top: 3em;
-  .listing-item {
-    margin-bottom: 2em !important;
+  .post-container {
+    margin-bottom: 5em !important;
   }
   .post-title {
     margin-bottom: 0.5em !important;
+    a {
+      border: 0;
+    }
   }
-  .excerpt {
-    p {
-      margin-top: 1.5em;
+  .category-display {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .latest-posts {
+    .post-image-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
     }
   }
 }

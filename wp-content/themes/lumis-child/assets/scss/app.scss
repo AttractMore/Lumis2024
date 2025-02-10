@@ -23,12 +23,12 @@
 /**
 * Modules
 */
-@import "modules/pages/index";
+// @import "modules/pages/index";
 @import "modules/pages/about";
 @import "modules/pages/single";
 // @import "modules/pages/contact";
 @import "modules/pages/brochures";
-@import "modules/pages/category";
+@import "modules/pages/blog";
 // @import "modules/pages/outsourcing_trials";
 // @import "modules/pages/legal_representative";
 // @import "modules/pages/data_representative";
@@ -38,6 +38,7 @@
 @import "modules/pages/home";
 @import "modules/buttons";
 // @import "modules/icon_and_slogan";
+@import "modules/blocks/pagination";
 @import "modules/blocks/lumis_glossary";
 @import "modules/blocks/lumis_post_on_page";
 // @import "modules/blocks/lumis_contact_form";
@@ -54,10 +55,10 @@
 /**
  * Modules ; posts
  */
-@import "modules/posts/listing_section";
-@import "modules/posts/content_hub_page";
+// @import "modules/posts/listing_section";
+// @import "modules/posts/content_hub_page";
 @import "modules/posts/single";
-@import "modules/posts/_archive";
+// @import "modules/posts/_archive";
 
 /* Mobile */
 @import "base/_responsive";

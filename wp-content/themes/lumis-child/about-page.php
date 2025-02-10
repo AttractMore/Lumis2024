@@ -26,7 +26,8 @@ get_header(); ?>
           echo '<h2 class="flash-dark-orange">Management Board</h2>';
 
           $args = [
-            "numberposts" => -1,
+            // "numberposts" => -1,
+            "posts_per_page" => 100,
             "post_status" => "publish",
             "post_type" => "team_member",
           ];

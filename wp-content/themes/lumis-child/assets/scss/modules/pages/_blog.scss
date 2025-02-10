@@ -1,0 +1,76 @@
+.blog-category-content {
+  .post-container {
+    margin-bottom: 5em;
+  }
+  .archive-title.h2 {
+    padding-left: 0;
+  }
+  .post-title {
+    margin-bottom: 0.5em !important;
+    a {
+      border: 0;
+    }
+  }
+  .post-link {
+    margin-top: 2em;
+  }
+  .category-sidebar {
+    .category-sidebar-container {
+      background-color: var(--light-blue);
+      padding: 1.5em;
+      margin-bottom: 2em;
+      .category-list {
+        margin: 1em 0;
+        padding: 0;
+        li {
+          padding: 0;
+          margin: 1.5em 0;
+          a {
+            border-bottom: 0;
+            display: flex;
+            svg {
+              display: none;
+              fill: var(--petrol);
+              width: 1em;
+              height: 1em;
+              padding-right: 0.25em;
+              position: relative;
+              top: 6px;
+            }
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  .blog-category-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    .category-sidebar-container {
+      position: sticky;
+      top: 7.5em;
+    }
+  }
+}
+
+.blog-category-content.clinical-quality-management .category-list .clinical-quality-management,
+.blog-category-content.clinical-regulatory-consulting .category-list .clinical-regulatory-consulting,
+.blog-category-content.clinical-trial-management .category-list .clinical-trial-management,
+.blog-category-content.company-events .category-list .company-events,
+.blog-category-content.gdpr-article-27-data-representative .category-list .gdpr-article-27-data-representative,
+.blog-category-content.legal-representative-clinical-trials .category-list .legal-representative-clinical-trials,
+.blog-category-content.medical-device-authorized-representative .category-list .medical-device-authorized-representative,
+.blog-category-content.medical-device-regulatory-consulting .category-list .medical-device-regulatory-consulting,
+.blog-category-content.news .category-list .news {
+  a {
+    color: var(--petrol) !important;
+    svg {
+      display: block !important;
+    }
+  }
+}

@@ -1,34 +1,34 @@
-.display-posts-listing {
-  &.videos {
-    .listing-item {
-      margin-bottom: 5em;
-      .post_details {
-        float: none;
-        width: 93%;
-        padding: 0;
-        .title {
-          margin-bottom: 0.5em;
-          display: block;
-        }
-      }
-      .post_image {
-        float: none;
-        width: 93%;
-        margin-bottom: 15px;
-        margin-top: 0.5em;
-      }
-    }
-  }
-}
-.taxonomy-sidebar {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 992px) {
-  .video-main-content-sidebar {
-    display: flex;
-    gap: 2em;
-  }
-}
+// .display-posts-listing {
+//   &.videos {
+//     .listing-item {
+//       margin-bottom: 5em;
+//       .post_details {
+//         float: none;
+//         width: 93%;
+//         padding: 0;
+//         .title {
+//           margin-bottom: 0.5em;
+//           display: block;
+//         }
+//       }
+//       .post_image {
+//         float: none;
+//         width: 93%;
+//         margin-bottom: 15px;
+//         margin-top: 0.5em;
+//       }
+//     }
+//   }
+// }
+// .taxonomy-sidebar {
+//   margin-bottom: 60px;
+// }
+// @media screen and (min-width: 992px) {
+//   .video-main-content-sidebar {
+//     display: flex;
+//     gap: 2em;
+//   }
+// }
 
 body.single-videos {
   #primary {

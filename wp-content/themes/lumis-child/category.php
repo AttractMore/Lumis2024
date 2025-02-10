@@ -18,12 +18,16 @@ get_header();
 
 		<?php astra_primary_content_top(); ?>
 
-    <h1 class="h2 archive-title">Category - <?php single_cat_title(); ?></h1>
-    <section class="category-content">
+    <header class="page-header">
+      <h1 class="archive-title">Category - <?php single_cat_title(); ?></h1>
+    </header>
+    <section class="blog-category-content <?php echo get_queried_object()->slug; ?>">
       <?php
       $args = [
         "post_type" => ["post", "videos"],
         "category_name" => get_queried_object()->slug,
+        "post_status" => "publish",
+        "paged" => get_query_var("paged", 1),
       ];
       $query = new WP_Query($args);
       ?>
@@ -33,7 +37,7 @@ get_header();
           $query->the_post(); ?>
           <div class="post-container">
             <h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <div class="post-image">
+            <div class="post-image mb1">
             <?php the_post_thumbnail("full"); ?>
             </div>
             <div class="entry-content">
@@ -45,34 +49,17 @@ get_header();
           </div>
       <?php
         endwhile;
-      else:
-         ?>
-        <p>No posts found in this category.</p>
-      <?php
+        $big = 999999999;
+        echo paginate_links([
+          "total" => $query->max_num_pages,
+          "current" => max(1, get_query_var("paged")),
+          "type" => "list",
+          "base" => str_replace($big, "%#%", get_pagenum_link($big)),
+        ]);
+        wp_reset_postdata();
       endif; ?>
     </div><!-- .posts-container -->
-    <div class="category-sidebar">
-      <div class="category-sidebar-container">
-        <h3>Topics:</h3>
-        <?php
-        $categories = get_categories([
-          "orderby" => "name",
-          "order" => "ASC",
-        ]);
-        echo "<ul class='category-list'>";
-        foreach ($categories as $category) {
-          $category_link = sprintf(
-            '<a href="%1$s" alt="%2$s">%3$s</a>',
-            esc_url(get_category_link($category->term_id)),
-            esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)),
-            esc_html($category->name)
-          );
-          echo "<li>" . sprintf(esc_html__("%s", "textdomain"), $category_link) . "</li> ";
-        }
-        ?>
-        </ul>
-      </div>
-    </div><!-- .category-sidebar -->
+    <?php get_sidebar("blog"); ?>
   </section>
 </div><!-- #primary -->
 

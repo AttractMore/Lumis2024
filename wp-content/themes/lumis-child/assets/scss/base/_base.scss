@@ -210,6 +210,9 @@ body.archive.category {
 .mb0 {
   margin-bottom: 0 !important;
 }
+.mb1 {
+  margin-bottom: 1em !important;
+}
 .mb15 {
   margin-bottom: 1.5em !important;
 }
@@ -241,6 +244,11 @@ body.archive.category {
 }
 main + article {
   margin-top: 14em;
+}
+.page-title,
+.archive-title {
+  margin-bottom: 1em;
+  color: var(--black);
 }
 // .inverted_colors_section {
 //   position: relative;

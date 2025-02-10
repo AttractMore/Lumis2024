@@ -118,12 +118,69 @@ get_header(); ?>
 
   <?php echo do_shortcode("[standard-contact-form]"); ?>
 
-  <section class="latest-blogs full-width">
-    <div class="latest-blogs-container wrap">
+  <section class="latest-posts full-width">
+    <div class="latest-posts-container wrap">
       <h2 class="flash-dark-orange">The latest from Lumis Content Hub</h2>
-      <?php echo do_shortcode(
-        '[display-posts layout="default" post_type="post, videos" posts_per_page="3" category_display="true" include_excerpt="true" excerpt_length="30" image_size="full" wrapper="div" wrapper_class="display-posts-listing image-left"]'
-      ); ?>
+      <?php
+      $args = [
+        "post_type" => ["post", "videos"],
+        "post_status" => "publish",
+        "posts_per_page" => 3,
+      ];
+      $query = new WP_Query($args);
+      ?>
+      <?php if ($query->have_posts()):
+        echo '<div class="posts-container">';
+        while ($query->have_posts()):
+          $query->the_post(); ?>
+          <div class="post-container">
+            <h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <div class="post-image-details">
+              <div class="post-image">
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail("full"); ?>
+                </a>
+              </div>
+              <div class="post_details">
+                <span class="category-display"><span class="category-display-label">Topic(s): </span>
+
+              <?php
+              $categories = get_the_category();
+              $separator = " | ";
+              $output = "";
+              if (!empty($categories)) {
+                foreach ($categories as $category) {
+                  $output .=
+                    '<a href="' .
+                    esc_url(get_category_link($category->term_id)) .
+                    '" alt="' .
+                    esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)) .
+                    '">' .
+                    esc_html($category->name) .
+                    "</a>" .
+                    $separator;
+                }
+                echo trim($output, $separator);
+              }
+              ?>
+                </span>
+                <?php the_excerpt(); ?>
+                <p>
+                  <a class="primary-button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
+                    <span class="screen-reader-text"><? echo get_the_title()?></span>
+                    Read more
+                  </a>
+                </p>
+              </div><!-- .post-details -->
+            </div>
+          </div><!-- .post-container -->
+          <hr>
+          <?php
+        endwhile;
+        wp_reset_postdata();
+      endif; ?>
+    </div><!-- .posts-container -->
+
     </div>
   </section>
   <?php astra_primary_content_bottom(); ?> <!-- needed for inclusion of newletter signup block -->

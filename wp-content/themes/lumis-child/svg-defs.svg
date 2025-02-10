@@ -23,5 +23,8 @@
     <symbol id="envelope" viewBox="0 0 16 16">
       <path d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM14 4v0.719l-6 3.536-6-3.536v-0.719h12zM2 12v-5.54l6 3.536 6-3.536v5.54h-12z"></path>
     </symbol>
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+      <path d="M5.5 0l-1.5 1.5 6.5 6.5-6.5 6.5 1.5 1.5 8-8-8-8z"></path>
+    </symbol>
   </defs>
 </svg>
