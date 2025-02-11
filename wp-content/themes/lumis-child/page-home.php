@@ -46,14 +46,20 @@ get_header(); ?>
             the_row(); ?>
             <li class="legal-service">
               <?php $icon = get_sub_field("icon"); ?>
+              <?php $link = get_sub_field("link"); ?>
               <aside>
                 <?php if ($icon): ?>
-                  <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
+                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                    <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
+                  </a>
                 <?php endif; ?>
-                <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
+                <h3>
+                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                    <?php echo wp_kses_post(get_sub_field("title")); ?>
+                  </a>
+                </h3>
               </aside>
               <?php echo wp_kses_post(get_sub_field("description")); ?>
-              <?php $link = get_sub_field("link"); ?>
               <?php if ($link): ?>
                 <span class="service-link">
                   <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
@@ -89,14 +95,20 @@ get_header(); ?>
           the_row(); ?>
           <li class="consulting-service">
             <?php $icon = get_sub_field("icon"); ?>
+            <?php $link = get_sub_field("link"); ?>
             <aside>
               <?php if ($icon): ?>
-                <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
+                <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                  <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
+              </a>
               <?php endif; ?>
-              <h3><?php echo wp_kses_post(get_sub_field("title")); ?></h3>
+              <h3>
+                <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                  <?php echo wp_kses_post(get_sub_field("title")); ?>
+                </a>
+              </h3>
             </aside>
             <?php echo wp_kses_post(get_sub_field("description")); ?>
-            <?php $link = get_sub_field("link"); ?>
             <?php if ($link): ?>
               <span class="service-link">
                 <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>" target="<?php echo esc_attr($link["target"]); ?>">

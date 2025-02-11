@@ -47,16 +47,6 @@
     }
   }
 }
-// @media screen and (min-width: 991px) {
-//   .hero-section {
-//     margin-top: 6.7rem;
-//   }
-// }
-// @media screen and (min-width: 1199px) {
-//   .hero-section {
-//     margin-top: 7rem;
-//   }
-// }
 .home-services-section {
   padding-top: 2em;
   ul {
@@ -77,6 +67,9 @@
       align-items: center;
       gap: 0.5em;
       margin-bottom: 0.25em;
+      a {
+        border: 0;
+      }
     }
     &:before {
       display: none;
