@@ -5,11 +5,15 @@
 .about {
   padding-top: 3em;
   .management-team {
-    padding-bottom: 0;
-    margin-bottom: 2em;
+    padding-top: var(--vertical-spacing);
+    padding-bottom: calc(var(--vertical-spacing) * 0.5);
+    // padding-bottom: 0;
+    // margin-bottom: 2em;
   }
   .wider-team {
-    margin-bottom: 2em;
+    padding-top: calc(var(--vertical-spacing) * 0.5);
+    padding-bottom: var(--vertical-spacing);
+    // margin-bottom: 2em;
   }
   .team-members {
     display: grid;

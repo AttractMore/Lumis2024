@@ -47,29 +47,31 @@ get_header(); ?>
             <li class="legal-service">
               <?php $icon = get_sub_field("icon"); ?>
               <?php $link = get_sub_field("link"); ?>
-              <aside>
                 <?php if ($icon): ?>
-                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
-                    <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
-                  </a>
+                  <figure>
+                    <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                      <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
+                    </a>
+                  </figure>
                 <?php endif; ?>
                 <h3>
                   <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
                     <?php echo wp_kses_post(get_sub_field("title")); ?>
                   </a>
                 </h3>
-              </aside>
-              <?php echo wp_kses_post(get_sub_field("description")); ?>
-              <?php if ($link): ?>
-                <span class="service-link">
-                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
-                    <?php echo esc_html($link["title"]); ?>
-                    <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
-                  </a>
-                </span>
-              <?php endif; ?>
-            </li>
-            <?php
+                <aside>
+                  <?php echo wp_kses_post(get_sub_field("description")); ?>
+                  <?php if ($link): ?>
+                    <span class="service-link">
+                      <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                        <?php echo esc_html($link["title"]); ?>
+                        <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
+                      </a>
+                    </span>
+                    <?php endif; ?>
+                  </aside>
+                  </li>
+                  <?php
           endwhile; ?>
         <?php endif; ?>
       <?php
@@ -96,32 +98,34 @@ get_header(); ?>
           <li class="consulting-service">
             <?php $icon = get_sub_field("icon"); ?>
             <?php $link = get_sub_field("link"); ?>
-            <aside>
-              <?php if ($icon): ?>
+            <?php if ($icon): ?>
+              <figure>
                 <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
                   <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="<?php echo esc_attr($icon["alt"]); ?>" />
-              </a>
+                </a>
+              </figure>
               <?php endif; ?>
               <h3>
                 <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
                   <?php echo wp_kses_post(get_sub_field("title")); ?>
                 </a>
               </h3>
-            </aside>
-            <?php echo wp_kses_post(get_sub_field("description")); ?>
-            <?php if ($link): ?>
-              <span class="service-link">
-                <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>" target="<?php echo esc_attr($link["target"]); ?>">
-                  <?php echo esc_html($link["title"]); ?>
-                  <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
-                </a>
-              </span>
-            <?php endif; ?>
+              <aside>
+                <?php echo wp_kses_post(get_sub_field("description")); ?>
+                <?php if ($link): ?>
+                  <span class="service-link">
+                    <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>" target="<?php echo esc_attr($link["target"]); ?>">
+                      <?php echo esc_html($link["title"]); ?>
+                      <svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#long-arrow-right"></use></svg>
+                    </a>
+                  </span>
+                  <?php endif; ?>
+                </aside>
             </li>
           <?php
         endwhile; ?>
-        </ul>
         <?php endif; ?>
+      </ul>
       <?php
       endwhile; ?>
     <?php endif; ?>

@@ -166,7 +166,7 @@ if ($testimonial_rows) {
     // ];
     // $matching_posts = new WP_Query($args);
     if ($matching_posts->have_posts()) {
-      echo "<section class='services-resources mt2'><h2 class='flash-dark-orange'>Additional resources for " . esc_html(get_field("service_title")) . "</h2><ul class='matching-posts'>";
+      echo "<section class='services-resources'><h2 class='flash-dark-orange'>Additional resources for " . esc_html(get_field("service_title")) . "</h2><ul class='matching-posts'>";
 
       while ($matching_posts->have_posts()) {
         $matching_posts->the_post();

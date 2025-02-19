@@ -2,20 +2,12 @@
   #primary {
     margin-bottom: 4em !important;
   }
-  // #content {
-  //   margin-top: 112px;
-  // }
-  .site-content {
-    .home-introduction {
-      padding: 0;
-    }
-  }
 }
 .hero-section {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 0;
-  margin-bottom: 5em;
+  // margin-bottom: 5em;
   padding: 0;
   max-height: 500px;
   min-height: 220px;
@@ -47,8 +39,18 @@
     }
   }
 }
+.home-introduction {
+  padding-top: var(--vertical-spacing);
+  padding-bottom: var(--vertical-spacing);
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
 .home-services-section {
-  padding-top: 2em;
+  padding-top: var(--vertical-spacing);
+  padding-bottom: var(--vertical-spacing);
   ul {
     margin-left: 0 !important;
     margin-bottom: 0;
@@ -61,73 +63,78 @@
         margin-bottom: 2em;
       }
     }
-    aside {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      align-items: center;
-      gap: 0.5em;
-      margin-bottom: 0.25em;
-      a {
-        border: 0;
-      }
-    }
     &:before {
       display: none;
     }
     p {
       margin-bottom: 0.5em !important;
     }
-    .service-link {
+  }
+  .legal-service,
+  .consulting-service {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-areas:
+      "icon heading"
+      ". content";
+    column-gap: 1em;
+    row-gap: 0.5em;
+    padding: 0 !important;
+    figure {
+      grid-area: icon;
+      img {
+        max-width: 80px;
+        border-radius: 8px;
+        background-color: var(--white);
+        padding: 0.5em;
+        display: block;
+        // margin: 0 auto;
+      }
+    }
+    h3 {
+      grid-area: heading;
+      align-self: center;
+      line-height: 1;
+      padding: 0;
       a {
-        display: inline-flex;
-        align-items: center;
-        svg {
-          padding-left: 0.25em;
-          width: 3em;
-          height: 1.5em;
-          stroke: var(--black);
-        }
-        &:hover {
+        border: 0;
+      }
+    }
+    aside {
+      grid-area: content;
+      .service-link {
+        a {
+          display: inline-flex;
+          align-items: center;
+          border: 0;
           svg {
-            fill: var(--petrol);
-            stroke: var(--petrol);
+            padding-left: 0.25em;
+            width: 3em;
+            height: 1.5em;
+            stroke: var(--black);
+          }
+          &:hover {
+            svg {
+              fill: var(--petrol);
+              stroke: var(--petrol);
+            }
           }
         }
       }
     }
   }
-  .legal-service,
-  .consulting-service {
-    padding: 0 !important;
-    img {
-      max-width: 80px;
-      border-radius: 8px;
-      background-color: var(--white);
-      padding: 0.5em;
-      display: block;
-      margin: 0 auto;
-    }
-  }
-  // .legal-service img {
-  //   background-color: var(--petrol);
-  // }
-  // .consulting-service img {
-  //   background-color: var(--orange);
-  // }
-  h3 {
-    padding: 0;
-    font-size: 22px !important;
-    line-height: 1 !important;
-  }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 991px) {
   .home-services-section {
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0 5em;
-      li {
+      h3 {
+        font-size: 28px !important;
+      }
+      aside {
         display: flex;
         flex-direction: column;
         .service-link {
@@ -165,19 +172,25 @@
     }
   }
 }
-@media screen and (min-width: 991px) {
-  .home-services-section {
-    h3 {
-      font-size: 30px !important;
-    }
-  }
-}
 
 .latest-posts {
-  padding-top: 3em;
-  .post-container {
-    margin-bottom: 5em !important;
+  padding-top: var(--vertical-spacing);
+  padding-bottom: var(--vertical-spacing);
+  .posts-container {
+    hr {
+      margin: var(--vertical-spacing) 0;
+    }
   }
+  .post-container {
+    &:last-of-type {
+      + hr {
+        display: none;
+      }
+    }
+  }
+  // .post-container {
+  //   margin-bottom: 5em !important;
+  // }
   .post-title {
     margin-bottom: 0.5em !important;
     a {

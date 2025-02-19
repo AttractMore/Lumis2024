@@ -89,14 +89,19 @@ get_header(); ?>
   echo "</p>";
   echo "<h3>";
   echo get_the_title();
-  echo ", ";
-  echo get_field("event_location");
-  echo "</h3>";
-  if (get_field("registration_url")) {
-    echo '<p>Join us at the event <a href="';
-    echo get_field("registration_url");
-    echo '">Details and registration</a></p>';
+  if (get_field("event_location")) {
+    echo ", ";
+    echo get_field("event_location");
   }
+  echo "</h3>";
+  echo "<p>";
+  echo get_field("text_before_registration_link");
+  if (get_field("registration_url")) {
+    echo ' <a href="';
+    echo get_field("registration_url");
+    echo '">Details and registration</a>';
+  }
+  echo "</p>";
   if (get_field("event_notes")) {
     echo "<p>";
     echo get_field("event_notes");
