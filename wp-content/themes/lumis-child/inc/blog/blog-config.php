@@ -291,7 +291,7 @@ if (!function_exists("astra_post_categories")) {
     $categories_list = get_the_category_list(__(", ", "astra"));
 
     if ($categories_list) {
-      $output .= '<span style="display: block; margin-bottom: 0.5em;" class="post_catt"  class="cat-links">Topics: ' . $categories_list . "</span>";
+      $output .= '<span style="display: block; margin-bottom: 0.5em;" class="post_catt"  class="cat-links">Topic: ' . $categories_list . "</span>";
     }
     $output .= '<span class="single_post_date">' . get_the_date() . ", </span>";
     /* Hide categories in single post */

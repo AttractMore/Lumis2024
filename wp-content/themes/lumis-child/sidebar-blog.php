@@ -1,6 +1,6 @@
 <div class="category-sidebar">
   <div class="category-sidebar-container">
-    <h3>Topics:</h3>
+    <h3>Topics</h3>
     <?php
     $categories = get_categories([
       "orderby" => "name",

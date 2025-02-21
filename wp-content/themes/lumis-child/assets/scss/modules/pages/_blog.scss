@@ -17,14 +17,16 @@
   .category-sidebar {
     .category-sidebar-container {
       background-color: var(--light-blue);
-      padding: 1.5em;
+      border-radius: var(--radius);
+      padding: 2em;
       margin-bottom: 2em;
       .category-list {
         margin: 1em 0;
         padding: 0;
         li {
-          padding: 0;
-          margin: 1.5em 0;
+          padding: 0.5em 0;
+          margin: 0.5em 0;
+          border-bottom: 1px solid var(--white);
           a {
             border-bottom: 0;
             display: flex;
@@ -40,6 +42,9 @@
           }
           &:before {
             display: none;
+          }
+          &:last-child {
+            border: 0;
           }
         }
       }
