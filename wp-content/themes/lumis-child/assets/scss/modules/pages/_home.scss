@@ -35,7 +35,7 @@
     max-height: 500px;
     h1 {
       margin: 0 !important;
-      font-size: clamp(1.5rem, 0.69rem + 4.048vw, 3.625rem) !important;
+      font-size: clamp(1.5rem, 0.69rem + 4.048vw, 3.5rem) !important;
     }
   }
 }
@@ -72,52 +72,49 @@
   }
   .legal-service,
   .consulting-service {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-template-areas:
-      "icon heading"
-      ". content";
-    column-gap: 1em;
-    row-gap: 0.5em;
+    // display: grid;
+    // grid-template-columns: 80px 1fr;
+    // grid-template-areas:
+    //   "icon heading"
+    //   ". content";
+    // column-gap: 1em;
+    // row-gap: 0.5em;
     padding: 0 !important;
     figure {
-      grid-area: icon;
+      // grid-area: icon;
       img {
-        max-width: 80px;
-        border-radius: 8px;
+        max-width: 120px;
+        border-radius: var(--radius);
+        margin-bottom: 0.75em;
         background-color: var(--white);
         padding: 0.5em;
         display: block;
-        // margin: 0 auto;
       }
     }
     h3 {
-      grid-area: heading;
-      align-self: center;
       line-height: 1;
       padding: 0;
+      text-wrap: balance;
+      margin-bottom: 0.5em !important;
       a {
         border: 0;
       }
     }
-    aside {
-      grid-area: content;
-      .service-link {
-        a {
-          display: inline-flex;
-          align-items: center;
-          border: 0;
+    .service-link {
+      a {
+        display: inline-flex;
+        align-items: center;
+        border: 0;
+        svg {
+          padding-left: 0.25em;
+          width: 3em;
+          height: 1.5em;
+          stroke: var(--black);
+        }
+        &:hover {
           svg {
-            padding-left: 0.25em;
-            width: 3em;
-            height: 1.5em;
-            stroke: var(--black);
-          }
-          &:hover {
-            svg {
-              fill: var(--petrol);
-              stroke: var(--petrol);
-            }
+            fill: var(--petrol);
+            stroke: var(--petrol);
           }
         }
       }
@@ -134,7 +131,7 @@
       h3 {
         font-size: 28px !important;
       }
-      aside {
+      li {
         display: flex;
         flex-direction: column;
         .service-link {
@@ -187,6 +184,9 @@
         display: none;
       }
     }
+  }
+  img {
+    border-radius: var(--radius);
   }
   // .post-container {
   //   margin-bottom: 5em !important;

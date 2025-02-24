@@ -230,7 +230,7 @@
           content: "“";
           font-family: Georgia, "Times New Roman", Times, serif;
           font-size: 4em;
-          color: $blue_color;
+          color: var(--mid-blue);
           line-height: 0.1;
           vertical-align: -0.25em;
           margin-right: 0.1em;
@@ -291,7 +291,7 @@
     svg {
       width: 1.5em;
       height: 1.5em;
-      fill: $blue_color;
+      fill: var(--mid-blue);
     }
   }
   #slide-arrow-prev {
@@ -353,6 +353,9 @@
     hr {
       margin-top: var(--vertical-spacing);
       margin-bottom: var(--vertical-spacing);
+    }
+    img {
+      border-radius: var(--radius);
     }
   }
   .matching-post {

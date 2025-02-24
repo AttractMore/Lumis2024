@@ -1,4 +1,55 @@
-.nav-links {
-  display: flex;
-  justify-content: space-between;
+.navigation.post-navigation {
+  display: none;
+}
+.navigation.post-navigation.custom-nav {
+  padding: 3em 0 !important;
+  display: block;
+  .nav-links {
+    display: block;
+    div {
+      width: auto;
+      margin-bottom: 1.5em;
+    }
+    a {
+      font-family: Montserrat, sans-serif;
+      font-size: 16px !important;
+      padding: 0 0 0.25em;
+      margin: 0;
+      display: inline-flex;
+      line-height: 30px;
+      height: auto;
+    }
+    .nav-previous {
+      a {
+        &:before {
+          content: url("/wp-content/themes/lumis-child/dist/img/content/blog/prev_post_icon.svg");
+          margin-right: 0.5em;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+    .nav-next {
+      a {
+        &:after {
+          content: url("/wp-content/themes/lumis-child/dist/img/content/blog/next_post_icon.svg");
+          margin-left: 0.5em;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .navigation.post-navigation.custom-nav {
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      div {
+        flex: 0 1 auto;
+        margin-bottom: 0;
+      }
+    }
+  }
 }

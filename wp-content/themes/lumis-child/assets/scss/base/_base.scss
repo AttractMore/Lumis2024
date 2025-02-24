@@ -185,8 +185,8 @@ body.archive.category {
   }
 }
 ::selection {
-  background-color: $blue_color !important;
-  background: $blue_color !important;
+  background-color: var(--mid-blue) !important;
+  background: var(--mid-blue) !important;
 }
 .full-width {
   position: relative;

@@ -5,7 +5,7 @@
     padding: 0;
   }
   &:before {
-    background: $blue_color;
+    background: var(--mid-blue);
   }
   .contact_credits_wrap {
     background: var(--white);

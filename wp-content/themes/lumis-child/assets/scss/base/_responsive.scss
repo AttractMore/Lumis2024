@@ -502,18 +502,18 @@
     }
   }
   /* Blogpost */
-  .single .post-navigation .nav-next,
-  .single .post-navigation .nav-previous {
-    width: 50%;
-  }
-  .single-post .entry-content figure.content_image {
-    width: unset !important;
-    position: relative;
-    left: unset !important;
-    right: unset !important;
-    margin-left: unset !important;
-    margin-right: unset !important;
-  }
+  // .single .post-navigation .nav-next,
+  // .single .post-navigation .nav-previous {
+  //   width: 50%;
+  // }
+  // .single-post .entry-content figure.content_image {
+  //   width: unset !important;
+  //   position: relative;
+  //   left: unset !important;
+  //   right: unset !important;
+  //   margin-left: unset !important;
+  //   margin-right: unset !important;
+  // }
   /* Archive Page */
   .archive article {
     margin-bottom: 55px !important;
@@ -637,12 +637,12 @@
     }
   }
   /* Custom posts nav */
-  .navigation.post-navigation.custom_posts_nav {
-    a {
-      font-size: 12px !important;
-      line-height: 15px !important;
-    }
-  }
+  // .navigation.post-navigation.custom_posts_nav {
+  //   a {
+  //     font-size: 12px !important;
+  //     line-height: 15px !important;
+  //   }
+  // }
 }
 
 // (min-width: 992px)

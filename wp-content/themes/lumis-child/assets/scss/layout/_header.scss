@@ -10,8 +10,8 @@
 //   }
 // }
 header#masthead {
-  //background: $blue_color;
-  background: linear-gradient(128deg, $blue_color 10%, #0e576d 52%);
+  //background: var(--mid-blue);
+  background: linear-gradient(128deg, var(--mid-blue) 10%, #0e576d 52%);
   .main-header-bar {
     background-color: transparent;
     border-bottom-color: transparent;
@@ -244,10 +244,10 @@ header#masthead {
       margin: 5px 0;
       a {
         text-align: left;
-        border-bottom: 2px solid $blue_color;
+        border-bottom: 2px solid var(--mid-blue);
         padding-bottom: 10px !important;
         padding: 0;
-        color: $blue_color;
+        color: var(--mid-blue);
         text-shadow: -0.4px -0.4px 0 transparent, 0.4px 0.4px transparent;
         font-weight: 400 !important;
       }
@@ -279,8 +279,8 @@ header#masthead {
           display: none;
         }
         a {
-          color: $blue_color;
-          //text-shadow: - .40px - .40px 0 $blue_color, .40px .40px $blue_color!important;
+          color: var(--mid-blue);
+          //text-shadow: - .40px - .40px 0 var(--mid-blue), .40px .40px var(--mid-blue)!important;
           font-weight: 900 !important;
         }
       }

@@ -1,6 +1,21 @@
 .blog-category-content {
+  .posts-container {
+    hr {
+      margin: calc(var(--vertical-spacing) * 0.5) 0;
+    }
+  }
   .post-container {
     margin-bottom: 5em;
+    img {
+      border-radius: var(--radius);
+    }
+  }
+  .post-container {
+    &:last-of-type {
+      + hr {
+        display: none;
+      }
+    }
   }
   .archive-title.h2 {
     padding-left: 0;
@@ -10,6 +25,12 @@
     a {
       border: 0;
     }
+  }
+  .post-meta {
+    margin-bottom: 1em;
+  }
+  .post-image {
+    margin-bottom: 1em;
   }
   .post-link {
     margin-top: 2em;

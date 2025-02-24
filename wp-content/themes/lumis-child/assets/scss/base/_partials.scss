@@ -13,7 +13,7 @@
     }
   }
   .blue_button {
-    background: $blue_color;
+    background: var(--mid-blue);
     border: none;
     color: var(--white) !important;
     padding: 10px 11px;
@@ -94,7 +94,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   &:before {
-    background: $blue_color;
+    background: var(--mid-blue);
   }
   p {
     margin-bottom: unset;
@@ -173,7 +173,7 @@
     display: none;
   }
   .page-title {
-    color: $blue_color;
+    color: var(--mid-blue);
   }
 }
 

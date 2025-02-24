@@ -223,7 +223,7 @@ function am_taxonomy_terms_callback($atts)
   return $output;
 }
 
-add_shortcode("taxonomy_terms", "am_taxonomy_terms_callback");
+// add_shortcode("taxonomy_terms", "am_taxonomy_terms_callback");
 
 function posts_navigation_callback()
 {
@@ -245,13 +245,61 @@ add_action("astra_primary_content_bottom", "add_newsletter_signup");
 
 function add_newsletter_signup()
 {
-  $body_classes = get_body_class();
+  // $body_classes = get_body_class();
 
-  if (in_array("single-post", $body_classes) || in_array("single-videos", $body_classes) || is_page(["events", "blog"]) || is_post_type_archive("videos") || is_front_page()) {
-    echo "<aside class='newsletter-signup'><h3>Sign up to our Newsletter!</h3><p class='before-form'>We want to keep you updated on our latest blog posts, upcoming webinars, conferences, relevant industry news and much more…</p>";
-    echo do_shortcode("[cleverreach_signup]");
-    echo "</aside>";
+  // if (in_array("single-post", $body_classes) || in_array("single-videos", $body_classes) || is_page(["events", "blog"]) || is_post_type_archive("videos") || is_front_page()) {
+  echo "<aside class='newsletter-signup'><h3>Sign up to our Newsletter!</h3><p class='before-form'>We want to keep you updated on our latest blog posts, upcoming webinars, conferences, relevant industry news and much more…</p>";
+  echo do_shortcode("[cleverreach_signup]");
+  echo "</aside>";
+  // }
+}
+function display_post_navigation($type)
+{
+  $prev_post = get_previous_post();
+  if ($prev_post) {
+    $prev_id = $prev_post->ID;
+    $prev_permalink = get_permalink($prev_id);
+    $prev_post_exists = true;
+  } else {
+    $prev_post_exists = false;
+    $prev_permalink = "#";
   }
+  $next_post = get_next_post();
+  if ($next_post) {
+    $next_id = $next_post->ID;
+    $next_permalink = get_permalink($next_id);
+    $next_post_exists = true;
+  } else {
+    $next_post_exists = false;
+    $next_permalink = "#";
+  }
+  echo '<nav class="navigation post-navigation custom-nav" role="navigation" aria-label="Posts">';
+  echo '<div class="nav-links">';
+  echo '<div class="nav-previous ';
+  if (!$prev_post_exists) {
+    echo "link-disabled";
+  }
+  echo '">';
+  echo '<a href="';
+  echo $prev_permalink;
+  echo '" rel="prev"> Previous Post</a>';
+  echo "</div>";
+  if ($type === "videos") {
+    echo '<div><a href="/videos/">Back to videos</a></div>';
+  } elseif ($type === "blog") {
+    echo '<div><a href="/blog/">Back to articles</a></div>';
+  }
+  echo '<div class="nav-next ';
+  if (!$next_post_exists) {
+    echo "link-disabled";
+  }
+  echo '">';
+  echo '<a href="';
+  echo $next_permalink;
+  echo '" rel="next">Next Post </a>';
+  echo "</div>";
+  echo "</div>";
+  echo "</nav>";
 }
 
 function display_team_member_details($linkedin_url, $email_address)

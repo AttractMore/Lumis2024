@@ -34,7 +34,6 @@ get_header(); ?>
           echo "<p>There are no videos to show.</p>";
         } ?>
           </div><!-- .posts-container -->
-
         </div><!-- .blog-content -->
       </div><!-- .video-main-content -->
 

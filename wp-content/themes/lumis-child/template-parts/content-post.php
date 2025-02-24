@@ -12,15 +12,8 @@
 	<h2 class="post-title h3">
 		<a class="title" href="<? echo get_permalink()?>"><? echo get_the_title()?></a>
   </h2>
-	<div class="post_image">
-    <a href="<?php echo get_permalink(); ?>">
-    <?php if (has_post_thumbnail()) {
-      the_post_thumbnail();
-    } ?>
-    </a>
-  </div><!-- .post_image -->
-  <div class="post_details">
-		<span class="category-display"><span class="category-display-label">Topic(s): </span>
+  <div class="post-meta">
+    <span class="category-display"><span class="category-display-label">Topic: </span>
 
   <?php
   $categories = get_the_category();
@@ -42,6 +35,15 @@
   }
   ?>
     </span>
+  </div>
+	<div class="post-image">
+    <a href="<?php echo get_permalink(); ?>">
+    <?php if (has_post_thumbnail()) {
+      the_post_thumbnail();
+    } ?>
+    </a>
+  </div><!-- .post-image -->
+  <div class="post-details">
     <?php the_excerpt(); ?>
 		<p>
 			<a class="primary-button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
@@ -51,3 +53,4 @@
 		</p>
   </div><!-- .post-details -->
 </div><!-- .post-container -->
+<hr>

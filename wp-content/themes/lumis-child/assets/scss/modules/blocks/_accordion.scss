@@ -16,7 +16,7 @@
     }
   }
   h2 {
-    color: $blue_color;
+    color: var(--mid-blue);
     text-transform: none;
     font-size: 2em !important;
     line-height: 1.25 !important;

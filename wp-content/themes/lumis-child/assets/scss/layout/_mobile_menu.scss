@@ -184,7 +184,7 @@ ul#mobile_menu {
 }
 
 #content_overlay_ {
-  background: rgba($blue_color, 1);
+  background: rgba(var(--mid-blue), 1);
   position: fixed;
   top: 7%;
   left: 0;

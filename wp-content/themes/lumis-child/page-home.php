@@ -59,7 +59,6 @@ get_header(); ?>
                     <?php echo wp_kses_post(get_sub_field("title")); ?>
                   </a>
                 </h3>
-                <aside>
                   <?php echo wp_kses_post(get_sub_field("description")); ?>
                   <?php if ($link): ?>
                     <span class="service-link">
@@ -69,7 +68,6 @@ get_header(); ?>
                       </a>
                     </span>
                     <?php endif; ?>
-                  </aside>
                   </li>
                   <?php
           endwhile; ?>
@@ -110,7 +108,6 @@ get_header(); ?>
                   <?php echo wp_kses_post(get_sub_field("title")); ?>
                 </a>
               </h3>
-              <aside>
                 <?php echo wp_kses_post(get_sub_field("description")); ?>
                 <?php if ($link): ?>
                   <span class="service-link">
@@ -120,7 +117,6 @@ get_header(); ?>
                     </a>
                   </span>
                   <?php endif; ?>
-                </aside>
             </li>
           <?php
         endwhile; ?>
@@ -158,7 +154,7 @@ get_header(); ?>
                 </a>
               </div>
               <div class="post_details">
-                <span class="category-display"><span class="category-display-label">Topic(s): </span>
+                <span class="category-display"><span class="category-display-label">Topic: </span>
 
               <?php
               $categories = get_the_category();
@@ -199,7 +195,10 @@ get_header(); ?>
 
     </div>
   </section>
-  <?php astra_primary_content_bottom(); ?> <!-- needed for inclusion of newletter signup block -->
+  <?php add_newsletter_signup(); ?>
+  <?php
+//astra_primary_content_bottom();
+?> <!-- needed for inclusion of newletter signup block -->
 
 </div><!-- #primary -->
 

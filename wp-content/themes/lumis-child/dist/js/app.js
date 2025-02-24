@@ -278,7 +278,7 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
 // closeButton.addEventListener("click", () => {
 //   dialog.close();
 // });
-if (document.body.classList.contains("page-template-about-page")) {
+if (document.body.classList.contains("page-template-team-page")) {
   // See https://tympanus.net/codrops/2021/10/06/how-to-implement-and-style-the-dialog-element/
 
   const dialog = document.querySelector("dialog");

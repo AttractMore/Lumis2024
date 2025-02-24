@@ -23,6 +23,7 @@ $output = "";
 		<h1><?php the_title(); ?></h1>
 
 		<?php astra_primary_content_top(); ?>
+    <article>
 
 		<?php
 //astra_content_loop();
@@ -78,54 +79,14 @@ $output = "";
     } ?>
 			</p>
 		</div>
+    </article>
+		<?php
+//astra_primary_content_bottom();
+?>
+    <?php display_post_navigation("videos"); ?>
 
-		<?php astra_primary_content_bottom(); ?>
-	  <?php
-   $prev_post = get_previous_post();
-   if ($prev_post) {
-     $prev_id = $prev_post->ID;
-     $prev_permalink = get_permalink($prev_id);
-     $prev_post_exists = true;
-   } else {
-     $prev_post_exists = false;
-     $prev_permalink = "#";
-   }
-   $next_post = get_next_post();
-   if ($next_post) {
-     $next_id = $next_post->ID;
-     $next_permalink = get_permalink($next_id);
-     $next_post_exists = true;
-   } else {
-     $next_post_exists = false;
-     $next_permalink = "#";
-   }
-   ?>
-		<nav class="navigation post-navigation custom_posts_nav" role="navigation" aria-label="Posts">
-			<div class="nav-links">
-				<div class="nav-previous <?php if (!$prev_post_exists) {
-      echo "link-disabled";
-    } ?>">
-					<a href="<? echo $prev_permalink ?>" rel="prev"> Previous Post</a>
-				</div>
-				<div style="text-align: center;">
-					<a href="/videos/">Back to videos
-					</a>
-				</div>
-				<div class="nav-next <?php if (!$next_post_exists) {
-      echo "link-disabled";
-    } ?>">
-					<a href="<? echo $next_permalink ?>" rel="next">Next Post </a>
-				</div>
-			</div>
-		</nav>
+    <?php add_newsletter_signup(); ?>
+
 	</div><!-- #primary -->
-
-<?php if (astra_page_layout() == "right-sidebar"): ?>
-
-	<?php
-  //get_sidebar();
-  ?>
-
-<?php endif; ?>
 
 <?php get_footer(); ?>

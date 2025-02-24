@@ -13,22 +13,31 @@ h2,
   font-family: $font_family_prompt_light;
   font-size: clamp(1.5rem, 0.939rem + 2.857vw, 3rem) !important;
   line-height: 1.25 !important;
-  position: relative;
-  padding-left: 22px;
+  // position: relative;
+  // padding-left: 22px;
   color: var(--black);
   margin-bottom: 65px !important;
 }
-h2 {
+h2[class*="flash"] {
+  padding-left: 22px;
+  position: relative;
   &:before {
     content: "";
     position: absolute;
     width: 30px;
     height: 30px;
-    border: solid $blue_color;
     border-width: 0 0 6px 6px;
     border-bottom-left-radius: 10px;
+    border-style: solid;
     bottom: -15px;
     left: 0;
+  }
+}
+h2 {
+  &.flash-mid-blue {
+    &:before {
+      border-color: var(--mid-blue);
+    }
   }
   &.flash-dark-orange {
     &:before {
@@ -41,8 +50,9 @@ h2 {
     }
   }
 }
+
 @media screen and (min-width: 991px) {
-  h2 {
+  h2[class*="flash"] {
     &::before {
       width: 42px;
       height: 42px;
@@ -93,7 +103,7 @@ li {
   font-family: $font_family_montserrat;
   font-size: 20px !important;
   line-height: 30px;
-  font-size: clamp(1.125rem, 1.077rem + 0.238vw, 1.25rem) !important;
+  font-size: clamp(1rem, 0.899rem + 0.505vw, 1.25rem) !important;
   line-height: 1.5 !important;
   color: var(--black);
   max-width: 78ch;

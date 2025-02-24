@@ -16,7 +16,7 @@
         margin-top: 15px;
       }
     }
-    border-bottom: 1px solid $blue_color !important;
+    border-bottom: 1px solid var(--mid-blue) !important;
     padding-bottom: 50px !important;
     margin-bottom: 100px !important;
     &:last-of-type {
