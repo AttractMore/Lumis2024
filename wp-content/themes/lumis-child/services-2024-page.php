@@ -212,7 +212,9 @@ if ($testimonial_rows) {
     </div>
   </section>
 
-    <?php astra_primary_content_bottom(); ?>
+    <?php
+//astra_primary_content_bottom();
+?>
   </article>
 </div><!-- #primary -->
 

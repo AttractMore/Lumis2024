@@ -152,6 +152,12 @@
   }
   summary {
     list-style: none;
+    &:focus-visible {
+      outline: none;
+      h3 {
+        color: var(--grey);
+      }
+    }
     &::-webkit-details-marker {
       display: none;
     }
@@ -274,9 +280,9 @@
     justify-content: space-between;
   }
   .slide-arrow {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    // display: grid;
+    // justify-content: center;
+    // align-items: center;
     border: 1px solid #222;
     border-radius: 999px;
     padding: 0;
@@ -296,11 +302,15 @@
   }
   #slide-arrow-prev {
     left: 0.5em;
-    transform: rotate(90deg);
+    svg {
+      transform: rotate(90deg);
+    }
   }
   #slide-arrow-next {
     right: 0.5em;
-    transform: rotate(-90deg);
+    svg {
+      transform: rotate(-90deg);
+    }
   }
 }
 @media screen and (min-width: 768px) {
@@ -331,16 +341,6 @@
     }
   }
 }
-// @media screen and (min-width: 1301px) {
-//   .testimonials {
-//     #slide-arrow-prev {
-//       left: -5em;
-//     }
-//     #slide-arrow-next {
-//       right: -5em;
-//     }
-//   }
-// }
 
 /***************************************/
 //  SERVICES RESOURCES

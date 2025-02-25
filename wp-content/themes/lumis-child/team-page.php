@@ -54,7 +54,7 @@ get_header(); ?>
           echo "<div class='team-members'>";
           while ($team_members->have_posts()) {
             $team_members->the_post();
-            $allocated_company = get_field("allocated_company");
+            // $allocated_company = get_field("allocated_company");
             $linkedin_url = get_field("linkedin_url");
             $email_address = get_field("email");
 

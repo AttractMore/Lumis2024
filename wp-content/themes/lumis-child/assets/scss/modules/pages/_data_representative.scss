@@ -1,9 +1,0 @@
-@media screen and (min-width: 991px) {
-  .data-representative-services {
-    flex-wrap: wrap !important;
-    .wp-block-column { // 3 columns
-      flex-basis: calc(33.333% - 1.333em) !important;
-      max-width:  calc(33.333% - 1.333em);
-    }
-  }
-}

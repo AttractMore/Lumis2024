@@ -1,9 +1,0 @@
-.checkmark_block {
-	&:before {
-		top: 45px!important;
-		@media (max-width: 991px) {
-			display: block!important;
-			top: 0!important;
-		}
-	}
-}

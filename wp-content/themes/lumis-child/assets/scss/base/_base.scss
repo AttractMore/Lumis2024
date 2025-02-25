@@ -250,29 +250,6 @@ main + article {
   margin-bottom: 1em;
   color: var(--black);
 }
-// .inverted_colors_section {
-//   position: relative;
-//   z-index: 1;
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     height: 100%;
-//     width: 100vw;
-//     background: #0e576d;
-//     z-index: -1;
-//   }
-//   &:after {
-//     content: "";
-//     display: table;
-//     clear: both;
-//   }
-//   &::selection {
-//     background-color: $grey_color;
-//   }
-// }
 @media (max-width: 544px) {
   .ast-separate-container #content .ast-container {
     padding-left: 1.5em;

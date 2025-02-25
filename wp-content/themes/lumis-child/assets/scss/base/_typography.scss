@@ -151,11 +151,6 @@ a {
         background-color: #0e576d;
         left: -30px;
         top: 10px;
-        //-webkit-transform: translateY(-50%);
-        //-moz-transform: translateY(-50%);
-        //-ms-transform: translateY(-50%);
-        //-o-transform: translateY(-50%);
-        //transform: translateY(-50%);
       }
     }
   }
@@ -167,41 +162,41 @@ a {
 }
 
 /* Blockquotes */
-blockquote.blue_color,
-blockquote.blue_color p,
-blockquote,
-blockquote p {
-  color: $blockquote_blue_color;
-  font-size: 28px !important;
-  line-height: 38px;
-  font-family: $font_prompt_medium_italic;
-  .blockquote_author {
-    color: $blockquote_blue_color;
-    font-size: 20px;
-    line-height: 42px;
-    font-family: $font_prompt_medium;
-    text-align: right;
-  }
-}
+// blockquote.blue_color,
+// blockquote.blue_color p,
+// blockquote,
+// blockquote p {
+//   color: $blockquote_blue_color;
+//   font-size: 28px !important;
+//   line-height: 38px;
+//   font-family: $font_prompt_medium_italic;
+//   .blockquote_author {
+//     color: $blockquote_blue_color;
+//     font-size: 20px;
+//     line-height: 42px;
+//     font-family: $font_prompt_medium;
+//     text-align: right;
+//   }
+// }
 
-blockquote.orange_color,
-blockquote.orange_color p {
-  color: var(--orange);
-  font-size: 28px !important;
-  line-height: 38px;
-  font-family: $font_prompt_medium_italic;
-  .blockquote_author {
-    color: var(--orange);
-    font-size: 20px;
-    line-height: 42px;
-    font-family: $font_prompt_medium;
-    text-align: right;
-  }
-}
+// blockquote.orange_color,
+// blockquote.orange_color p {
+//   color: var(--orange);
+//   font-size: 28px !important;
+//   line-height: 38px;
+//   font-family: $font_prompt_medium_italic;
+//   .blockquote_author {
+//     color: var(--orange);
+//     font-size: 20px;
+//     line-height: 42px;
+//     font-family: $font_prompt_medium;
+//     text-align: right;
+//   }
+// }
 
-span {
-  font-family: $font_family_montserrat;
-}
+// span {
+//   font-family: $font_family_montserrat;
+// }
 /******************/
 // Callouts (11/4/2024)
 /*****************/

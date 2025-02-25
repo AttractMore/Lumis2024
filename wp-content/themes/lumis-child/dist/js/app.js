@@ -197,41 +197,42 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
     const delay = 100; // delay between calls
     let throttled = false; // are we currently throttled?
     let index = 0; // Current slide index initialised to 0
-    let displayed_slides, gapPx, gap;
+    let gap = 0;
+    let displayed_slides, gapPx;
 
     const compStyles = window.getComputedStyle(slidesContainer);
-    updateSlideDetails();
+    gap = updateSlideDetails(compStyles, gap);
     slidesContainer.scrollLeft = -10000; // set position back to beginning
-    buttonDisplay(index);
+    buttonDisplay(index, numSlides, prevButton, nextButton, compStyles);
 
     nextButton.addEventListener("click", () => {
       const slideWidth = slide.clientWidth + gap;
       slidesContainer.scrollLeft += slideWidth;
       index = index + 1;
-      updateSlideDetails();
-      console.log(`index: ${index}`);
-      buttonDisplay(index);
+      gap = updateSlideDetails(compStyles, gap);
+      // console.log(`index: ${index}`);
+      buttonDisplay(index, numSlides, prevButton, nextButton, compStyles);
     });
     prevButton.addEventListener("click", () => {
       const slideWidth = slide.clientWidth + gap;
       slidesContainer.scrollLeft -= slideWidth;
       index = index - 1;
-      updateSlideDetails();
-      console.log(`index: ${index}`);
-      buttonDisplay(index);
+      gap = updateSlideDetails(compStyles, gap);
+      // console.log(`index: ${index}`);
+      buttonDisplay(index, numSlides, prevButton, nextButton, compStyles);
     });
 
     // window.resize event listener
     window.addEventListener("resize", function () {
       // only run if we're not throttled
       if (!throttled) {
-        updateSlideDetails();
+        gap = updateSlideDetails(compStyles, gap);
         slideWidth = slide.clientWidth + gap;
         slidesContainer.scrollLeft = slideWidth * index;
         // slidesContainer.scrollLeft = -10000; // set position back to beginning
         // index = 0;
         console.log(`slides: ${displayed_slides}, gap: ${gap}, index: ${index}`);
-        buttonDisplay(index);
+        buttonDisplay(index, numSlides, prevButton, nextButton, compStyles);
         throttled = true;
         // set a timeout to un-throttle
         setTimeout(function () {
@@ -240,19 +241,20 @@ if (document.body.classList.contains("page-template-services-2024-page")) {
       }
     });
 
-    function updateSlideDetails() {
+    function updateSlideDetails(compStyles, gap) {
       displayed_slides = compStyles.getPropertyValue("--displayed-slides");
       gapPx = compStyles.getPropertyValue("--testimonial-gap");
       gap = parseInt(gapPx, 10);
+      return gap;
     }
 
-    function buttonDisplay() {
+    function buttonDisplay(index, numSlides, prevButton, nextButton, compStyles) {
       if (index === 0) {
         prevButton.style.visibility = "hidden";
       } else {
         prevButton.style.visibility = "visible";
       }
-      if (index >= numSlides - displayed_slides) {
+      if (index >= numSlides - compStyles.getPropertyValue("--displayed-slides")) {
         nextButton.style.visibility = "hidden";
       } else {
         nextButton.style.visibility = "visible";
@@ -282,6 +284,7 @@ if (document.body.classList.contains("page-template-team-page")) {
   // See https://tympanus.net/codrops/2021/10/06/how-to-implement-and-style-the-dialog-element/
 
   const dialog = document.querySelector("dialog");
+  const dialogs = document.querySelectorAll("dialog");
 
   if (typeof dialog.showModal !== "function") {
     // Load polyfill script
@@ -292,7 +295,9 @@ if (document.body.classList.contains("page-template-team-page")) {
 
     // Register polyfill on dialog element once the script has loaded
     polyfill.onload = () => {
-      dialogPolyfill.registerDialog(dialog);
+      dialogs.forEach((element) => {
+        dialogPolyfill.registerDialog(element);
+      });
     };
 
     // Load polyfill CSS styles

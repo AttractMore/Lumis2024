@@ -23,7 +23,7 @@
   textarea {
     color: var(--black) !important;
     font-size: 20px;
-    border-radius: $radius;
+    border-radius: var(--radius);
   }
   input {
     max-width: 400px;
@@ -31,6 +31,8 @@
   }
   select {
     width: 100%;
+    -webkit-appearance: initial; // Needed for Safari to include the padding on the select!
+    appearance: initial;
   }
   textarea {
     max-height: 240px;
