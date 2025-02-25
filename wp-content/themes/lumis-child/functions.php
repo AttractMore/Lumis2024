@@ -305,7 +305,7 @@ function display_post_navigation($type)
 function display_team_member_details($linkedin_url, $email_address)
 {
   the_post_thumbnail("full");
-  echo "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&#x2716</button><div class='team-member-content'>";
+  echo "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&times;</button><div class='team-member-content'>";
   echo "<figure>";
   the_post_thumbnail("full");
   echo "</figure>";

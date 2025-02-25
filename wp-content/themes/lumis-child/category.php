@@ -38,7 +38,9 @@ get_header();
           <div class="post-container">
             <h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <div class="post-image mb1">
-            <?php the_post_thumbnail("full"); ?>
+            <a href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail("full"); ?>
+            </a>
             </div>
             <div class="entry-content">
                 <?php the_excerpt(); ?>

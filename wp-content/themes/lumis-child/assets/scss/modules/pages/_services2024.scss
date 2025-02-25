@@ -152,7 +152,8 @@
   }
   summary {
     list-style: none;
-    &:focus-visible {
+    &:focus-visible,
+    &:focus {
       outline: none;
       h3 {
         color: var(--grey);

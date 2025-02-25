@@ -61,7 +61,7 @@
       max-width: min(92vw, 1200px);
       padding: 2rem;
       padding: clamp(1.5em, 5%, 2rem);
-      position: fixed;
+      position: absolute; // better as position:fixed but Safari 13 and 14 hide the dialog below the footer!
       figure {
         margin-bottom: 1em;
         img {
@@ -70,11 +70,11 @@
       }
       button {
         position: absolute;
-        top: 0.3em;
-        right: 0.3em;
+        top: -0.25em;
+        right: 0.1em;
         background-color: transparent;
         color: var(--white);
-        font-size: 1.5em;
+        font-size: 3em;
         padding: 0;
         margin: 0;
       }
@@ -104,8 +104,8 @@
     .team-member {
       dialog {
         button {
-          top: 1em;
-          right: 1em;
+          top: 0.25em;
+          right: 0.75em;
         }
       }
     }
