@@ -81,6 +81,7 @@
       text-align: center;
       text-decoration: none;
       font-size: 1.25rem;
+      font-size: clamp(1rem, 0.899rem + 0.505vw, 1.25rem) !important;
       font-family: $font_family_montserrat;
       font-weight: 600;
       border-radius: var(--radius);
