@@ -10,13 +10,10 @@
   .management-team {
     padding-top: var(--vertical-spacing);
     padding-bottom: calc(var(--vertical-spacing) * 0.5);
-    // padding-bottom: 0;
-    // margin-bottom: 2em;
   }
   .wider-team {
     padding-top: calc(var(--vertical-spacing) * 0.5);
     padding-bottom: var(--vertical-spacing);
-    // margin-bottom: 2em;
   }
   .team-members {
     display: grid;

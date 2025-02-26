@@ -32,11 +32,11 @@
         font-family: $font_montserrat_medium;
       }
       &.posted-by {
-        font-style: italic;
+        // font-style: italic;
         a {
           border-bottom: 0;
         }
-        pointer-events: none;
+        // pointer-events: none;
       }
     }
     .entry-meta {

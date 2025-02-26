@@ -152,9 +152,10 @@
   }
   summary {
     list-style: none;
+    outline: 0;
     &:focus-visible,
     &:focus {
-      outline: none;
+      outline: 0;
       h3 {
         color: var(--grey);
       }
