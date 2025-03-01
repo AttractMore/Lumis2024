@@ -32,6 +32,10 @@
       fill: var(--black);
       width: 1em;
       height: 1em;
+      &.linkedin {
+        position: relative;
+        top: -2px;
+      }
     }
     .role {
       margin-bottom: 0.5em;
@@ -58,7 +62,7 @@
       max-width: min(92vw, 1200px);
       padding: 2rem;
       padding: clamp(1.5em, 5%, 2rem);
-      position: absolute; // better as position:fixed but Safari 13 and 14 hide the dialog below the footer!
+      position: fixed; // better as position:fixed but Safari 13 and 14 hide the dialog below the footer!
       figure {
         margin-bottom: 1em;
         img {

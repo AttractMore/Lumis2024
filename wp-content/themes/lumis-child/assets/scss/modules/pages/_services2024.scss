@@ -33,13 +33,16 @@
     figure {
       background-color: var(--white);
       border-radius: var(--radius);
-      aspect-ratio: 1;
+      // aspect-ratio: 1;
       margin: 0 auto 2em;
-      max-width: 250px;
+      width: 250px;
+      height: 250px;
       display: grid;
-      place-items: center;
+      // place-items: center;
+      align-items: center;
+      justify-content: center;
       img {
-        max-width: 200px;
+        width: 200px;
         aspect-ratio: 1;
         display: block;
       }
@@ -71,6 +74,8 @@
       display: block;
       margin: 0 auto;
       border-radius: var(--radius);
+      min-height: 240px;
+      object-fit: cover;
     }
   }
   .service-advantages-container {

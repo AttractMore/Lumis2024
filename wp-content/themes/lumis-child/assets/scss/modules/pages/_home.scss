@@ -72,16 +72,8 @@
   }
   .legal-service,
   .consulting-service {
-    // display: grid;
-    // grid-template-columns: 80px 1fr;
-    // grid-template-areas:
-    //   "icon heading"
-    //   ". content";
-    // column-gap: 1em;
-    // row-gap: 0.5em;
     padding: 0 !important;
     figure {
-      // grid-area: icon;
       img {
         max-width: 120px;
         border-radius: var(--radius);
@@ -104,7 +96,7 @@
       a {
         display: inline-flex;
         align-items: center;
-        border: 0;
+        // border: 0;
         svg {
           padding-left: 0.25em;
           width: 3em;

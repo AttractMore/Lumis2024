@@ -132,6 +132,9 @@ a {
     &:focus {
       color: $link_hover_color !important;
     }
+    &:has(img) {
+      border-bottom: 0;
+    }
   }
   ul {
     font-size: 20px;
