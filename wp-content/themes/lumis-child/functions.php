@@ -45,7 +45,7 @@ function true_remove_default_image_sizes($sizes)
 
   return $sizes;
 }
-add_filter("intermediate_image_sizes_advanced", "true_remove_default_image_sizes");
+//add_filter("intermediate_image_sizes_advanced", "true_remove_default_image_sizes");
 /******/
 
 // register a mobile menu

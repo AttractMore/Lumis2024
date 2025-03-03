@@ -15,7 +15,6 @@
     }
   },
   "scripts": {
-    "start": "parcel build",
     "sass": "sass wp-content/themes/lumis-child/assets/scss/app.scss wp-content/themes/lumis-child/dist/css/app.css --style=compressed --no-source-map"
   },
   "keywords": [],

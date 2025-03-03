@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Lumis International Brochure page 2025
+ * Template Name: Authorized Representative Brochure page 2025
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,11 +14,11 @@ get_header(); ?>
 
   <div id="hero-section" class="brochure-hero-section">
     <img class="brochure-hero-section-graphic" 
-    srcset="/wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg-400.png 400w,
-    /wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg-600.png 600w,
-    /wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg-800.png 800w,
-    /wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg.png 1120w"
-    src="/wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg.png" width="1120" height="480" alt="" decoding="async" loading="eager">
+    srcset="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-400.jpg 400w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-600.jpg 600w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-800.jpg 800w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg.jpg 1120w"
+    src="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg.jpg" width="1120" height="480" alt="" decoding="async" loading="eager">
     <div class="brochure-hero-section-text">
       <h1 class="white-text"><?php echo get_field("main_header"); ?></h1>
     </div>
@@ -53,51 +53,23 @@ get_header(); ?>
     </div> <!-- .box-2-->
   </section><!-- .boxes-1-2 -->
 
+  <section class="intermediate-image">
+    <img 
+    srcset="/wp-content/themes/lumis-child/dist/img/stethoscope-400.png 400w,
+    /wp-content/themes/lumis-child/dist/img/stethoscope-600.png 600w,
+    /wp-content/themes/lumis-child/dist/img/stethoscope-800.png 800w,
+    /wp-content/themes/lumis-child/dist/img/stethoscope.png 1120w"
+    src="/wp-content/themes/lumis-child/dist/img/stethoscope.png" width="1120" height="446" alt="" decoding="async" loading="eager">
+  </section>
+
   <section class="boxes-3-4">
     <div class="box-3">
-      <aside class="intro-image-text">
-        <?php
-        $image = get_field("box_3_intro_image");
-        $size = "full";
-        echo '<figure class="intro-image">';
-        echo wp_get_attachment_image($image, $size);
-        echo "</figure>";
-        ?>
-        <h2 class="h3"><?php echo get_field("box_3_title"); ?></h2>
-      </aside>
-      <?php if (have_rows("box_3_content")): ?>
-        <ul>
-        <?php while (have_rows("box_3_content")):
-          the_row(); ?>
-          <li>
-            <?php $icon = get_sub_field("icon"); ?>
-            <?php if ($icon): ?>
-              <figure>
-                <img aria-hidden="true" src="<?php echo esc_url($icon["url"]); ?>" alt="" >
-              </figure>
-            <?php endif; ?>
-            <aside>
-              <p class="lead-text"><?php echo get_sub_field("lead_text"); ?></p>
-              <p><?php echo get_sub_field("content"); ?></p>
-            </aside>
-          </li>
-        <?php
-        endwhile; ?>
-        </ul>
-      <?php endif; ?>
+      <h2 class="h3"><?php echo get_field("box_3_title"); ?></h2>
+      <?php echo wp_kses_post(get_field("box_3_content")); ?>
     </div><!-- .box-3 -->
 
     <div class="box-4">
-    <aside class="intro-image-text">
-      <?php
-      $image = get_field("box_4_intro_image");
-      $size = "full";
-      echo '<figure class="intro-image">';
-      echo wp_get_attachment_image($image, $size);
-      echo "</figure>";
-      ?>
-      <h2 class="h3"><?php echo get_field("box_4_title"); ?></h2>
-    </aside>
+    <h2 class="h3"><?php echo get_field("box_4_title"); ?></h2>
       <?php if (have_rows("box_4_content")): ?>
         <ul>
         <?php while (have_rows("box_4_content")):
@@ -111,7 +83,16 @@ get_header(); ?>
             <?php endif; ?>
             <aside>
               <p class="lead-text"><?php echo get_sub_field("lead_text"); ?></p>
-              <p><?php echo get_sub_field("content"); ?></p>
+              <?php
+              $content_items = get_sub_field("content");
+              if ($content_items) {
+                echo "<ul>";
+                foreach ($content_items as $content_item) {
+                  echo "<li>" . $content_item["item"] . "</li>";
+                }
+                echo "</ul>";
+              }
+              ?>
             </aside>
           </li>
         <?php

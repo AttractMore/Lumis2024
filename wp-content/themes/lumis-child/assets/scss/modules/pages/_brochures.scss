@@ -1,13 +1,42 @@
 body.lumis-international-brochure,
 body.authorized-representative-brochure {
-  --icon-size: 5em;
-  .hero-section,
+  --icon-size: 3em;
+  --box-gap: 2em;
+  .brochure-hero-section {
+    margin-top: 3em;
+    position: relative;
+    img {
+      border-radius: var(--radius);
+      object-fit: cover;
+      min-height: 250px;
+      width: 100%;
+    }
+    .brochure-hero-section-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h1 {
+        padding: 0 1em;
+        margin: 0 !important;
+        font-size: 30px !important;
+        font-size: clamp(1.313rem, 0.788rem + 2.625vw, 2.625rem) !important;
+        line-height: 1.3 !important;
+      }
+    }
+  }
+
+  .brochure-hero-section,
   .box-1,
   .box-2,
   .box-3,
   .box-4 {
-    margin-bottom: 3em;
+    margin-bottom: var(--box-gap);
+    h2,
+    p {
+      color: var(--mid-blue);
+    }
   }
+
   background-color: var(--light-blue) !important;
   .lead-text {
     font-weight: 700;
@@ -31,8 +60,11 @@ body.authorized-representative-brochure {
   .box-1,
   .box-2 {
     background-color: var(--white);
-    padding: 5em;
+    padding: 2em;
     border-radius: var(--radius);
+    h2.h3 {
+      margin-bottom: 1.5em !important;
+    }
   }
   .box-2 {
     h2,
@@ -42,22 +74,26 @@ body.authorized-representative-brochure {
     }
     li {
       display: grid;
-      grid-template-columns: var(--icon-size) 1fr;
-      gap: 3em;
-      align-items: center;
+      grid-template-columns: auto 1fr;
+      gap: 1em;
+      align-items: start;
       margin-bottom: 1em;
+      aside {
+        margin-top: 0.75rem;
+      }
     }
   }
   .box-3,
   .box-4 {
     .intro-image-text {
       display: grid;
+      margin-bottom: 3em;
       > * {
         grid-area: 1/1/2/2;
       }
       h2 {
         color: var(--white);
-        margin: 3em;
+        margin: 2em;
         z-index: 10;
         text-wrap: balance;
       }
@@ -77,6 +113,136 @@ body.authorized-representative-brochure {
           bottom: 0;
           background: linear-gradient(var(--petrol), transparent 50%);
           border-radius: var(--radius);
+        }
+      }
+    }
+    > ul li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1em;
+      align-items: start;
+      margin-bottom: 3em;
+      p {
+        margin-bottom: 0;
+      }
+      figure {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        padding: 0.25em;
+      }
+    }
+  }
+}
+body.authorized-representative-brochure {
+  .box-1 {
+    display: flex;
+    flex-direction: column;
+    p:last-of-type {
+      margin-top: auto;
+    }
+  }
+  .box-2 {
+    li {
+      margin-bottom: 3em;
+      aside {
+        margin-top: 0.5em;
+      }
+    }
+  }
+  .intermediate-image {
+    margin-bottom: 2em;
+    img {
+      border-radius: var(--radius);
+    }
+  }
+  .box-3,
+  .box-4 {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 2em;
+    h2.h3 {
+      margin-bottom: 1.5em !important;
+    }
+  }
+  .box-4 {
+    h2,
+    p,
+    li {
+      color: var(--orange);
+    }
+    > ul li {
+      margin-bottom: 0;
+      figure {
+        padding: 0;
+      }
+      aside {
+        margin-top: 0.5em;
+      }
+      ul,
+      li {
+        list-style: disc;
+        margin: 0.25em 0;
+        padding: 0.25em 0;
+      }
+      ul {
+        margin-bottom: 1.5em;
+      }
+      li {
+        display: list-item;
+        margin-left: 1em;
+        border-top: 1px solid var(--orange);
+        &:last-child {
+          border-bottom: 1px solid var(--orange);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  body.lumis-international-brochure,
+  body.authorized-representative-brochure {
+    --icon-size: 4em;
+    .box-2,
+    .box-4 > ul {
+      li {
+        gap: 1.5em;
+      }
+    }
+  }
+}
+body.lumis-international-brochure {
+  .box-3,
+  .box-4 {
+    .intro-image-text {
+      > ul li {
+        figure {
+          padding: 0.5em;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 920px) {
+  body.lumis-international-brochure,
+  body.authorized-representative-brochure {
+    --icon-size: 5em;
+    .box-2,
+    .box-4 > ul {
+      li {
+        gap: 2em;
+      }
+    }
+    .boxes-1-2,
+    .boxes-3-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--box-gap);
+    }
+    .box-3,
+    .box-4 {
+      .intro-image-text {
+        h2 {
+          margin: 1em;
         }
       }
     }
