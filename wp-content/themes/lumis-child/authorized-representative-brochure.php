@@ -14,11 +14,11 @@ get_header(); ?>
 
   <div id="hero-section" class="brochure-hero-section">
     <img class="brochure-hero-section-graphic" 
-    srcset="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-400.jpg 400w,
-    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-600.jpg 600w,
-    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg-800.jpg 800w,
-    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg.jpg 1120w"
-    src="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg.jpg" width="1120" height="480" alt="" decoding="async" loading="eager">
+    srcset="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg1-400.jpg 400w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg1-600.jpg 600w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg1-800.jpg 800w,
+    /wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg1.jpg 1120w"
+    src="/wp-content/themes/lumis-child/dist/img/authorized-rep-brochure-main-bg1.jpg" width="1120" height="480" alt="" decoding="async" loading="eager">
     <div class="brochure-hero-section-text">
       <h1 class="white-text"><?php echo get_field("main_header"); ?></h1>
     </div>

@@ -18,9 +18,13 @@ body.authorized-representative-brochure {
       h1 {
         padding: 0 1em;
         margin: 0 !important;
+        font-family: $font_family_prompt;
         font-size: 30px !important;
         font-size: clamp(1.313rem, 0.788rem + 2.625vw, 2.625rem) !important;
         line-height: 1.3 !important;
+        strong {
+          font-family: $font_prompt_medium;
+        }
       }
     }
   }
@@ -39,7 +43,7 @@ body.authorized-representative-brochure {
 
   background-color: var(--light-blue) !important;
   .lead-text {
-    font-weight: 700;
+    font-family: $font_montserrat_bold;
     margin-bottom: 0.25em;
   }
   ul,
@@ -137,6 +141,9 @@ body.authorized-representative-brochure {
   .box-1 {
     display: flex;
     flex-direction: column;
+    p:first-of-type {
+      margin-top: 10px;
+    }
     p:last-of-type {
       margin-top: auto;
     }
@@ -169,6 +176,9 @@ body.authorized-representative-brochure {
     p,
     li {
       color: var(--orange);
+    }
+    h2 {
+      display: none;
     }
     > ul li {
       margin-bottom: 0;
