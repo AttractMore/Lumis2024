@@ -13,18 +13,42 @@ body.authorized-representative-brochure {
     }
     .brochure-hero-section-text {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: grid;
+      grid-template-rows: auto 3em;
+      margin: 2em;
       h1 {
-        padding: 0 1em;
+        // padding: 0 1em;
         margin: 0 !important;
         font-family: $font_family_prompt;
         font-size: 30px !important;
         font-size: clamp(1.313rem, 0.788rem + 2.625vw, 2.625rem) !important;
         line-height: 1.3 !important;
+        align-self: center;
         strong {
           font-family: $font_prompt_medium;
         }
+      }
+      p {
+        margin: 0 !important;
+        align-self: end;
+      }
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .brochure-hero-section {
+      .brochure-hero-section-text {
+        margin: 2.5em;
+      }
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .brochure-hero-section {
+      .brochure-hero-section-text {
+        margin: 3em;
       }
     }
   }

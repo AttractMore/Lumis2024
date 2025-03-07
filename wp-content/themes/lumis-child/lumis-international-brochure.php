@@ -21,6 +21,9 @@ get_header(); ?>
     src="/wp-content/themes/lumis-child/dist/img/corporate-brochure-main-bg.png" width="1120" height="480" alt="" decoding="async" loading="eager">
     <div class="brochure-hero-section-text">
       <h1 class="white-text"><?php echo get_field("main_header"); ?></h1>
+      <p>
+        <a class="primary-button button-no-border" target="_blank" href="/wp-content/uploads/2025/03/lumis-international-brochure.pdf">Download Brochure</a>
+      </p>
     </div>
   </div>
   <section class="boxes-1-2">
