@@ -302,41 +302,45 @@ function display_post_navigation($type)
   echo "</nav>";
 }
 
-function display_team_member_details($linkedin_url, $email_address)
+function display_team_member_details($linkedin_url, $email_address, $post_id)
 {
-  the_post_thumbnail("full");
-  echo "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&times;</button><div class='team-member-content'>";
-  echo "<figure>";
-  the_post_thumbnail("full");
-  echo "</figure>";
-  echo "<div class='team-member-data'><h3 id='team-member-name' class='white-text'>" . get_the_title() . "</h3>";
-  echo "<p class='role white-text'>" . get_field("role") . "</p>";
+  $output = "";
+  $output = get_the_post_thumbnail($post_id, "full");
+  $output .=
+    "<dialog aria-labelled-by='team-member-name' aria-described-by='team-member-bio' class='wrap mid-bg'><div class='dialog-content'><button autofocus>&times;</button><div class='team-member-content'>";
+  $output .= "<figure>";
+  $output .= get_the_post_thumbnail($post_id, "full");
+  $output .= "</figure>";
+  $output .= "<div class='team-member-data'><h3 id='team-member-name' class='white-text'>" . get_the_title() . "</h3>";
+  $output .= "<p class='role white-text'>" . get_field("role") . "</p>";
   if (!empty($linkedin_url) || !empty($email_address)) {
-    echo "<ul class='contact-group'>";
+    $output .= "<ul class='contact-group'>";
     if ($linkedin_url) {
-      echo "<li><a href='" . $linkedin_url . "'><svg class='linkedin'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#linkedin'></use></svg></a></li>";
+      $output .= "<li><a href='" . $linkedin_url . "'><svg class='linkedin'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#linkedin'></use></svg></a></li>";
     }
     if ($email_address) {
-      echo "<li><a href='mailto:" . $email_address . "'><svg class='envelope'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#envelope'></use></svg></a></li>";
+      $output .= "<li><a href='mailto:" . $email_address . "'><svg class='envelope'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#envelope'></use></svg></a></li>";
     }
-    echo "</ul>";
+    $output .= "</ul>";
   }
-  echo "<div id='team-member-bio'>";
-  the_content();
-  echo "</div></div>";
-  echo "</div></div></dialog>";
-  echo "<h3>" . get_the_title() . "</h3>";
-  echo "<p class='role'>" . get_field("role") . "</p>";
+  $output .= "<div id='team-member-bio'>";
+  $content = apply_filters("the_content", get_the_content());
+  $output .= $content;
+  $output .= "</div></div>";
+  $output .= "</div></div></dialog>";
+  $output .= "<h3>" . get_the_title() . "</h3>";
+  $output .= "<p class='role'>" . get_field("role") . "</p>";
   if (!empty($linkedin_url) || !empty($email_address)) {
-    echo "<ul class='contact-group'>";
+    $output .= "<ul class='contact-group'>";
     if ($linkedin_url) {
-      echo "<li><a href='" . $linkedin_url . "'><svg class='linkedin'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#linkedin'></use></svg></a></li>";
+      $output .= "<li><a href='" . $linkedin_url . "'><svg class='linkedin'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#linkedin'></use></svg></a></li>";
     }
     if ($email_address) {
-      echo "<li><a href='mailto:" . $email_address . "'><svg class='envelope'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#envelope'></use></svg></a></li>";
+      $output .= "<li><a href='mailto:" . $email_address . "'><svg class='envelope'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#envelope'></use></svg></a></li>";
     }
-    echo "</ul>";
+    $output .= "</ul>";
   }
+  return $output;
 }
 
 function set_number_of_posts($query)

@@ -58,7 +58,7 @@ get_header(); ?>
         <div class="full-width mid-bg pb15">
           <div class="service-advantages-container wrap">
             <div>
-              <h2 class="flash-dark-orange">Our 3E Advantage: Expert. Efficient. Expedited.</h2>
+              <h2 class="flash-dark-orange">Our 3E Advantage: Expertise. Efficiency. Expedited.</h2>
             </div>
             <ul>
               <li>
@@ -132,7 +132,7 @@ get_header(); ?>
     <?php if ($testimonial_rows || $matching_posts->have_posts()): ?>
     <section class="services-contact-reference full-width mid-bg mb0">
       <div class="services-contact-reference-container wrap">
-        <p class="h3 white-text">Contact our experts to find out more!</p>
+        <p class="h3 white-text">Contact us to find out more!</p>
         <p>
           <a class="primary-button button-no-border" href="#home-contact-section">Contact us</a>
         </p>
@@ -166,7 +166,7 @@ if ($testimonial_rows) {
     // ];
     // $matching_posts = new WP_Query($args);
     if ($matching_posts->have_posts()) {
-      echo "<section class='services-resources'><h2 class='flash-dark-orange'>Additional resources for " . esc_html(get_field("service_title")) . "</h2><ul class='matching-posts'>";
+      echo "<section class='services-resources'><h2 class='flash-dark-orange'>Latest news & blog articles</h2><ul class='matching-posts'>";
 
       while ($matching_posts->have_posts()) {
         $matching_posts->the_post();
@@ -184,7 +184,7 @@ if ($testimonial_rows) {
 
   <section id="home-contact-section" class="home-contact-form full-width mid-bg">
     <div class="home-content-form-container wrap">
-      <h2 class="flash-mid-grey white-text">Contact our experts to find out more!</h2>
+      <h2 class="flash-mid-grey white-text">Contact us to find out more!</h2>
       <?php
       $contact = get_field("contact");
       $form_shortcode = '[formidable id="1"]';
