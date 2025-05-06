@@ -51,6 +51,18 @@
 .home-services-section {
   padding-top: var(--vertical-spacing);
   padding-bottom: var(--vertical-spacing);
+  .lead-text {
+    font-family: $font_montserrat_bold;
+    a {
+      border-bottom: none;
+    }
+  }
+  .button-container {
+    text-align: center;
+    margin-top: var(--vertical-spacing);
+    margin-bottom: 0;
+    max-width: none;
+  }
   ul {
     margin-left: 0 !important;
     margin-bottom: 0;
@@ -113,6 +125,16 @@
     }
   }
 }
+@media screen and (min-width: 450px) {
+  .home-services-section {
+    .legal-service,
+    .consulting-service {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2em;
+    }
+  }
+}
 
 @media screen and (min-width: 991px) {
   .home-services-section {
@@ -161,7 +183,9 @@
     }
   }
 }
-
+/***
+  This CSS is used on the services pages as well as the home page
+***/
 .latest-posts {
   padding-top: var(--vertical-spacing);
   padding-bottom: var(--vertical-spacing);
@@ -180,9 +204,6 @@
   img {
     border-radius: var(--radius);
   }
-  // .post-container {
-  //   margin-bottom: 5em !important;
-  // }
   .post-title {
     margin-bottom: 0.5em !important;
     a {
@@ -193,14 +214,58 @@
     display: block;
     margin-bottom: 1em;
   }
+  .posts-grid-container {
+    display: none;
+  }
+  .more-on-this-topic {
+    text-align: center;
+    margin-top: 2em;
+  }
 }
-
-@media screen and (min-width: 991px) {
+// No need for the categories to be shown on the Services pages
+.service {
+  .latest-posts {
+    .category-display {
+      display: none;
+    }
+    .post-image {
+      margin-bottom: 1em;
+    }
+  }
+}
+@media screen and (min-width: 48em) {
   .latest-posts {
     .post-image-details {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2em;
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  .latest-posts {
+    .posts-container.multiple-posts {
+      display: none;
+    }
+    .posts-grid-container.multiple-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0 3em;
+      h2 {
+        order: 1;
+        &:last-of-type {
+          order: 2;
+        }
+      }
+      .post-image-details {
+        display: block;
+        order: 3;
+        &:last-of-type {
+          order: 4;
+        }
+        // }
+      }
     }
   }
 }

@@ -16,21 +16,22 @@ h2,
   // position: relative;
   // padding-left: 22px;
   color: var(--black);
-  margin-bottom: 65px !important;
+  // margin-bottom: 65px !important;
+  margin-bottom: clamp(1.5rem, 0.524rem + 4.881vw, 4.063rem) !important;
 }
 h2[class*="flash"] {
-  padding-left: 22px;
+  // padding-left: 22px;
   position: relative;
   &:before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border-width: 0 0 6px 6px;
+    width: 26px;
+    height: 26px;
+    border-width: 0 0 5px 5px;
     border-bottom-left-radius: 10px;
     border-style: solid;
-    bottom: -15px;
-    left: 0;
+    bottom: -10px;
+    left: -16px;
   }
 }
 h2 {
@@ -54,18 +55,15 @@ h2 {
 @media screen and (min-width: 991px) {
   h2[class*="flash"] {
     &::before {
-      width: 42px;
-      height: 42px;
-      border-width: 0 0 10px 10px;
+      width: 38px;
+      height: 38px;
+      border-width: 0 0 8px 8px;
       border-bottom-left-radius: 16px;
       bottom: -12px;
+      left: -20px;
     }
   }
 }
-// .elementor-kit-890 h2 {
-//   color: inherit !important;
-//   font-family: $font_family_prompt_light;
-// }
 
 h3,
 .h3 {

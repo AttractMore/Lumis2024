@@ -734,7 +734,8 @@
   .main-header-bar {
     .menu_desktop {
       .left_aligned_top_bar {
-        width: 64% !important;
+        // width: 64% !important;
+        width: 100% !important;
       }
       #menu-lumis-top-menu-1 li a,
       .topnav li a {

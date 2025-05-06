@@ -281,3 +281,12 @@ main + article {
   width: 1px;
   white-space: nowrap;
 }
+.rounded-corner-image {
+  img {
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    min-height: 240px;
+    object-fit: cover;
+  }
+}

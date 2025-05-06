@@ -113,37 +113,15 @@ get_header(); ?>
       echo "</div>";
     }
     ?>
+        <p class="button-container">
+          <a class="primary-button wide-button" href="#home-contact-section">Contact us</a>
+        </p>
       </div>
     </section>
 
     <?php
     $testimonial_rows = get_field("testimonials");
-    $associated_category = get_field("associated_category_slug");
-    $args = [
-      "post_type" => ["post", "videos"],
-      "perm" => "readable",
-      "category_name" => $associated_category,
-      "posts_per_page" => "3",
-    ];
-    $matching_posts = new WP_Query($args);
-    ?>
-
-    <!-- Don't show services-contact-reference if no testimonials or no posts otherwise this section is immediately followed by the contact block -->
-    <?php if ($testimonial_rows || $matching_posts->have_posts()): ?>
-    <section class="services-contact-reference full-width mid-bg mb0">
-      <div class="services-contact-reference-container wrap">
-        <p class="h3 white-text">Contact us to find out more!</p>
-        <p>
-          <a class="primary-button button-no-border" href="#home-contact-section">Contact us</a>
-        </p>
-      </div>
-    </section>
-
-    <?php endif; ?>
-
-    <?php //    $testimonial_rows = get_field("testimonials");
-
-if ($testimonial_rows) {
+    if ($testimonial_rows) {
       echo '<section class="testimonials full-width light-grey-bg"><div class="testimonials-container wrap"><h2 class="flash-dark-orange">Testimonials</h2><ul class="testimonial-set" id="testimonial-set">';
 
       foreach ($testimonial_rows as $row) {
@@ -154,45 +132,71 @@ if ($testimonial_rows) {
         echo "</cite></li>";
       }
       echo "</ul><nav><button class='slide-arrow' id='slide-arrow-prev'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button><button class='slide-arrow' id='slide-arrow-next'><svg aria-hidden='true'><use xlink:href='/wp-content/themes/lumis-child/svg-defs.svg#icon-arrow-down'></use></svg></button></nav></div></section>";
-    } ?>
+    }
+    ?>
     
-    <?php // $associated_category = get_field("associated_category_slug");
+    <?php
+    $associated_category = get_field("associated_category_slug");
+    $args = [
+      "post_type" => ["post", "videos"],
+      "perm" => "readable",
+      "category_name" => $associated_category,
+      "posts_per_page" => "2",
+    ];
+    $matching_posts = new WP_Query($args);
+    $total_posts = $matching_posts->found_posts;
 
-// $args = [
-    //   "post_type" => ["post", "videos"],
-    //   "perm" => "readable",
-    //   "category_name" => $associated_category,
-    //   "posts_per_page" => "3",
-    // ];
-    // $matching_posts = new WP_Query($args);
-    if ($matching_posts->have_posts()) {
-      echo "<section class='services-resources'><h2 class='flash-dark-orange'>Latest news & blog articles</h2><ul class='matching-posts'>";
-
-      while ($matching_posts->have_posts()) {
-        $matching_posts->the_post();
-        echo "<li class='matching-post'><h3 class='post-title'><a class='title' href='" . get_the_permalink() . "'>" . get_the_title() . "</a></h3>";
-        echo "<div class='post-content'>";
-        if (has_post_thumbnail()) {
-          echo "<div class='post-image'><a class='image' href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a></div>";
-        }
-        echo "<div class='excerpt-button'><p class='post-excerpt'>" . get_the_excerpt() . "</p>";
-        echo "<p class='read-more-button-container'><a class='primary-button read-more' href='" . get_the_permalink() . "'>Read more</a></p></div></div></li><hr>";
-      }
-      wp_reset_postdata();
-      echo "</ul></section>";
-    } ?>
+    if ($matching_posts->have_posts()): ?>
+      <section class='latest-posts full-width'>
+        <div class="latest-posts-container wrap">
+          <h2 class='flash-dark-orange'>Latest news & blog articles</h2>
+          <div class="posts-container  <?php if ($total_posts > 1) {
+            echo "multiple-posts";
+          } else {
+            echo "single-post";
+          } ?>">
+            <?php while ($matching_posts->have_posts()):
+              $matching_posts->the_post(); ?>
+              <div class='post-container'>
+                <?php display_post_summary(); ?>
+              </div><!-- .post-container -->
+              <hr>
+            <?php
+            endwhile; ?>
+          </div><!-- .posts-container -->
+          <div class="posts-grid-container <?php if ($total_posts > 1) {
+            echo "multiple-posts";
+          } else {
+            echo "single-post";
+          } ?>">
+          <?php
+          while ($matching_posts->have_posts()):
+            $matching_posts->the_post(); ?>
+              <?php display_post_summary(); ?>
+          <?php
+          endwhile;
+          wp_reset_postdata();
+          ?>
+          </div><!-- .posts-grid-container -->
+          <?php if ($total_posts > 2): ?>
+            <hr>
+            <p class="more-on-this-topic">
+              <a class="primary-button" href="/category/<?php echo $associated_category; ?>">More posts on this topic</a>
+            </p>
+            <?php endif; ?>
+      </div>
+    </section>
+    <?php endif;
+    ?>
 
   <section id="home-contact-section" class="home-contact-form full-width mid-bg">
-    <div class="home-content-form-container wrap">
+    <div class="home-contact-form-container wrap">
       <h2 class="flash-mid-grey white-text">Contact us to find out more!</h2>
       <?php
       $contact = get_field("contact");
       $form_shortcode = '[formidable id="1"]';
       ?>
       <article class="form-plus-contact">
-        <div class="contact-form">
-          <?php echo do_shortcode($form_shortcode); ?>
-        </div>
         <div class="contact-details">
           <?php
           $size = "full";
@@ -207,6 +211,9 @@ if ($testimonial_rows) {
             <p>Phone:&nbsp;<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
             <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
           </aside>
+        </div>
+        <div class="contact-form">
+          <?php echo do_shortcode($form_shortcode); ?>
         </div>
       </article>
     </div>

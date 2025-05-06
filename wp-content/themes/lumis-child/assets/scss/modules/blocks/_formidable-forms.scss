@@ -38,11 +38,17 @@
     max-height: 240px;
   }
   .notice-plus-submit {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0;
     .data-notice {
       font-size: 15px !important;
       line-height: 20px;
-      margin-bottom: 1.5em;
+      order: 2;
+      margin-bottom: 0;
+    }
+    .frm_submit {
+      margin-bottom: 0;
     }
   }
 }
@@ -52,9 +58,8 @@
       margin-bottom: 0;
     }
     .notice-plus-submit {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 0;
       .data-notice {
         margin: 0;
         flex: 0 1 calc(100% - 180px);

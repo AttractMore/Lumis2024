@@ -352,3 +352,43 @@ function set_number_of_posts($query)
   }
 }
 add_action("pre_get_posts", "set_number_of_posts", 1);
+
+function display_post_summary()
+{
+  echo '<h2 class="post-title h3"><a href="';
+  the_permalink();
+  echo '">';
+  the_title();
+  echo "</a></h2>";
+  echo '<div class="post-image-details">';
+  echo '<div class="post-image">';
+  echo '<a href="';
+  the_permalink();
+  echo '">';
+  the_post_thumbnail("full");
+  echo "</a></div>";
+  echo '<div class="post_details">';
+  echo '<span class="category-display"><span class="category-display-label">Topic: </span>';
+
+  $categories = get_the_category();
+  $separator = " | ";
+  $output = "";
+  if (!empty($categories)) {
+    foreach ($categories as $category) {
+      $output .=
+        '<a href="' .
+        esc_url(get_category_link($category->term_id)) .
+        '" alt="' .
+        esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)) .
+        '">' .
+        esc_html($category->name) .
+        "</a>" .
+        $separator;
+    }
+    echo trim($output, $separator);
+  }
+  echo "</span>";
+  the_excerpt();
+  echo '<p><a class="primary-button" href="' . get_the_permalink() . '" aria-label="' . get_the_title() . '">';
+  echo '<span class="screen-reader-text">' . get_the_title() . "</span>Read more</a></p></div><!-- .post-details --></div>";
+}

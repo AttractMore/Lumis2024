@@ -54,11 +54,12 @@ get_header(); ?>
                     </a>
                   </figure>
                 <?php endif; ?>
-                <h3>
-                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
-                    <?php echo wp_kses_post(get_sub_field("title")); ?>
-                  </a>
-                </h3>
+                <aside>
+                  <p class="lead-text">
+                    <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                      <?php echo wp_kses_post(get_sub_field("title")); ?>
+                    </a>
+                  </p>
                   <?php echo wp_kses_post(get_sub_field("description")); ?>
                   <?php if ($link): ?>
                     <span class="service-link">
@@ -68,7 +69,8 @@ get_header(); ?>
                       </a>
                     </span>
                     <?php endif; ?>
-                  </li>
+                </aside>
+            </li>
                   <?php
           endwhile; ?>
         <?php endif; ?>
@@ -103,11 +105,12 @@ get_header(); ?>
                 </a>
               </figure>
               <?php endif; ?>
-              <h3>
-                <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
-                  <?php echo wp_kses_post(get_sub_field("title")); ?>
-                </a>
-              </h3>
+              <aside>
+                <p class="lead-text">
+                  <a aria-label="<?php echo esc_html($link["title"]); ?>" href="<?php echo esc_url($link["url"]); ?>">
+                    <?php echo wp_kses_post(get_sub_field("title")); ?>
+                  </a>
+                </p>
                 <?php echo wp_kses_post(get_sub_field("description")); ?>
                 <?php if ($link): ?>
                   <span class="service-link">
@@ -117,6 +120,7 @@ get_header(); ?>
                     </a>
                   </span>
                   <?php endif; ?>
+              </aside>
             </li>
           <?php
         endwhile; ?>
@@ -126,6 +130,10 @@ get_header(); ?>
       endwhile; ?>
     <?php endif; ?>
     </div>
+    <p class="button-container">
+      <a class="primary-button" href="/wp-content/uploads/2025/03/lumis-international-brochure.pdf" target="_blank">Download Corporate Brochure</a>
+    </p>
+
   </section>
 
   <?php echo do_shortcode("[standard-contact-form]"); ?>
@@ -137,68 +145,36 @@ get_header(); ?>
       $args = [
         "post_type" => ["post", "videos"],
         "post_status" => "publish",
-        "posts_per_page" => 3,
+        "posts_per_page" => 2,
       ];
       $query = new WP_Query($args);
       ?>
-      <?php if ($query->have_posts()):
-        echo '<div class="posts-container">';
-        while ($query->have_posts()):
+      <?php if ($query->have_posts()): ?>
+        <div class="posts-container multiple-posts">
+        <?php while ($query->have_posts()):
           $query->the_post(); ?>
           <div class="post-container">
-            <h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <div class="post-image-details">
-              <div class="post-image">
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail("full"); ?>
-                </a>
-              </div>
-              <div class="post_details">
-                <span class="category-display"><span class="category-display-label">Topic: </span>
-
-              <?php
-              $categories = get_the_category();
-              $separator = " | ";
-              $output = "";
-              if (!empty($categories)) {
-                foreach ($categories as $category) {
-                  $output .=
-                    '<a href="' .
-                    esc_url(get_category_link($category->term_id)) .
-                    '" alt="' .
-                    esc_attr(sprintf(__("View all posts in %s", "textdomain"), $category->name)) .
-                    '">' .
-                    esc_html($category->name) .
-                    "</a>" .
-                    $separator;
-                }
-                echo trim($output, $separator);
-              }
-              ?>
-                </span>
-                <?php the_excerpt(); ?>
-                <p>
-                  <a class="primary-button" href="<? echo get_permalink()?>" aria-label="<? echo get_the_title()?>">
-                    <span class="screen-reader-text"><? echo get_the_title()?></span>
-                    Read more
-                  </a>
-                </p>
-              </div><!-- .post-details -->
-            </div>
+            <?php display_post_summary(); ?>
           </div><!-- .post-container -->
           <hr>
           <?php
+        endwhile; ?>
+        </div><!-- .posts-container -->
+        <div class="posts-grid-container multiple-posts">
+        <?php
+        while ($query->have_posts()):
+          $query->the_post(); ?>
+            <?php display_post_summary(); ?>
+        <?php
         endwhile;
         wp_reset_postdata();
-      endif; ?>
-    </div><!-- .posts-container -->
+        ?>
+        </div><!-- .posts-grid-container -->
+      <?php endif; ?>
 
     </div>
   </section>
   <?php add_newsletter_signup(); ?>
-  <?php
-//astra_primary_content_bottom();
-?> <!-- needed for inclusion of newletter signup block -->
 
 </div><!-- #primary -->
 
