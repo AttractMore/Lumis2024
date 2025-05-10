@@ -1,14 +1,34 @@
 #wcb {
-  text-align: right !important;
+  // text-align: right !important;
+  &.carbonbadge {
+    font-size: 0.7em !important;
+    text-align: left !important;
+  }
+  #wcb_p {
+    margin-right: 1em;
+  }
   #wcb_a {
-    background-color: var(--petrol) !important;
-    border-color: var(--petrol) !important;
+    background-color: transparent !important;
+    border-color: var(--white) !important;
     font-weight: normal !important;
   }
   #wcb_g {
     border-color: var(--white) !important;
+    background-color: transparent !important;
+    color: var(--white);
   }
   #wcb_2 {
     color: var(--white) !important;
+    text-align: left !important;
+    align-self: flex-start;
+    margin-top: 0.5em !important;
+  }
+}
+
+@media screen and (min-width: 32em) {
+  #wcb {
+    &.carbonbadge {
+      display: flex;
+    }
   }
 }

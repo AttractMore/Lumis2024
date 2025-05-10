@@ -956,7 +956,7 @@ if (!function_exists("astra_footer_markup")) {
   }
 }
 
-add_action("astra_footer", "astra_footer_markup");
+// add_action("astra_footer", "astra_footer_markup");
 
 /**
  * Function to get Header Breakpoint

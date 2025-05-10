@@ -672,62 +672,62 @@
 
 @media (min-width: 768px) and (max-width: 998px) {
   /* Footer */
-  .site-footer .footer-adv-widget {
-    &.footer-adv-widget-1 {
-      margin: 0 0 2.8em;
-    }
-    &.footer-adv-widget-2 {
-      margin: 0 0 2.8em;
-      //margin-left: 8.3333333333%;
-    }
-    &.footer-adv-widget-3 {
-      margin: 0 0 2.8em;
-    }
-    &.footer-adv-widget-4 {
-      //text-align: right;
-    }
-  }
+  // .site-footer .footer-adv-widget {
+  //   &.footer-adv-widget-1 {
+  //     margin: 0 0 2.8em;
+  //   }
+  //   &.footer-adv-widget-2 {
+  //     margin: 0 0 2.8em;
+  //     //margin-left: 8.3333333333%;
+  //   }
+  //   &.footer-adv-widget-3 {
+  //     margin: 0 0 2.8em;
+  //   }
+  //   &.footer-adv-widget-4 {
+  //     //text-align: right;
+  //   }
+  // }
   .contact_form_wrapper .data_notice {
     width: 67% !important;
   }
 }
-@media (max-width: 998px) {
-  /* Footer */
-  .site-footer .footer-adv-widget {
-    &.footer-adv-widget-1 {
-    }
-    &.footer-adv-widget-2 {
-      width: 100%;
-      //margin-left: 8.3333333333%;
-    }
-    &.footer-adv-widget-3 {
-      width: 100%;
-    }
-    &.footer-adv-widget-4 {
-      width: 100%;
-      //text-align: right;
-    }
-  }
-}
+// @media (max-width: 998px) {
+//   /* Footer */
+//   .site-footer .footer-adv-widget {
+//     &.footer-adv-widget-1 {
+//     }
+//     &.footer-adv-widget-2 {
+//       width: 100%;
+//       //margin-left: 8.3333333333%;
+//     }
+//     &.footer-adv-widget-3 {
+//       width: 100%;
+//     }
+//     &.footer-adv-widget-4 {
+//       width: 100%;
+//       //text-align: right;
+//     }
+//   }
+// }
 
-@media (min-width: 999px) {
-  /* Footer */
-  .site-footer .footer-adv-widget {
-    &.footer-adv-widget-1 {
-    }
-    &.footer-adv-widget-2 {
-      width: 16.6666666667%;
-      margin-left: 8.3333333333%;
-    }
-    &.footer-adv-widget-3 {
-      width: 33.3333333333%;
-    }
-    &.footer-adv-widget-4 {
-      width: 16.6666666667%;
-      text-align: right;
-    }
-  }
-}
+// @media (min-width: 999px) {
+//   /* Footer */
+//   .site-footer .footer-adv-widget {
+//     &.footer-adv-widget-1 {
+//     }
+//     &.footer-adv-widget-2 {
+//       width: 16.6666666667%;
+//       margin-left: 8.3333333333%;
+//     }
+//     &.footer-adv-widget-3 {
+//       width: 33.3333333333%;
+//     }
+//     &.footer-adv-widget-4 {
+//       width: 16.6666666667%;
+//       text-align: right;
+//     }
+//   }
+// }
 
 // (min-width: 992px) and (max-width: 1199px)
 @include min_992_and_max_1199 {
