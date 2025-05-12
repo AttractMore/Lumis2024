@@ -122,7 +122,7 @@ get_header(); ?>
     <?php
     $testimonial_rows = get_field("testimonials");
     if ($testimonial_rows) {
-      echo '<section class="testimonials full-width light-grey-bg"><div class="testimonials-container wrap"><h2 class="flash-dark-orange">Testimonials</h2><ul class="testimonial-set" id="testimonial-set">';
+      echo '<section class="testimonials full-width light-grey-bg"><div class="testimonials-container wrap"><h2 class="flash-dark-orange">Trusted by</h2><ul class="testimonial-set" id="testimonial-set">';
 
       foreach ($testimonial_rows as $row) {
         echo "<li class='testimonial'><blockquote>";
