@@ -16,7 +16,9 @@ get_header(); ?>
     <div class="hero-section-overlay"></div>
     <img class="hero-section-graphic" src="/wp-content/themes/lumis-child/dist/img/home-page-graphic-with-gradient-1.jpg" alt="" decoding="async">
     <div class="hero-section-text wrap">
-      <h1 class="white-text">Representing your medical innovation.<br>Empowering your product development.</h1>
+      <!-- <h1 class="white-text">Representing your medical innovation.<br>Empowering your product development.</h1> -->
+      <!-- <h1 class="white-text">Legal Representation & Regulatory Strategy for Clinical and Commercial Success</h1> -->
+      <h1 class="white-text">Empowering Biopharma & MedTech Companies to Enter and Navigate EU, UK and Swiss Markets</h1>
     </div>
   </div>
 
