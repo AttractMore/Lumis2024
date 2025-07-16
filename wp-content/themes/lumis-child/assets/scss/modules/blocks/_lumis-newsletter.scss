@@ -60,9 +60,9 @@
     color: var(--white);
   }
   button {
-    background-color: var(--white);
+    background-color: var(--orange);
     // border: 2px solid var(--orange);
-    color: var(--orange) !important;
+    color: var(--white) !important;
     padding: 0.5em 0.75em;
     text-align: center;
     text-decoration: none;
@@ -73,8 +73,8 @@
     transition: background-color 0.4s ease-in-out;
     &:hover,
     &:focus {
-      color: var(--white) !important;
-      background: var(--orange);
+      color: var(--orange) !important;
+      background: var(--white);
       // border-color: var(--orange);
     }
   }

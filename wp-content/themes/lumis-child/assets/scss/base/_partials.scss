@@ -3,6 +3,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/**
+* See https://adactio.com/journal/21896
+*/
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  @view-transition {
+    navigation: auto;
+  }
+}
+
 // .site-content {
 //   /* Buttons */
 //   p {

@@ -15,7 +15,8 @@ Colours
   --radius: 1em;
   --radius-small: 0.25em;
   // --vertical-spacing: 9rem;
-  --vertical-spacing: clamp(2rem, -0.667rem + 13.333vw, 9rem);
+  // --vertical-spacing: clamp(2rem, -0.667rem + 13.333vw, 9rem);
+  --vertical-spacing: clamp(1.5rem, 0.786rem + 3.571vw, 3.375rem);
 }
 $link_hover_color: #24a6cd;
 $submenu_link_hover_color: #00a9cf;

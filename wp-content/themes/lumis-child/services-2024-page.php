@@ -36,6 +36,21 @@ get_header(); ?>
               <p class="service-summary">
               <?php echo esc_html($service_introduction["service_summary"]); ?></p>
               <?php echo wp_kses_post($service_introduction["service_introduction_block"]); ?>
+              <?php
+              $cta_fields = get_field("cta_fields");
+              if ($cta_fields["lead_in"]) {
+                echo "<p class='lead-in'><strong>" . esc_html($cta_fields["lead_in"]) . "</strong></p>";
+              }
+              ?>
+              <p class="button-container mb0">
+                <a class="primary-button wide-button" href="#home-contact-section">
+                <?php if ($cta_fields["button_text"]) {
+                  echo esc_html($cta_fields["button_text"]);
+                } else {
+                  echo "Contact us";
+                } ?>
+                </a>
+              </p>
             </div>
           </div>
       <?php endif;
@@ -80,6 +95,27 @@ get_header(); ?>
     <?php endif;
     ?>
 
+    <section class="services-cta">
+      <div class="services-cta-container">
+        <?php
+        $cta_fields = get_field("cta_fields");
+        if ($cta_fields["lead_in"]) {
+          echo "<p class='lead-in'><strong>" . esc_html($cta_fields["lead_in"]) . "</strong></p>";
+        }
+        ?>
+        <p class="button-container">
+          <a class="primary-button wide-button" href="#home-contact-section">
+          <?php if ($cta_fields["button_text"]) {
+            echo esc_html($cta_fields["button_text"]);
+          } else {
+            echo "Contact us";
+          } ?>
+          </a>
+        </p>
+
+      </div>
+    </section>
+
     <?php
     $our_services = get_field("our_services");
     if ($our_services): ?>
@@ -113,9 +149,9 @@ get_header(); ?>
       echo "</div>";
     }
     ?>
-        <p class="button-container">
+        <!-- <p class="button-container">
           <a class="primary-button wide-button" href="#home-contact-section">Contact us</a>
-        </p>
+        </p> -->
       </div>
     </section>
 
@@ -191,11 +227,18 @@ get_header(); ?>
 
   <section id="home-contact-section" class="home-contact-form full-width mid-bg">
     <div class="home-contact-form-container wrap">
-      <h2 class="flash-mid-grey white-text">Contact us to find out more!</h2>
-      <?php
-      $contact = get_field("contact");
-      $form_shortcode = '[formidable id="1"]';
-      ?>
+
+      <h2 class="flash-mid-grey white-text">
+        <?php
+        $contact = get_field("contact");
+        if ($contact["contact_form_title"]) {
+          echo esc_html($contact["contact_form_title"]);
+        } else {
+          echo "Contact us to find out more!";
+        }
+        ?>
+      </h2>
+      <?php $form_shortcode = '[formidable id="1"]'; ?>
       <article class="form-plus-contact">
         <div class="contact-details">
           <?php
