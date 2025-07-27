@@ -392,3 +392,31 @@ function display_post_summary()
   echo '<p><a class="primary-button" href="' . get_the_permalink() . '" aria-label="' . get_the_title() . '">';
   echo '<span class="screen-reader-text">' . get_the_title() . "</span>Read more</a></p></div><!-- .post-details --></div>";
 }
+
+/**
+ * Blog author bios
+ */
+function author_bio()
+{
+  $author = get_the_author_meta("display_name");
+  $args = [
+    "post_type" => "author-bio",
+    "post_status" => "published",
+    "posts_per_page" => -1,
+  ];
+  $author_bio = new WP_Query($args);
+  if ($author_bio->have_posts()) {
+    while ($author_bio->have_posts()) {
+      $author_bio->the_post();
+      $author_name = get_the_title();
+      if ($author === $author_name) {
+        echo '<section class="author-bio"><div class="author-bio-container">';
+        echo "<figure class='author-bio-photo'>";
+        the_post_thumbnail("medium");
+        echo "</figure>";
+        echo '<div class="author-bio-text">' . get_the_content() . "</div></div></section>";
+      }
+    }
+  }
+  wp_reset_postdata();
+}

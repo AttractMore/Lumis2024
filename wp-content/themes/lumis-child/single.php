@@ -20,7 +20,13 @@ get_header();
 		<?php astra_primary_content_top(); ?>
 
 		<?php astra_content_loop(); ?>
-    
+
+    <?php
+//echo do_shortcode("[blog_video_cta post-id=$post->ID]");
+?>
+
+    <?php author_bio(); ?>
+
     <?php display_post_navigation("blog"); ?>
 
     <?php add_newsletter_signup(); ?>
