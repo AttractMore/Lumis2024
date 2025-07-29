@@ -19,6 +19,9 @@ get_header(); ?>
       <!-- <h1 class="white-text">Representing your medical innovation.<br>Empowering your product development.</h1> -->
       <!-- <h1 class="white-text">Legal Representation & Regulatory Strategy for Clinical and Commercial Success</h1> -->
       <h1 class="white-text">Empowering Biopharma & MedTech Companies to Enter and Navigate EU, UK and Swiss Markets</h1>
+      <p class="button-container mb0">
+        <a class="primary-button" href="#home-services">Explore our services</a>
+      </p>
     </div>
   </div>
 
@@ -26,7 +29,7 @@ get_header(); ?>
     <?php the_content(); ?>
   </section>
 
-  <section class="home-services-section full-width light-bg mb0">
+  <section id="home-services" class="home-services-section full-width light-bg mb0">
     <div class="home-services-section-container wrap">
     <?php if (have_rows("services_list")): ?>
       <?php while (have_rows("services_list")):

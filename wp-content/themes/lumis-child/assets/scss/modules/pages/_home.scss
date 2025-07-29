@@ -6,6 +6,7 @@
 .hero-section {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto 20em;
   margin-top: 0;
   // margin-bottom: 5em;
   padding: 0;
@@ -15,7 +16,7 @@
   .hero-section-graphic,
   .hero-section-overlay,
   .hero-section-text {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 3 / 3;
   }
 
   .hero-section-graphic {
@@ -52,6 +53,7 @@
 .home-services-section {
   padding-top: var(--vertical-spacing);
   padding-bottom: var(--vertical-spacing);
+  scroll-margin-top: var(--vertical-spacing);
   .lead-text {
     font-family: $font_montserrat_bold;
     a {

@@ -21,9 +21,7 @@ get_header();
 
 		<?php astra_content_loop(); ?>
 
-    <?php
-//echo do_shortcode("[blog_video_cta post-id=$post->ID]");
-?>
+    <?php echo do_shortcode("[blog_video_cta post-id=$post->ID]"); ?>
 
     <?php author_bio(); ?>
 

@@ -80,6 +80,7 @@ $output = "";
 			</p>
 		</div>
     </article>
+    <?php echo do_shortcode("[blog_video_cta post-id=$post->ID]"); ?>
 		<?php
 //astra_primary_content_bottom();
 ?>
