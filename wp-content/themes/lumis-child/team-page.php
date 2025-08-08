@@ -20,15 +20,16 @@ get_header(); ?>
 
         <?php the_content(); ?>
 
+        <section class="management-team">
+          <h2 class="flash-dark-orange">Management Board</h2>
+          <?php echo do_shortcode("[display_team_members ismanagement='yes']"); ?>
+        </section>
+
         <section class="wider-team">
           <h2 class="flash-dark-orange">Team</h2>
           <?php echo do_shortcode("[display_team_members ismanagement='no']"); ?>
         </section>
         
-        <section class="management-team">
-        <h2 class="flash-dark-orange">Management Board</h2>
-        <?php echo do_shortcode("[display_team_members ismanagement='yes']"); ?>
-        </section>
       </div>
     </section>
     <?php echo do_shortcode("[standard-contact-form]"); ?>
