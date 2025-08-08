@@ -135,9 +135,9 @@ get_header(); ?>
       endwhile; ?>
     <?php endif; ?>
     </div>
-    <!-- <p class="button-container">
-      <a class="primary-button" href="/wp-content/uploads/2025/06/lumis-corporate-presentation.pdf" target="_blank">Download Corporate Brochure</a>
-    </p> -->
+    <p class="button-container">
+      <a class="primary-button" href="/wp-content/uploads/2025/08/lumis-International-brochure.pdf" target="_blank">Download Corporate Brochure</a>
+    </p>
 
   </section>
 
