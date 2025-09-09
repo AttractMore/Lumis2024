@@ -180,9 +180,6 @@ header#masthead {
 
 .topnav li,
 #menu-lumis-top-menu-1 li {
-  * {
-    transition: font-weight 0.1s ease-in-out !important;
-  }
   float: left;
   display: block;
   margin-right: 29px;
@@ -190,6 +187,9 @@ header#masthead {
   //top: -10px;
   position: relative;
   //border-bottom: 6px solid transparent;
+  * {
+    transition: font-weight 0.1s ease-in-out !important;
+  }
   &:hover {
     &.menu-item-has-children {
       &:after {
@@ -233,13 +233,13 @@ header#masthead {
     width: -moz-fit-content;
     width: -webkit-fit-content;
     width: fit-content;
-    @media (min-width: 992px) {
-      min-width: 250px;
-    }
     margin: 0;
     z-index: 10;
     padding: 25px 30px;
     border-top: 6px solid transparent;
+    @media (min-width: 992px) {
+      min-width: 250px;
+    }
     li {
       float: unset;
       white-space: pre;

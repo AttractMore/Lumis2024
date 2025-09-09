@@ -13,16 +13,13 @@
 if (!defined("ABSPATH")) {
   exit(); // Exit if accessed directly.
 } ?><!DOCTYPE html>
-<!-- <?php astra_html_before(); ?> -->
 <html <?php language_attributes(); ?>>
 <head>
-<!-- <?php astra_head_top(); ?> -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZMA5oMmI7X84fhAkg9S83Q" async></script>
 
 <?php wp_head(); ?>
-<?php // astra_head_bottom(); ?>
 </head>
 
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>

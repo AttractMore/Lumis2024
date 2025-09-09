@@ -2,6 +2,7 @@ body.lumis-international-brochure,
 body.authorized-representative-brochure {
   --icon-size: 3em;
   --box-gap: 2em;
+  background-color: var(--light-blue) !important;
   .brochure-hero-section {
     margin-top: 3em;
     position: relative;
@@ -20,6 +21,8 @@ body.authorized-representative-brochure {
       display: grid;
       grid-template-rows: auto 3em;
       margin: 2em;
+      // background-color: var(--light-blue) !important;
+
       h1 {
         // padding: 0 1em;
         margin: 0 !important;
@@ -65,7 +68,6 @@ body.authorized-representative-brochure {
     }
   }
 
-  background-color: var(--light-blue) !important;
   .lead-text {
     font-family: $font_montserrat_bold;
     margin-bottom: 0.25em;

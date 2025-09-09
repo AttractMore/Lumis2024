@@ -1,0 +1,105 @@
+.downloads {
+  .button-container {
+    margin-bottom: 0;
+  }
+  .downloads-introduction {
+    padding: 3em 0;
+    p {
+      color: var(--white);
+      font-size: clamp(1.125rem, 0.982rem + 0.714vw, 1.5rem) !important;
+      &.disclaimer {
+        font-size: 15px !important;
+        margin-bottom: 0;
+      }
+    }
+    img {
+      border-radius: 0.5em;
+      margin-bottom: 1.5em;
+      max-width: 550px;
+      width: 100%;
+    }
+  }
+  .downloads-features {
+    padding: 5em 0;
+    .downloads-features-container {
+      > ul {
+        margin: 0;
+        .feature-text-block {
+          margin-bottom: 3.5em;
+          h2 {
+            margin-bottom: 0.25em !important;
+          }
+          p {
+            margin-bottom: 0.5em;
+          }
+          ul {
+            margin: 0;
+            list-style-type: disc;
+            padding-left: 0.75em;
+            li {
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+    li {
+      &:before {
+        display: none;
+      }
+    }
+    aside {
+      margin-bottom: 0.5em;
+      img {
+        width: clamp(8rem, 6.909rem + 5.455vw, 11rem);
+        height: clamp(8rem, 6.909rem + 5.455vw, 11rem);
+        padding: 1.5em;
+        background-color: var(--white);
+        border-radius: 0.5em;
+      }
+    }
+    p {
+      &.disclaimer {
+        font-size: 15px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .downloads {
+    .downloads-introduction-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4em;
+      .downloads-introduction-text {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      img {
+        grid-column: 2;
+        grid-row: 1;
+        margin-bottom: 0;
+      }
+      .button-related-content {
+        grid-row: 1;
+        grid-column: 1;
+        margin-top: auto;
+      }
+    }
+    .downloads-features {
+      ul {
+        .feature-text-block {
+          margin-bottom: 1.5em;
+        }
+
+        .feature-block {
+          display: grid;
+          grid-template-columns: clamp(8rem, 6.909rem + 5.455vw, 11rem) auto;
+          gap: 2em;
+          margin-bottom: 3em;
+        }
+      }
+    }
+  }
+}
