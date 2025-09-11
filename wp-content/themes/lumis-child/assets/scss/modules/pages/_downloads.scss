@@ -9,7 +9,7 @@
       font-size: clamp(1.125rem, 0.982rem + 0.714vw, 1.5rem) !important;
       &.disclaimer {
         font-size: 15px !important;
-        margin-bottom: 0;
+        margin: 0.5em 0 0;
       }
     }
     img {
@@ -61,6 +61,7 @@
     p {
       &.disclaimer {
         font-size: 15px !important;
+        margin-top: 0.5em;
       }
     }
   }
