@@ -19,6 +19,7 @@ h2,
   // margin-bottom: 65px !important;
   margin-bottom: clamp(1.5rem, 0.524rem + 4.881vw, 4.063rem) !important;
 }
+h1[class*="flash"],
 h2[class*="flash"] {
   // padding-left: 22px;
   position: relative;
@@ -34,7 +35,8 @@ h2[class*="flash"] {
     left: -16px;
   }
 }
-h2 {
+h2,
+h1 {
   &.flash-mid-blue {
     &:before {
       border-color: var(--mid-blue);
@@ -53,7 +55,8 @@ h2 {
 }
 
 @media screen and (min-width: 991px) {
-  h2[class*="flash"] {
+  h2[class*="flash"],
+  h1[class*="flash"] {
     &::before {
       width: 38px;
       height: 38px;
