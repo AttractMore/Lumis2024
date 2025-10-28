@@ -33,11 +33,12 @@
 @media screen and (min-width: 55em) {
   .set-of-3-boxes-in-page {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     div {
       margin-left: 0;
       margin-right: 0;
       max-width: none;
+      flex: 0 1 30%;
     }
   }
 }
