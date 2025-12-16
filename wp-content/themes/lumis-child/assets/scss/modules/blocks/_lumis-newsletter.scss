@@ -17,7 +17,7 @@
     color: var(--white) !important;
     &:hover,
     &:focus {
-      color: $link_hover_color !important;
+      color: var(--link-hover-colour) !important;
     }
   }
   .type-email,
@@ -67,7 +67,9 @@
     text-align: center;
     text-decoration: none;
     font-size: 1.25rem;
-    font-family: $font_family_montserrat;
+    // font-family: $font_family_montserrat;
+    font-family: var(--font-family-copy-regular);
+
     font-weight: 600;
     border-radius: var(--radius);
     transition: background-color 0.4s ease-in-out;

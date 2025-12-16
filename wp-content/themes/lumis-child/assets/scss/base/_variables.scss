@@ -12,25 +12,36 @@ Colours
   --light-orange: #ffaa3d;
   --black: #000;
   --white: #fff;
+  --link-hover-colour: #24a6cd;
+  --submenu-link-hover-colour: #00a9cf;
   --radius: 1em;
   --radius-small: 0.25em;
   // --vertical-spacing: 9rem;
   // --vertical-spacing: clamp(2rem, -0.667rem + 13.333vw, 9rem);
   --vertical-spacing: clamp(1.5rem, 0.786rem + 3.571vw, 3.375rem);
+  --font-family-headings-light: "Prompt Light", sans-serif;
+  --font-family-headings-regular: "Prompt Regular", sans-serif;
+  --font-family-headings-medium: "Prompt Medium", sans-serif;
+  --font-family-headings-semibold: "Prompt SemiBold", sans-serif;
+  --font-family-headings-mediumitalic: "Prompt MediumItalic", sans-serif;
+  --font-family-copy-light: "Montserrat Light", sans-serif;
+  --font-family-copy-regular: "Montserrat", sans-serif;
+  --font-family-copy-medium: "Montserrat Medium", sans-serif;
+  --font-family-copy-bold: "Montserrat Bold", sans-serif;
 }
-$link_hover_color: #24a6cd;
-$submenu_link_hover_color: #00a9cf;
+// $link_hover_color: #24a6cd;
+// $submenu_link_hover_color: #00a9cf;
 
 /* Fonts */
 /* Prompt font */
-$font_family_prompt_light: "Prompt Light", sans-serif;
-$font_family_prompt: "Prompt Regular", sans-serif;
-$font_prompt_medium: "Prompt Medium", sans-serif;
-$font_prompt_semibold: "Prompt SemiBold", sans-serif;
-$font_prompt_medium_italic: "Prompt MediumItalic", sans-serif;
+// $font_family_prompt_light: "Prompt Light", sans-serif;
+// $font_family_prompt: "Prompt Regular", sans-serif;
+// $font_prompt_medium: "Prompt Medium", sans-serif;
+// $font_prompt_semibold: "Prompt SemiBold", sans-serif;
+// $font_prompt_medium_italic: "Prompt MediumItalic", sans-serif;
 
 /* Montserrat font */
-$font_family_montserrat_light: "Montserrat Light", sans-serif;
-$font_family_montserrat: "Montserrat", sans-serif;
-$font_montserrat_medium: "Montserrat Medium", sans-serif;
-$font_montserrat_bold: "Montserrat Bold", sans-serif;
+// $font_family_montserrat_light: "Montserrat Light", sans-serif;
+// $font_family_montserrat: "Montserrat", sans-serif;
+// $font_montserrat_medium: "Montserrat Medium", sans-serif;
+// $font_montserrat_bold: "Montserrat Bold", sans-serif;

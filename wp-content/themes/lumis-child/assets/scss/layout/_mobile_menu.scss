@@ -47,10 +47,12 @@ ul#mobile_menu {
       padding: 10px;
       font-size: 18px;
       line-height: 25px;
-      font-family: $font_family_prompt_light;
+      // font-family: $font_family_prompt_light;
+      font-family: var(--font-family-headings-light);
       &:focus {
         color: #24a6cd !important;
-        font-family: $font_prompt_medium;
+        // font-family: $font_prompt_medium;
+        font-family: var(--font-family-headings-medium);
       }
     }
     .sub-menu {
@@ -67,7 +69,8 @@ ul#mobile_menu {
         &.current_page_item {
           text-shadow: none !important;
           a {
-            font-family: $font_prompt_medium;
+            // font-family: $font_prompt_medium;
+            font-family: var(--font-family-headings-medium);
             text-shadow: none !important;
           }
         }

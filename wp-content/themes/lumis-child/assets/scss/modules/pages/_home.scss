@@ -55,7 +55,9 @@
   padding-bottom: var(--vertical-spacing);
   scroll-margin-top: var(--vertical-spacing);
   .lead-text {
-    font-family: $font_montserrat_bold;
+    // font-family: $font_montserrat_bold;
+    font-family: var(--font-family-copy-bold);
+
     a {
       border-bottom: none;
     }

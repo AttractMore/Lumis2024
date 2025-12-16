@@ -22,14 +22,17 @@
     margin-top: 50px;
     span {
       font-size: 20px;
-      font-family: $font_family_montserrat;
+      // font-family: $font_family_montserrat;
+      font-family: var(--font-family-copy-regular);
+
       line-height: 20px;
       // font-style: italic;
       color: var(--black);
       &.single_post_date {
         font-weight: bold;
         margin-right: 7px;
-        font-family: $font_montserrat_medium;
+        // font-family: $font_montserrat_medium;
+        font-family: var(--font-family-copy-medium);
       }
       &.posted-by {
         // font-style: italic;

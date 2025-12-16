@@ -1,6 +1,7 @@
 h1,
 .h1 {
-  font-family: $font_family_prompt_light;
+  // font-family: $font_family_prompt_light;
+  font-family: var(--font-family-headings-light);
   // font-size: 60px !important;
   // line-height: 72px !important;
   font-size: clamp(2rem, 1.33rem + 3.333vw, 3.75rem) !important;
@@ -10,7 +11,8 @@ h1,
 }
 h2,
 .h2 {
-  font-family: $font_family_prompt_light;
+  // font-family: $font_family_prompt_light;
+  font-family: var(--font-family-headings-light);
   font-size: clamp(1.5rem, 0.939rem + 2.857vw, 3rem) !important;
   line-height: 1.25 !important;
   // position: relative;
@@ -70,7 +72,8 @@ h1 {
 
 h3,
 .h3 {
-  font-family: $font_family_prompt_light;
+  // font-family: $font_family_prompt_light;
+  font-family: var(--font-family-headings-light);
   // font-size: 36px !important;
   // line-height: 45px !important;
   font-size: clamp(1.25rem, 0.869rem + 1.905vw, 2.25rem) !important;
@@ -85,7 +88,8 @@ h3,
 //
 h4,
 .h4 {
-  font-family: $font_family_montserrat;
+  // font-family: $font_family_montserrat;
+  font-family: var(--font-family-copy-regular);
   // font-size: 28px !important;
   // line-height: 37px !important;
   font-size: clamp(1.125rem, 0.887rem + 1.19vw, 1.75rem) !important;
@@ -102,7 +106,8 @@ p,
 label,
 li,
 td {
-  font-family: $font_family_montserrat;
+  // font-family: $font_family_montserrat;
+  font-family: var(--font-family-copy-regular);
   font-size: 20px !important;
   line-height: 30px;
   font-size: clamp(1rem, 0.899rem + 0.505vw, 1.25rem) !important;
@@ -114,7 +119,8 @@ td {
 p {
   strong,
   b {
-    font-family: $font_montserrat_bold;
+    // font-family: $font_montserrat_bold;
+    font-family: var(--font-family-copy-bold);
   }
 }
 
@@ -122,17 +128,17 @@ a {
   cursor: pointer;
 }
 
-:focus {
-  //outline: 4px solid var(--orange)!important;
-}
+// :focus {
+//outline: 4px solid var(--orange)!important;
+// }
 
 .site-content {
   a {
     color: var(--black) !important;
-    border-bottom: 2px solid $link_hover_color;
+    border-bottom: 2px solid var(--link-hover-colour);
     &:hover,
     &:focus {
-      color: $link_hover_color !important;
+      color: var(--link-hover-colour) !important;
     }
     &:has(img) {
       border-bottom: 0;
@@ -141,7 +147,9 @@ a {
   ul {
     font-size: 20px;
     line-height: 30px;
-    font-family: $font_family_montserrat;
+    // font-family: $font_family_montserrat;
+    font-family: var(--font-family-copy-regular);
+
     list-style: none;
     //list-style-type: '---';
     li {
@@ -162,8 +170,12 @@ a {
   ol {
     font-size: 20px;
     line-height: 30px;
-    font-family: $font_family_montserrat;
+    // font-family: $font_family_montserrat;
+    font-family: var(--font-family-copy-regular);
   }
+}
+.simple-title {
+  padding: 0.75em 0;
 }
 
 /* Blockquotes */

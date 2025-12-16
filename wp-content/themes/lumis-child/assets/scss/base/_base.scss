@@ -209,7 +209,9 @@ body.thank-you {
 .light-grey-bg {
   background-color: var(--light-grey);
 }
-
+.m0 {
+  margin: 0 !important;
+}
 .mb0 {
   margin-bottom: 0 !important;
 }
@@ -288,5 +290,44 @@ main + article {
     border-radius: var(--radius);
     min-height: 240px;
     object-fit: cover;
+  }
+}
+@media screen and (min-width: 991px) {
+  figure {
+    &.centered-image {
+      width: 951px;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -475px;
+      margin-right: -475px;
+      margin-bottom: 50px;
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  figure {
+    &.left-image {
+      img {
+        width: auto;
+        margin: 0;
+      }
+    }
+  }
+}
+// This is used on a few pages not linked to the menu but which appeared
+// as links in the 2025 Newsletter
+.author-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  img {
+    max-width: 225px;
+    border-radius: 50%;
+  }
+  p {
+    padding: 0.5em 0 0.5em 1em;
+    align-self: center;
+    margin-bottom: 0;
   }
 }

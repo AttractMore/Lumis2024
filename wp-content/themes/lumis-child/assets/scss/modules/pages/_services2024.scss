@@ -241,7 +241,9 @@
       font-size: 20px !important;
       font-style: normal;
       color: var(--black);
-      font-family: $font_family_montserrat;
+      // font-family: $font_family_montserrat;
+      font-family: var(--font-family-copy-regular);
+
       line-height: 1.5 !important;
       &:first-of-type {
         display: inline-block;

@@ -213,11 +213,11 @@
       top: 30px !important;
     }
   }
-  .wp-block-group.fullwidth_halfheight_row.fullwidth_halfheight_row-grey.our_exp {
-    &:before {
-      //top: 110px!important;
-    }
-  }
+  // .wp-block-group.fullwidth_halfheight_row.fullwidth_halfheight_row-grey.our_exp {
+  //   &:before {
+  //     //top: 110px!important;
+  //   }
+  // }
 }
 
 // (max-width: 991px)
@@ -309,9 +309,9 @@
   //   display: none;
   // }
   /* Main */
-  #primary {
-    // padding-top: 100px !important;
-  }
+  // #primary {
+  // padding-top: 100px !important;
+  // }
   /* Typography */
   // h1 {
   //   font-size: 28px !important;
@@ -462,9 +462,9 @@
       figure {
         text-align: center;
         //padding-top: 30px;
-        img {
-          //max-width: 150px;
-        }
+        // img {
+        //max-width: 150px;
+        // }
       }
       p {
         text-align: center;

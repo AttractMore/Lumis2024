@@ -129,3 +129,50 @@ function blog_video_cta_callback($attr)
   return $output;
 }
 add_shortcode("blog_video_cta", "blog_video_cta_callback");
+
+/**
+ * Shortcode to add brief author details (name, title and photo) to pages
+ */
+function author_info_callback($attr) {
+  $args = shortcode_atts(
+    [
+      "author_name" => "",
+    ],
+    $attr
+  );
+  $output = null;
+  $author_name = "";
+  $author_title = "";
+  $author_image = "";
+  switch ($attr["author_name"]) {
+    case "Liam":
+      $author_name = "Liam Spencer";
+      $author_title = "Senior Regulatory Project Manager";
+      $author_image = "/wp-content/themes/lumis-child/dist/img/content/Team/liam-spencer.jpg";
+      break;
+    case "Stella":
+      $author_name = "Stella Vu";
+      $author_title = "Business Development Manager";
+      $author_image = "/wp-content/themes/lumis-child/dist/img/content/Team/stella-vu.jpg";
+      break;
+    case "Andres":
+      $author_name = "Andrés Aguilar Caro";
+      $author_title = "Head of Contracts and Proposals ";
+      $author_image = "/wp-content/themes/lumis-child/dist/img/content/Team/andres-aguilar-caro.jpg";
+      break;
+  }
+  if ($author_name !== "") {
+    $output = "<div class='author-details'><img src='";
+    $output .= $author_image;
+    $output .= "' width='450' height='450' loading='lazy' decoding='async' alt='";
+    $output .= $author_name;
+    $output .= "'>";
+    $output .= "<p><strong>";
+    $output .= $author_name;
+    $output .= "</strong><br>";
+    $output .= $author_title;
+    $output .= "</p></div>";
+  }
+  return $output;
+}
+add_shortcode("author_info", "author_info_callback");
