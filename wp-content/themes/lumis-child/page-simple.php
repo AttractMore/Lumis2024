@@ -17,9 +17,13 @@ get_header(); ?>
     </header>
       <section class="page-introduction">
         <?php the_content(); ?>
+        <p><strong>Get in touch with our Lumis experts to learn more.</strong></p>
+        <p class="button-container">
+          <a class="primary-button wide-button" href="/contact/">Contact Lumis</a>
+        </p>
+        <div style="height: 4em;"></div>
       </section>
   </article>
-  <?php add_newsletter_signup(); ?>
 
 </div><!-- #primary -->
 
