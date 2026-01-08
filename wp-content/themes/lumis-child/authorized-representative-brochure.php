@@ -62,7 +62,7 @@ get_header(); ?>
     /wp-content/themes/lumis-child/dist/img/stethoscope-600.png 600w,
     /wp-content/themes/lumis-child/dist/img/stethoscope-800.png 800w,
     /wp-content/themes/lumis-child/dist/img/stethoscope.png 1120w"
-    src="/wp-content/themes/lumis-child/dist/img/stethoscope.png" width="1120" height="446" alt="" decoding="async" loading="eager">
+    src="/wp-content/themes/lumis-child/dist/img/stethoscope.png" width="1120" height="446" alt="Stethoscope" decoding="async" loading="lazy">
   </section>
 
   <section class="boxes-3-4">

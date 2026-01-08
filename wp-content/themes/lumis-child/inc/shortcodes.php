@@ -15,7 +15,7 @@ function standard_contact_form_callback()
   $standard_contact_form .= "<h2 class='white-text flash-mid-grey'>Contact us to find out more!</h2>";
   $standard_contact_form .= '<article class="form-plus-contact">';
   $standard_contact_form .= '<div class="contact-details">';
-  $standard_contact_form .= wp_get_attachment_image($photo, "full");
+  $standard_contact_form .= wp_get_attachment_image($photo, "full", false, ["loading" => "lazy"]);
   $standard_contact_form .= "<aside>";
   $standard_contact_form .= "<p><strong>" . esc_html($contact["contact_person"]["name"]) . "</strong></p>";
   $standard_contact_form .= "<p>" . esc_html($contact["contact_person"]["title"]) . "</p>";

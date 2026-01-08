@@ -244,7 +244,7 @@ get_header(); ?>
           <?php
           $size = "full";
           $photo = $contact["contact_person"]["photo"];
-          echo wp_get_attachment_image($photo, $size);
+          echo wp_get_attachment_image($photo, $size, false, ["loading" => "lazy"]);
           ?>
           <aside>
             <?php $phone = esc_html($contact["contact_person"]["phone"]); ?>
