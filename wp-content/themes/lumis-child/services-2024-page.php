@@ -57,6 +57,14 @@ get_header(); ?>
         ?>
       </div>
     </section><!-- .service-introduction -->
+
+    <?php 
+    $trust_builder = get_field("trust_builder");
+    if ($trust_builder) {
+      show_trust_builder($trust_builder);
+    }
+    ?>
+
     <?php
     $advantages = get_field("advantages");
     if ($advantages): ?>
