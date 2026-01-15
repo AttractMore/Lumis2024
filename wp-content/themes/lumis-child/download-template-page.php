@@ -33,6 +33,12 @@ get_header(); ?>
             <p class="button-container">
               <a class="primary-button wide-button" 
                   target="_blank" 
+                  <?php 
+                    // $li_campaign_tracker = "window.lintrk('track', { conversion_id: 25550905 });";
+                    // if (str_contains($button_details['link_url'], "ce-marking")) {
+                    //   echo 'onclick="' . $li_campaign_tracker . '"';
+                    // }
+                  ?>
                   href="<?php echo esc_url($button_details['link_url']); ?>"
               >
               <?php echo $button_details['link_text']; ?>
