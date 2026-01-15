@@ -1,4 +1,6 @@
 .trust-builder {
+  padding-top: var(--vertical-spacing);
+  padding-bottom: var(--vertical-spacing);
   ul,
   li {
     margin: 0 !important;
@@ -8,7 +10,7 @@
   --columns: 1;
   ul {
     display: grid;
-    justify-content: space-between;
+    // justify-content: space-between;
     grid-template-columns: repeat(var(--columns), 1fr);
   }
   li {
@@ -29,6 +31,7 @@
     }
     .trust-item-detail {
       font-family: var(--font-family-copy-medium);
+      margin-bottom: 0;
     }
   }
 }
@@ -38,7 +41,7 @@
     --columns: 2;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
   .trust-builder {
     --columns: 4;
   }

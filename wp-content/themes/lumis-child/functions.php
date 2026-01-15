@@ -426,7 +426,7 @@ function author_bio()
  */
 function show_trust_builder($trust_builder) {
   echo '<section class="trust-builder">';
-    echo '<div class="trust-builder-container wrap">';
+    echo '<div class="trust-builder-container">';
     $trust_items = $trust_builder["trust_items"];
     if ($trust_items) {
       echo '<ul class="trust-builder-grid">';
