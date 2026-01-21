@@ -57,10 +57,19 @@ get_header(); ?>
         ?>
       </div>
     </section><!-- .service-introduction -->
+
+    <?php 
+    $trust_builder = get_field("trust_builder");
+    if ($trust_builder) {
+      $trust_builder_active = true;
+      show_trust_builder($trust_builder);
+    }
+    ?>
+
     <?php
     $advantages = get_field("advantages");
     if ($advantages): ?>
-      <section class="service-advantages full-width mb0">
+      <section class="service-advantages full-width mb0 <?php if ($trust_builder_active) {echo "trust-builder-active";} ?>">
         <div class="service-advantages-header-container">
           <?php
           $photo = $advantages["header_image"];

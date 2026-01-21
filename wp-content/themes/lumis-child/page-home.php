@@ -29,6 +29,13 @@ get_header(); ?>
     <?php the_content(); ?>
   </section>
 
+    <?php 
+    $trust_builder = get_field("trust_builder");
+    if ($trust_builder) {
+      show_trust_builder($trust_builder);
+    }
+    ?>
+
   <section id="home-services" class="home-services-section full-width light-bg mb0">
     <div class="home-services-section-container wrap">
     <?php if (have_rows("services_list")): ?>

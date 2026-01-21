@@ -63,8 +63,12 @@
   }
 }
 .service-advantages {
+  --top-half-colour: var(--light-blue);
+  &.trust-builder-active {
+    --top-half-colour: var(--white);
+  }
   .service-advantages-header-container {
-    background: linear-gradient(var(--light-blue) 50%, var(--petrol) 50%);
+    background: linear-gradient(var(--top-half-colour) 50%, var(--petrol) 50%);
     padding: 2em 0;
     img {
       display: block;

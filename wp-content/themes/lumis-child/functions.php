@@ -420,3 +420,27 @@ function author_bio()
   }
   wp_reset_postdata();
 }
+
+/**
+ * Display Trust Builder info
+ */
+function show_trust_builder($trust_builder) {
+  echo '<section class="trust-builder">';
+    echo '<div class="trust-builder-container">';
+    $trust_items = $trust_builder["trust_items"];
+    if ($trust_items) {
+      echo '<ul class="trust-builder-grid">';
+      foreach($trust_items as $trust_item) {
+        $icon = $trust_item["icon"];
+        echo '<li>';
+          echo wp_get_attachment_image( $icon, 'full', '', array('loading' => 'lazy', 'alt' => ' ', 'aria-hidden' => 'true'));
+          echo '<p class="trust-item-heading">' . esc_html($trust_item["heading"]) . '</p>';
+          $allowed_tags = ['br' => []];
+          echo '<p class="trust-item-detail">' . wp_kses($trust_item["detail"], $allowed_tags) . '</p>';
+        echo '</li>';
+      }
+      echo '</ul>';
+    }
+    echo '</div>';
+  echo '</section>';
+}
