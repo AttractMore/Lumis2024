@@ -19,7 +19,16 @@ get_header(); ?>
         <header class="entry-header">
           <h1 class="entry-title" itemprop="headline"><?php echo esc_html(get_field("service_title")); ?></h1>
         </header>
+        
+        <?php 
+        echo $_SESSION["utm_source"];
+        echo $_SESSION["utm_medium"];
+        echo $_SESSION["utm_campaign"];
+        echo $_SESSION["utm_content"];
+        echo $_SESSION["utm_term"];
+        ?>
         <?php
+        $trust_builder_active= false;
         $service_introduction = get_field("service_introduction");
         if ($service_introduction): ?>
           <div class="service-introduction-block">
@@ -265,7 +274,17 @@ get_header(); ?>
           </aside>
         </div>
         <div class="contact-form">
-          <?php echo do_shortcode($form_shortcode); ?>
+          <?php
+            // do_shortcode("[frm-set-get utm_source='empty']");
+            do_shortcode('[frm-set-get utm_source="' . $_SESSION["utm_source"] . '"]');
+            // add_filter('frm_pre_create_entry', function($values) {
+            //   $filtered = "YES";
+            //   $values['item_meta'][12] = $filtered;
+            //   return $values;
+            // });
+            echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) );
+            // add_filter('frm_pre_create_entry', 'utm_source');
+          ?>
         </div>
       </article>
     </div>

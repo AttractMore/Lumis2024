@@ -12,7 +12,42 @@
 
 if (!defined("ABSPATH")) {
   exit(); // Exit if accessed directly.
-} ?><!DOCTYPE html>
+} 
+
+session_start();
+
+// Get URL of current page.
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+  $page_url = "https";}
+else {
+  $page_url = "http";
+}
+// Here append the common URL characters.
+$page_url .= "://";
+    
+// Append the host(domain name, ip) to the URL.
+$page_url .= $_SERVER['HTTP_HOST'];
+    
+// Append the requested resource location to the URL
+$page_url .= $_SERVER['REQUEST_URI'];
+// Get URL components
+$page_url_components = parse_url($page_url);
+// Place query params into $params
+if (isset($page_url_components['query'])) {
+  parse_str($page_url_components['query'], $params);
+  if (isset($params) && !empty($params)) {
+    $_SESSION["utm_source"] = $params["utm_source"];
+    $_SESSION["utm_medium"] = $params["utm_medium"];
+    $_SESSION["utm_campaign"] = $params["utm_campaign"];
+    $_SESSION["utm_content"] = $params["utm_content"];
+    $_SESSION["utm_term"] = $params["utm_term"];
+    $utm_source = $_SESSION["utm_source"];
+    
+  }
+}
+
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="UTF-8">

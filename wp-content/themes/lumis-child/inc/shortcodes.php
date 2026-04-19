@@ -1,4 +1,11 @@
 <?php
+/******************************************************************
+ * Shortcodes to get UTM parameters for transfer to contact form
+ ******************************************************************/
+function utm_source_callback() {
+  return $_SESSION["utm_source"];
+}
+add_shortcode("utm_source", "utm_source_callback");
 /**************************************************
  * Shortcode to generate standard contact form
  **************************************************/

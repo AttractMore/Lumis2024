@@ -17,6 +17,13 @@ get_header(); ?>
         <header class="entry-header">
           <h1 class="entry-title" itemprop="headline"><?php echo the_title(); ?></h1>
         </header>
+        <?php 
+        echo $_SESSION["utm_source"];
+        echo $_SESSION["utm_medium"];
+        echo $_SESSION["utm_campaign"];
+        echo $_SESSION["utm_content"];
+        echo $_SESSION["utm_term"];
+        ?>
         <?php
         $args = [
           "post_type" => ["lumis-events"],

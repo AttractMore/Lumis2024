@@ -444,3 +444,22 @@ function show_trust_builder($trust_builder) {
     echo '</div>';
   echo '</section>';
 }
+
+/**
+ * Place UTM parameters in form fields
+ */
+function utm_source($values) {
+  die("in utm_source callback");
+  do_action( 'inspect', [ 'variable_name', $values, __FILE__, __LINE__ ] );
+  if ( $values['form_id'] == 1 ) {
+    error_log("form=1");
+    if ( isset( $values['item_meta'][12] ) ) {
+      $values['item_meta'][12] = null;
+      error_log("value is null");
+    }
+      // $values['item_meta'][12] = "test value";
+    $values['item_meta'][12] = $_SESSION["utm_source"];
+  }
+  do_action( 'inspect', [ 'variable_name', $values, __FILE__, __LINE__ ] );
+  return $values;
+}
