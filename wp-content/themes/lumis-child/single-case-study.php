@@ -52,23 +52,24 @@ get_header(); ?>
       <h2>Result</h2>
       <?php
       $results = get_field("result");
-      if ($results["result_item_1"]) {
-        echo '<ul class="result_items">';
-        echo '<li>' . wp_kses_post($results["result_item_1"]) . '</li>';
-        if ($results["result_item_2"]) {
-          echo '<li>' . wp_kses_post($results["result_item_2"]) . '</li>';
+      if ($results["result_1"]["content"]) {
+        echo '<ul class="result-items">';
+        echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg>';
+        echo '<aside><strong>' . esc_html($results["result_1"]["lead_in"]) . '</strong>' . esc_html($results["result_1"]["content"]) . '</aside></li>';
+        if ($results["result_2"]["content"]) {
+          echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg><strong>' . esc_html($results["result_2"]["lead_in"]) . '</strong>' . esc_html($results["result_2"]["content"]) . '</li>';
         }
-        if ($results["result_item_3"]) {
-          echo '<li>' . wp_kses_post($results["result_item_3"]) . '</li>';
+        if ($results["result_3"]["content"]) {
+          echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg><strong>' . esc_html($results["result_3"]["lead_in"]) . '</strong>' . esc_html($results["result_3"]["content"]) . '</li>';
         }
-        if ($results["result_item_4"]) {
-          echo '<li>' . wp_kses_post($results["result_item_4"]) . '</li>';
+        if ($results["result_4"]["content"]) {
+          echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg><strong>' . esc_html($results["result_4"]["lead_in"]) . '</strong>' . esc_html($results["result_4"]["content"]) . '</li>';
         }
-        if ($results["result_item_5"]) {
-          echo '<li>' . wp_kses_post($results["result_item_5"]) . '</li>';
+        if ($results["result_5"]["content"]) {
+          echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg><strong>' . esc_html($results["result_5"]["lead_in"]) . '</strong>' . esc_html($results["result_5"]["content"]) . '</li>';
         }
-        if ($results["result_item_6"]) {
-          echo '<li>' . wp_kses_post($results["result_item_6"]) . '</li>';
+        if ($results["result_6"]["content"]) {
+          echo '<li><svg aria-hidden="true"><use xlink:href="/wp-content/themes/lumis-child/svg-defs.svg#green-tick-circle"></use></svg><strong>' . esc_html($results["result_6"]["lead_in"]) . '</strong>' . esc_html($results["result_6"]["content"]) . '</li>';
         }
         echo '</ul>';
       }
@@ -86,7 +87,7 @@ get_header(); ?>
     <section id="home-contact-section" class="home-contact-form full-width mid-bg">
     <div class="home-contact-form-container wrap">
 
-      <h2 class="flash-mid-grey white-text">
+      <h2 class="white-text">
         <?php
         $contact = get_field("contact");
         if ($contact["contact_heading"]) {
@@ -96,7 +97,7 @@ get_header(); ?>
         }
         ?>
       </h2>
-      <h3>
+      <h3 class="white-text">
         <?php
         if ($contact["contact_subheading"]) {
           echo esc_html($contact["contact_subheading"]);

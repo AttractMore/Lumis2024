@@ -1,0 +1,22 @@
+.case-study {
+  h2 {
+    color: var(--new-blue);
+  }
+  .result-items {
+    margin-left: 0;
+  }
+  .result-items li {
+    display: flex;
+  }
+  .result-items li:before {
+    display: none;
+  }
+  .result-items li svg {
+    --svg-size: 1.3em;
+    width: var(--svg-size);
+    height: var(--svg-size);
+    flex: 0 0 var(--svg-size);
+    margin: 0.3em var(--svg-size) 0;
+    margin-right: 1em;
+  }
+}

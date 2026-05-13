@@ -26,5 +26,8 @@
     <symbol id="chevron-right" viewBox="0 0 16 16">
       <path d="M5.5 0l-1.5 1.5 6.5 6.5-6.5 6.5 1.5 1.5 8-8-8-8z"></path>
     </symbol>
+    <symbol id="green-tick-circle" viewBox="0 0 28 28">
+      <g id="Elipse_13"><circle cx="14" cy="14" r="13" style="fill:none;stroke:#0283a4;stroke-width:2px;"/></g><path id="Trazado_435" d="M8.324,15l4.261,4.967l7.344,-11.161" style="fill:none;fill-rule:nonzero;stroke:#0283a4;stroke-width:2px;stroke-linecap:round;"/>    
+    </symbol>
   </defs>
 </svg>
