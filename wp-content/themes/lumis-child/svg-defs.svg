@@ -15,6 +15,9 @@
       <path d="M17 12H3" />
       <path d="m21.643 11.786-3.431-2.059a.8.8 0 0 0-1.212.686v3.174a.8.8 0 0 0 1.212.686l3.43-2.059a.25.25 0 0 0 0-.428Z" />
     </symbol>
+    <symbol id="long-arrow-left" viewBox="0 0 20 20">
+      <path d="M 3.5 7 L 0 10.5 L 3.5 14 L 5 14 L 2 11 L 19 11 L 19 10 L 2 10 L 5 7 L 3.5 7 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/>
+    </symbol>
     <symbol id="linkedin" viewBox="0 0 16 16">
       <path d="M6 6h2.767v1.418h0.040c0.385-0.691 1.327-1.418 2.732-1.418 2.921 0 3.461 1.818 3.461 4.183v4.817h-2.885v-4.27c0-1.018-0.021-2.329-1.5-2.329-1.502 0-1.732 1.109-1.732 2.255v4.344h-2.883v-9z"></path>
       <path d="M1 6h3v9h-3v-9z"></path>
