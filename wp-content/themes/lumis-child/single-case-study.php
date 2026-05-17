@@ -146,6 +146,7 @@ get_header(); ?>
     <div class="sidebar">
       <h3 class="h4">Other Case Studies</h3>
       <?php 
+      $current = get_the_ID();
       $args = [
         'post_type' => ["case-study"],
         "nopaging" => true,
@@ -158,12 +159,13 @@ get_header(); ?>
       <ul class="case-study-list">
       <?php while ($case_studies->have_posts()):
         $case_studies->the_post(); ?>
-        <li>
-        <?php
-        echo esc_html(get_field("heading"));
-        echo '<span class="link-to-full-case-study"><a href="' . get_the_permalink() . '">See more</a></span>'
+        <?php if (get_the_id() != $current) {
+          echo '<li>';
+          echo '<a class="title" href="' . get_the_permalink() . '">' . esc_html(get_field("heading")) . '</a>';
+          echo '<span class="link-to-full-case-study"><a href="' . get_the_permalink() . '">See more</a></span>';
+          echo '</li>';
+        }
         ?>
-        </li>
       <?php endwhile; ?>
       </ul>
       <?php endif; ?>
