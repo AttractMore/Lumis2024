@@ -14,7 +14,7 @@ get_header(); ?>
       <figure>
         <figcaption>
           <h1 class="h2 page-title white-text">Case Studies</h1>
-          <p class="white-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quis molestias hic qui, laudantium iusto quaerat nulla ullam debitis dolor quidem et ex earum beatae necessitatibus doloremque totam dolorem aspernatur.</p>
+          <p class="white-text">Explore our case studies to discover how Lumis International navigates complex global regulatory landscapes, mitigates development risks, and optimizes strategic pathways to accelerate cutting-edge biopharma innovations to market.</p>
         </figcaption>
         <img src="/wp-content/uploads/2026/05/operating-theatre.jpg" alt="Medical examination room with a range of modern equipment surrounding an empty examination table" width="1120" height="467" decoding="async" loading="eager">
       </figure>

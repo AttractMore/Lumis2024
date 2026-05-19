@@ -18,11 +18,40 @@
     }
   }
 }
+.article-form-sidebar {
+  display: grid;
+  gap: 2em;
+  .case-study {
+    order: 1;
+  }
+  .home-contact-form {
+    order: 3;
+    position: relative;
+    right: 50%;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .sidebar {
+    order: 2;
+    padding: 0 2em;
+  }
+}
 @media screen and (min-width: 991px) {
   .article-form-sidebar {
-    display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 2em;
+    row-gap: 0;
+    .home-contact-form {
+      position: static;
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+    }
+    .sidebar {
+      padding: 0;
+    }
   }
 }
 .sidebar {
@@ -65,7 +94,7 @@
 .case-study {
   background-color: var(--white);
   padding: 2em;
-  border-radius: 2em 2em 0 0;
+  border-radius: 2em;
   h2 {
     color: var(--new-blue);
     margin: 1.25em 0 0.75em !important;
@@ -133,6 +162,11 @@
     margin-right: 1em;
   }
 }
+@media screen and (min-width: 991px) {
+  .case-study {
+    border-radius: 2em 2em 0 0;
+  }
+}
 
 /***********************
   Central Case Sudy Page
@@ -166,9 +200,9 @@
 .post-type-archive-case-study .page-header figcaption {
   z-index: 50;
   position: absolute;
-  top: 1em;
-  left: 1em;
-  right: 1em;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 2em 2em 0;
   h1.h2 {
     margin-bottom: 0.2em !important;
@@ -189,9 +223,6 @@
         border: 0;
       }
     }
-    .case-study-excerpt {
-      display: none;
-    }
   }
 }
 
@@ -207,9 +238,6 @@
       grid-template-rows: subgrid;
       grid-row: span 4;
       gap: 0;
-      .case-study-excerpt {
-        display: block;
-      }
     }
   }
   @supports not (grid-template-rows: subgrid) {
