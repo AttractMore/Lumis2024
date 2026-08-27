@@ -1,13 +1,15 @@
-.downloads {
-  .button-container {
-    margin-bottom: 0;
-  }
-  .downloads-introduction {
+.downloads,
+.gated-downloads {
+  .downloads-introduction,
+  .gated-downloads-introduction {
     padding: 3em 0;
-    p {
+    p,
+    li {
       color: var(--white);
       font-size: clamp(1.125rem, 0.982rem + 0.714vw, 1.5rem) !important;
-      &.disclaimer {
+      margin-bottom: 1.25em;
+      &.disclaimer,
+      &.data-notice {
         font-size: 15px !important;
         margin: 0.5em 0 0;
       }
@@ -18,6 +20,11 @@
       max-width: 550px;
       width: 100%;
     }
+  }
+}
+.downloads {
+  .button-container {
+    margin-bottom: 0;
   }
   .downloads-features {
     padding: 5em 0;
@@ -66,14 +73,59 @@
     }
   }
 }
-
+.gated-downloads {
+  h1 {
+    text-wrap: wrap;
+  }
+  .gated-downloads-introduction-text {
+    ul {
+      margin-left: 0;
+      list-style-type: disc;
+      li {
+        color: var(--white);
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  .frm_form_fields {
+    label {
+      display: none;
+    }
+    input {
+      max-width: 100%;
+    }
+    .frm_submit {
+      margin-bottom: 0;
+      button {
+        width: 100%;
+        padding: 1em 0.75em;
+        display: block;
+      }
+    }
+  }
+  .frm_message,
+  .frm_error_style {
+    color: yellow;
+    font-size: clamp(1.125rem, 0.982rem + 0.714vw, 1.5rem) !important;
+  }
+  .data-notice {
+    a {
+      color: var(--white) !important;
+    }
+  }
+}
 @media screen and (min-width: 991px) {
-  .downloads {
-    .downloads-introduction-content {
+  .downloads,
+  .gated-downloads {
+    .downloads-introduction-content,
+    .gated-downloads-introduction-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 4em;
-      .downloads-introduction-text {
+      .downloads-introduction-text,
+      .gated-downloads-introduction-text {
         grid-column: 1;
         grid-row: 1;
       }
@@ -82,6 +134,10 @@
         grid-row: 1;
         margin-bottom: 0;
       }
+    }
+  }
+  .downloads {
+    .downloads-introduction-content {
       .button-related-content {
         grid-row: 1;
         grid-column: 1;
