@@ -147,7 +147,7 @@ function author_info_callback($attr) {
   switch ($attr["author_name"]) {
     case "Liam":
       $author_name = "Liam Spencer";
-      $author_title = "Senior Regulatory Project Manager";
+      $author_title = "Head of Regulatory Services";
       $author_image = "/wp-content/themes/lumis-child/dist/img/content/Team/liam-spencer.jpg";
       break;
     case "Stella":
