@@ -15,7 +15,8 @@
     }
   },
   "scripts": {
-    "sass": "sass wp-content/themes/lumis-child/assets/scss/app.scss wp-content/themes/lumis-child/dist/css/app.css --style=compressed --no-source-map"
+    "sass": "sass wp-content/themes/lumis-child/assets/scss/app.scss wp-content/themes/lumis-child/dist/css/app.css --style=compressed --no-source-map",
+    "ce-sass": "sass wp-content/themes/lumis-child/assets/scss/ce-questionnaire.scss wp-content/themes/lumis-child/dist/css/ce-questionnaire.css --style=compressed --no-source-map"
   },
   "keywords": [],
   "author": "",

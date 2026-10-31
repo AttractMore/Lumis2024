@@ -18,6 +18,10 @@ function theme_enqueues_styles_scripts()
    wp_enqueue_style('event-css');*/
   //	wp_deregister_script('jquery');
   wp_enqueue_script("app-js", get_stylesheet_directory_uri() . "/dist/js/app.js", ["jquery"], null, true);
+  if (is_page_template('page-ce-questionnaire.php')) {
+    wp_enqueue_style("ce-css", get_stylesheet_directory_uri() . "/dist/css/ce-questionnaire.css", [], filemtime( get_stylesheet_directory() . '/dist/css/ce-questionnaire.css' ));
+    wp_enqueue_script('ce-questionnaire', get_stylesheet_directory_uri() . "/dist/js/ce-questionnaire.js" , "", null, true);
+  }
 }
 add_action("wp_enqueue_scripts", "theme_enqueues_styles_scripts", 1001);
 
