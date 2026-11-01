@@ -21,7 +21,7 @@ get_header("no-nav"); ?>
     </header>
 
     <section class="question-set">
-      <div class="question-set-container ast-container">
+      <div class="question-set-container">
         <div class="score-options-container">
           <ul class="score-options">
             <li><span>0</span><span>Not started or missing</span></li>
@@ -35,7 +35,7 @@ get_header("no-nav"); ?>
 
     <?php
       if( have_rows('category') ): ?>
-        <form id="ce-questionnaire">
+        <form id="ce-questionnaire" class="ast-container">
           <?php
           $question_number = 0;
           while( have_rows('category') ) : the_row();
