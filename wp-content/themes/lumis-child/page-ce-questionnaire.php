@@ -29,7 +29,7 @@ get_header("no-nav"); ?>
             <li><span>2</span><span>Complete & verified or not applicable</span></li>
           </ul>
         </div>
-        <div class="floating-total">
+        <div class="floating-total ast-container">
           <span class="floating-total-score"></span>
         </div>
 
